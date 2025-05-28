@@ -1,1 +1,1 @@
-### KB727.com is an one-page-website with English and Chinese version using bootstrap 3.
+### KB727 is a global certificate program that advocates for social responsibility in tutoring.
