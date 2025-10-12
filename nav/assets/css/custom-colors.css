@@ -1,0 +1,251 @@
+/* 自定义颜色方案 - 基于#669900绿色主题 */
+
+/* 主要按钮颜色 */
+.btn-primary {
+    background-color: #669900 !important;
+    border-color: #5a8a00 !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-color: #5a8a00 !important;
+    border-color: #4a7a00 !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none !important;
+}
+
+/* 文本颜色 */
+.text-primary {
+    color: #669900 !important;
+}
+
+a.text-primary:hover {
+    color: #5a8a00 !important;
+}
+
+/* 背景颜色 */
+.bg-primary {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+}
+
+a.bg-primary:hover {
+    background-color: #5a8a00 !important;
+}
+
+/* 面板颜色 */
+.panel-primary {
+    border-color: #669900 !important;
+}
+
+.panel-primary > .panel-heading {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+    border-color: #669900 !important;
+}
+
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #669900 !important;
+}
+
+.panel-primary > .panel-heading .badge {
+    color: #669900 !important;
+    background-color: #ffffff !important;
+}
+
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #669900 !important;
+}
+
+/* 列表组颜色 */
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    z-index: 2;
+    color: #ffffff !important;
+    background-color: #669900 !important;
+    border-color: #669900 !important;
+}
+
+.list-group-item.active .list-group-item-heading,
+.list-group-item.active:hover .list-group-item-heading,
+.list-group-item.active:focus .list-group-item-heading,
+.list-group-item.active .list-group-item-heading > small,
+.list-group-item.active:hover .list-group-item-heading > small,
+.list-group-item.active:focus .list-group-item-heading > small,
+.list-group-item.active .list-group-item-heading > .small,
+.list-group-item.active:hover .list-group-item-heading > .small,
+.list-group-item.active:focus .list-group-item-heading > .small {
+    color: inherit !important;
+}
+
+.list-group-item.active .list-group-item-text,
+.list-group-item.active:hover .list-group-item-text,
+.list-group-item.active:focus .list-group-item-text {
+    color: #e6f0d9 !important;
+}
+
+/* 表单焦点颜色 */
+.form-control:focus {
+    border-color: rgba(102, 153, 0, 0.5) !important;
+    outline: 0 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 153, 0, 0.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 153, 0, 0.6) !important;
+}
+
+/* 进度条颜色 */
+.progress-bar {
+    background-color: #669900 !important;
+}
+
+/* 标签颜色 */
+.label-primary {
+    background-color: #669900 !important;
+}
+
+/* 徽章颜色 */
+.badge-primary {
+    background-color: #669900 !important;
+}
+
+/* 警告框颜色 */
+.alert-primary {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+    border-color: #5a8a00 !important;
+}
+
+.alert-primary hr {
+    border-top-color: #4a7a00 !important;
+}
+
+.alert-primary .alert-link {
+    color: #e6f0d9 !important;
+}
+
+/* 导航标签颜色 */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+}
+
+/* 分页颜色 */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    z-index: 2;
+    color: #ffffff !important;
+    background-color: #669900 !important;
+    border-color: #5a8a00 !important;
+}
+
+/* 下拉菜单颜色 */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+}
+
+/* 工具提示颜色 */
+.tooltip-primary .tooltip-inner {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+}
+
+.tooltip-primary.top .tooltip-arrow {
+    border-top-color: #669900 !important;
+}
+
+.tooltip-primary.bottom .tooltip-arrow {
+    border-bottom-color: #669900 !important;
+}
+
+.tooltip-primary.left .tooltip-arrow {
+    border-left-color: #669900 !important;
+}
+
+.tooltip-primary.right .tooltip-arrow {
+    border-right-color: #669900 !important;
+}
+
+/* 弹出框颜色 */
+.popover-primary .popover-title {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+}
+
+.popover-primary.bottom .popover-title {
+    border-bottom-color: #5a8a00 !important;
+}
+
+.popover-primary.bottom .arrow:after {
+    border-bottom-color: #669900 !important;
+}
+
+/* 模态框颜色 */
+.modal-primary .modal-header {
+    color: #ffffff !important;
+    background-color: #669900 !important;
+    border-bottom-color: #5a8a00 !important;
+}
+
+/* 表格颜色 */
+.table > thead > tr > td.active,
+.table > tbody > tr > td.active,
+.table > tfoot > tr > td.active,
+.table > thead > tr > th.active,
+.table > tbody > tr > th.active,
+.table > tfoot > tr > th.active,
+.table > thead > tr.active > td,
+.table > tbody > tr.active > td,
+.table > tfoot > tr.active > td,
+.table > thead > tr.active > th,
+.table > tbody > tr.active > th,
+.table > tfoot > tr.active > th {
+    background-color: rgba(102, 153, 0, 0.1) !important;
+}
+
+/* 输入组颜色 */
+.input-group-addon {
+    background-color: #f5f5f5 !important;
+    border-color: #e4e4e4 !important;
+}
+
+.input-group-addon:focus {
+    border-color: rgba(102, 153, 0, 0.5) !important;
+}
+
+/* 链接颜色 */
+a {
+    color: #669900 !important;
+}
+
+a:hover,
+a:focus {
+    color: #5a8a00 !important;
+}
+
+/* 选中文本颜色 */
+::selection {
+    background-color: rgba(102, 153, 0, 0.2) !important;
+}
+
+::-moz-selection {
+    background-color: rgba(102, 153, 0, 0.2) !important;
+}
