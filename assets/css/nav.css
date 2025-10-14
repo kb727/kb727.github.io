@@ -65,3 +65,34 @@
 .img-circle {
     padding: 7px 0;
 }
+
+/* 移动端菜单切换按钮样式自定义 */
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a {
+    background-color: white !important;
+    border-radius: 8px;
+    padding: 12px 16px !important;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a i {
+    font-size: 24px !important;
+    color: #333 !important;
+    line-height: 1 !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:hover,
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:active,
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:focus {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
