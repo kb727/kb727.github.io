@@ -96,3 +96,8 @@
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* 移动端菜单切换按钮垂直位置：与 logo 文字上端齐平 */
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle {
+    margin-top: 6px;
+}
