@@ -105,11 +105,6 @@
                 <!-- User Info, Notifications and Menu Bar -->
                 <!-- Left links for user info navbar -->
                 <ul class="user-info-menu left-links list-inline list-unstyled">
-                    <li class="hidden-sm hidden-xs">
-                        <a href="#" data-toggle="sidebar">
-                            <i class="fa-bars"></i>
-                        </a>
-                    </li>
                 </ul>
                 <ul class="user-info-menu right-links list-inline list-unstyled">
                 </ul>
@@ -480,10 +475,17 @@ text-decoration:none;
 </style>
                         <style>
                         /* Footer go-top visual adjustments */
+                        .main-footer .go-up {
+                            margin-bottom: 0 !important;
+                            display: flex;
+                            align-items: flex-end;
+                            height: 100%;
+                        }
                         .main-footer .go-up a {
                             background: transparent !important;
                             box-shadow: none !important;
                             border: none !important;
+                            padding: 0 !important;
                         }
                         .main-footer .go-up a i {
                             font-size: 48px; /* roughly 2x typical icon size */
