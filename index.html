@@ -14,15 +14,51 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
+    <!-- Resource hints for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//cdnjs.cloudflare.com">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="img/bg.jpg" as="image">
+
     <title>KB727.COM</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/animations.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <!-- Critical CSS - Inline for above-the-fold content -->
+    <style>
+        /* Critical styles for initial render */
+        body { margin: 0; font-family: 'Open Sans', sans-serif; }
+        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg.jpg') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .vert-text { text-align: center; color: white; }
+        .expandUp h2, .expandUp h3 { margin: 0; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .list-inline { list-style: none; padding: 0; }
+        .list-inline li { display: inline-block; margin: 0 10px; }
+        .services { padding: 60px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .lead { font-size: 1.1em; line-height: 1.6; }
+    </style>
 
-    <!-- Google Fonts -->
-    <link href="fonts/open-sans.css" rel="stylesheet">
-    <link href="font-awesome/css/all.min.css" rel="stylesheet">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="fonts/open-sans.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link href="css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="fonts/open-sans.css" rel="stylesheet">
+        <link href="font-awesome/css/all.min.css" rel="stylesheet">
+    </noscript>
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v20251015">
@@ -266,7 +302,7 @@
                     <picture>
                         <source srcset="img/Salon.png" type="image/png">
                         <source srcset="img/Salon.jpg" type="image/jpeg"> 
-                        <img src="img/Salon.png" alt="Activate Trade">
+                        <img src="img/Salon.png" alt="Activate Trade" loading="lazy">
                     </picture>
                     <div class="caption">
                         <h3>Activate Trade</h3>
@@ -282,7 +318,7 @@
                     <picture>
                         <source srcset="img/Chinese-Social-Media.png" type="image/png">
                         <source srcset="img/Chinese-Social-Media.jpg" type="image/jpeg">
-                        <img src="img/Chinese-Social-Media.png" alt="Social Media">
+                        <img src="img/Chinese-Social-Media.png" alt="Social Media" loading="lazy">
                     </picture>
                     <div class="caption">
                         <h3>Social Media</h3>
@@ -298,7 +334,7 @@
                     <picture>
                         <source srcset="img/Taling-Copywriting.png" type="image/png">
                         <source srcset="img/Taling-Copywriting.jpg" type="image/jpeg">
-                        <img src="img/Taling-Copywriting.png" alt="Taling Copywriting">
+                        <img src="img/Taling-Copywriting.png" alt="Taling Copywriting" loading="lazy">
                     </picture>
                    <div class="caption">
                         <h3>Content Creation</h3>
@@ -360,9 +396,37 @@ text-decoration:none;
     </footer>
     <!-- /Footer -->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.scrolldepth.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Load JavaScript asynchronously -->
+    <script>
+        // Load scripts asynchronously to prevent render blocking
+        function loadScript(src, callback) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.onload = callback;
+            document.head.appendChild(script);
+        }
+        
+        // Load critical scripts first, then non-critical
+        loadScript('js/jquery.js', function() {
+            loadScript('js/bootstrap.js', function() {
+                loadScript('js/main.js');
+            });
+        });
+        
+        // Load non-critical scripts after page load
+        window.addEventListener('load', function() {
+            loadScript('js/jquery.scrolldepth.min.js');
+        });
+        
+        // Font loading optimization
+        if ('fonts' in document) {
+            document.fonts.ready.then(function() {
+                document.documentElement.classList.add('fonts-loaded');
+            });
+        }
+        
+        // Prevent layout shift during font loading
+        document.documentElement.style.fontFamily = "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    </script>
 </body>
 </html>

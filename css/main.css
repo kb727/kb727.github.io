@@ -152,14 +152,6 @@ body {
   background: url(../img/favicon.jpg);
 }
 
-.pixelSeven {
-  visibility: hidden;
-  height: 250px;
-  width: 250px;
-  margin: 17px auto;
-  background: url(../img/Penpal-Wanted.png);
-}
-
 i.service-icon {
   border: 3px solid #ffffff;
   border-radius: 50%;

@@ -103,3 +103,45 @@
 .page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle {
     margin-top: 6px;
 }
+
+/* LOGO字间距调整 - 桌面端和移动端对齐优化 */
+.logo-expanded div:first-child {
+    letter-spacing: 0.8px !important;
+}
+
+.logo-expanded div:last-child {
+    letter-spacing: 0.2px !important;
+}
+
+.logo-collapsed span {
+    letter-spacing: 0.5px !important;
+}
+
+/* 响应式字间距调整 */
+@media (max-width: 768px) {
+    .logo-expanded div:first-child {
+        letter-spacing: 0.6px !important;
+    }
+    
+    .logo-expanded div:last-child {
+        letter-spacing: 0.15px !important;
+    }
+    
+    .logo-collapsed span {
+        letter-spacing: 0.4px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-expanded div:first-child {
+        letter-spacing: 0.4px !important;
+    }
+    
+    .logo-expanded div:last-child {
+        letter-spacing: 0.1px !important;
+    }
+    
+    .logo-collapsed span {
+        letter-spacing: 0.3px !important;
+    }
+}

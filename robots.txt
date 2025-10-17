@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kb727.com/sitemap.xml
+
+# Allow all crawlers to access all content
+Disallow:
+
+# Specific pages to prioritize
+Allow: /index.html
+Allow: /nav.html
+
+# Crawl delay (optional - 1 second between requests)
+Crawl-delay: 1
