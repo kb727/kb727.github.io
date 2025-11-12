@@ -1,66 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="KB727.COM">
+    <title>KB727.COM</title>
     <meta name="description" content="KB727.COM | Global real assets marketing and advisory: industrial parks, land, logistics, hotels, offices, retail.">
     <meta name="keywords" content="real estate, industrial park, logistics, warehouse, hotel, office, retail, China, cross-border, M&A, lease, sale">
-    <meta name="author" content="KB727.COM">
-    <meta name="apple-mobile-web-app-title" content="KB727">
-    <meta name="application-name" content="KB727">
+    <meta name="apple-mobile-web-app-title" content="KB727.COM">
+    <meta name="application-name" content="KB727.COM">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="mstile-144x144.png?v20250523">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
-    <!-- Resource hints for performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="//cdnjs.cloudflare.com">
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Preload critical images -->
-    <link rel="preload" href="img/bg.jpg" as="image">
-
-    <title>KB727.COM</title>
-
-    <!-- Critical CSS - Inline for above-the-fold content -->
-    <style>
-        /* Critical styles for initial render */
-        body { margin: 0; font-family: 'Open Sans', sans-serif; }
-        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg.jpg') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; }
-        .vert-text { text-align: center; color: white; }
-        .expandUp h2, .expandUp h3 { margin: 0; }
-        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
-        .list-inline { list-style: none; padding: 0; }
-        .list-inline li { display: inline-block; margin: 0 10px; }
-        .services { padding: 60px 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .lead { font-size: 1.1em; line-height: 1.6; }
-    </style>
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="fonts/open-sans.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- Non-critical CSS - Load asynchronously -->
-    <link href="css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for browsers that don't support preload -->
-    <noscript>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <link href="fonts/open-sans.css" rel="stylesheet">
-        <link href="font-awesome/css/all.min.css" rel="stylesheet">
-    </noscript>
-
-    <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v20251015">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v20251015">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v20251015">
@@ -71,317 +26,556 @@
     <link rel="manifest" href="/site.webmanifest?v20251015">
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v20251015" color="#5bbad5">
     <link rel="shortcut icon" href="/favicon.ico?v20251015">
+
+    <link rel="stylesheet" href="./assets/fonts/arimo-local.css">
+    <link rel="stylesheet" href="./assets/css/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/xenon-core.css">
+    <link rel="stylesheet" href="./assets/css/xenon-components.css">
+    <link rel="stylesheet" href="./assets/css/xenon-skins.css">
+    <link rel="stylesheet" href="./assets/css/nav.css">
+    <script src="./assets/js/jquery-1.11.1.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="./assets/js/html5shiv.min.js"></script>
+        <script src="./assets/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body>
+<body class="page-body">
+    <!-- skin-white -->
+    <div class="page-container">
+        <div class="sidebar-menu toggle-others fixed">
+            <div class="sidebar-menu-inner">
+                <header class="logo-env">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href="nav.html" class="logo-expanded">
+                            <div style="text-align: left;">
+                                <div style="font-size: 24px; font-weight: bold; color: white; letter-spacing: 0.8px;">KB727.COM</div>
+                                <div style="font-size: 14px; color: white; margin-top: 2px; letter-spacing: 0.2px;">存量资产交易信息集合</div>
+                            </div>
+                        </a>
+                        <a href="nav.html" class="logo-collapsed">
+                            <span style="font-size: 16px; font-weight: bold; color: white; letter-spacing: 0.5px;">KB727.COM</span>
+                        </a>
+                    </div>
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="KB727.COM" data-toggle="mobile-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+                </header>
+                <ul id="main-menu" class="main-menu">
 
-    <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" onClick="ga('send', '_trackEvent', 'Navbar', 'Toggle', 'Navbar toggle');"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
-            <li><a href="#about" onClick="ga('send', '_trackEvent', 'Navbar', 'About');">Brief Introduction</a></li>
-            <li><a href="#portfolio" onClick="ga('send', 'event', 'Navbar', 'Click', 'Portfolio');">Associated Links</a></li>
-            <li><a href="nav.html" onClick="ga('send', '_trackEvent', 'Navbar', 'Contact');">Chinese Localization</a></li>
-            <li><a href="mailto:business@kb727.com" onClick="ga('send', '_trackEvent', 'Navbar', 'Contact');">Send E-mail</a></li>
-            <hr>
-            <p class="small" style="text-align: left; margin: -5px 20px 0px 20px; color: #F3EEEE">KB727 is a deliverable-capable service that activates and trades existing asset portfolios.</p>                                                                                                                                                
-        </ul>
-    </div>
-    <!-- /Side Menu -->
+                    <p style="overflow: hidden;">
+                        <table style="border: 0; border-collapse: collapse; margin: 0 9px; width: calc(100% - 9px);">
+                            <tr>
+                                <td style="border: 0; padding: 0; color: white; text-align: justify;">
+                                    <span class="title">来自上市公司存量资产的一手信息，包括产业园、工业园区、物流仓储、酒店、办公楼和商业设施，联系business@kb727.com交流出售、租赁和收购机会。</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </p>
 
-    <!-- Full Page Image Header Area -->
-    <div id="top" class="header">
-        <div class="vert-text">
-            <div class="expandUp">
-            <h2><b>​​KB727 Real Assets</b></h2>
-            <h3>Precision Transactions, Mastered.</h3>
-            </div><br><br><br><br>
-            <ul class="list-inline spaced">
-                <li><a href="#about" title="Brief Introduction" onClick="ga('send', 'event', 'Navbar', 'Click', 'About');"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
-                <li><a href="#portfolio" title="Associated Links" onClick="ga('send', 'event', 'Navbar', 'Click', 'Portfolio');"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
-                <li><a href="mailto:business@kb727.com" title="Send E-mail" target="_blank" onClick="ga('send', '_trackEvent', 'Links', 'Email', 'Email top');"><i class="fa-regular fa-envelope fa-3x"></i></a></li>
-                <li><a href="nav.html" target="_blank"  title="Chinese Localization" onClick="ga('send', '_trackEvent', 'Links', 'Resume', 'Resume top');"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
-                  </a>
-                </li>
-             </ul>
-        </div>
-    </div>
-    <!-- /Full Page Image Header Area -->
-
-    <br>
-
-    <!-- Overview -->
-    <div id="about" class="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-md-offset-0 text-center">
-                   <div class="pixelMe toSlideRight"></div>
-                </div>
-        <div class="container">
-                <h3 style="text-align: left"><b>WHAT'S KB727</b></h3>
-                <p class="lead" style="text-align: left">
-            KB727 is a dynamic, results-driven international organization focused on large-scale property assets — industrial parks, industrial land, logistics and warehousing sites, hotels, office buildings, and retail facilities. We execute sale, lease, and acquisition mandates with speed, certainty, and compliance-first rigor. Our headquarters is located at 1088 Xiuyan Road, Pudong New Area, Shanghai, 201315, China.
-            </p>
-            <p class="lead" style="text-align: left">
-            We regularly host Stock Asset Activation salons in Shanghai, Hangzhou, Guangzhou, and Shenzhen. Our senior team members average 25+ years in the field and work closely with governments, industrial clients, investors, banks and financial institutions, tax and accounting advisors, valuation experts, and legal and judicial professionals.
-            </p>
-            <p class="lead" style="text-align: left">
-            For mandates and inquiries, email <a href="mailto:business@kb727.com">business@kb727.com</a>. Visit our Chinese version pages for current sale, lease, and acquisition opportunities.
-            </p>
-        </div>
-    </div>
-  </div>
-</div>
-    <!-- /Overview -->
-
-    <!-- Services -->
-    <div id="services" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>What We Do</b></h3>
-            <p class="lead" style="text-align: left">
-            End-to-end transaction execution for institutional assets, including mandate scoping, information memorandum and data room preparation, targeted buyer universe development, controlled marketing, bid management, SPA/lease negotiation, due diligence coordination, and closing support. We offer advisory across finance and tax, legal, banking/financing, and risk management for onshore China operations.
-            </p>
-            <ul class="lead" style="text-align: left">
-                <li>Sale, lease, and acquisition mandates in China’s core markets</li>
-                <li>Sale-leaseback, JV structuring, strata/bulk transactions</li>
-                <li>Cross-border investment planning for Chinese clients establishing overseas industrial parks or logistics facilities</li>
-                <li>Commercial matchmaking to connect specific buyer/customer segments domestically and internationally</li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Services -->
-
-    <!-- Coverage -->
-    <div id="coverage" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Geographic Coverage</b></h3>
-            <ul class="lead" style="text-align: left">
-                <li>China: Yangtze River Delta (Shanghai, Jiangsu, Zhejiang), Greater Bay Area (Guangzhou, Shenzhen), Chengdu–Chongqing, Beijing–Tianjin</li>
-                <li>Outbound: APAC, Europe, North America for Chinese corporates establishing industrial/logistics bases</li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Coverage -->
-
-    <!-- Deal Profile -->
-    <div id="profile" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Typical Deal Profile</b></h3>
-            <ul class="lead" style="text-align: left">
-                <li>Asset types: industrial parks, industrial land, logistics/warehousing, hotels, offices, retail</li>
-                <li>Ticket size: RMB 50 million to RMB 3+ billion</li>
-                <li>Structures: outright sale, lease, sale-leaseback, JV, strata or bulk</li>
-                <li>Holding period: short-term value-add to core long-hold</li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Deal Profile -->
-
-    <!-- 2025 Focus -->
-    <div id="focus" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>2025 Strategic Focus</b></h3>
-            <ol class="lead" style="text-align: left">
-                <li>China real estate transactions for international companies and foreign clients: comprehensive sale, lease, and acquisition services.</li>
-                <li>Advisory for foreign businesses in China: finance and tax, legal, and banking/financing guidance tailored to onshore operations.</li>
-                <li>Cross-border investment support for Chinese companies: structuring and establishing overseas industrial parks or logistics facilities.</li>
-                <li>Commercial matching: connecting products and services with targeted customer groups across borders.</li>
-            </ol>
-        </div>
-    </div>
-    <!-- /2025 Focus -->
-
-    <!-- Track Record -->
-    <div id="track" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Proven Track Record</b></h3>
-            <p class="lead" style="text-align: left">
-            Since 2021, KB727 has executed 80 mandates covering asset sales, leases, and acquisitions with an aggregate contract value exceeding RMB 10 billion, with no legacy issues or residual risk events.
-            </p>
-        </div>
-    </div>
-    <!-- /Track Record -->
-
-    <!-- Clients -->
-    <div id="clients" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Who We Serve</b></h3>
-            <ul class="lead" style="text-align: left">
-                <li>Industrial operators, manufacturers, and 3PLs</li>
-                <li>Developers, REITs, private and institutional investors</li>
-                <li>Government and park administrators</li>
-                <li>International corporates with China operations</li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Clients -->
-
-    <!-- Process -->
-    <div id="process" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Execution Process & Timeline</b></h3>
-            <ol class="lead" style="text-align: left">
-                <li>Mandate kickoff: scope, objectives, stakeholder map, timeline</li>
-                <li>Preparation: IM, data room, valuation and pricing strategy</li>
-                <li>Targeting: curated buyer/tenant universe and controlled outreach</li>
-                <li>Competition: bid rounds, site visits, Q&A, indicative offers</li>
-                <li>Negotiation: SPA/lease terms, financing, conditions precedent</li>
-                <li>Closing: DD coordination, approvals, signing and settlement</li>
-            </ol>
-            <p class="lead" style="text-align: left">Typical timeline: 8–16 weeks depending on asset complexity.</p>
-        </div>
-    </div>
-    <!-- /Process -->
-
-    <!-- Fees -->
-    <div id="fees" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Engagement & Fees</b></h3>
-            <p class="lead" style="text-align: left">Standard model: exclusive mandate with success-based fee; retainers may apply for complex or cross-border work. We maintain strict conflict management and confidentiality protocols.</p>
-        </div>
-    </div>
-    <!-- /Fees -->
-
-    <!-- Case Studies -->
-    <div id="cases" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Selected Case Studies</b></h3>
-            <ul class="lead" style="text-align: left">
-                <li>Industrial park (Yangtze River Delta): RMB 1.2B sale, 12-week process, 0 post-closing issues</li>
-                <li>Logistics portfolio (GBA): sale-leaseback, blended yield enhancement, closed in 10 weeks</li>
-                <li>Hotel repositioning (Tier-1 city): JV structure, capex plan, stabilized NOI uplift</li>
-            </ul>
-        </div>
-    </div>
-    <!-- /Case Studies -->
-
-    <!-- FAQ -->
-    <div id="faq" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>FAQ</b></h3>
-            <p class="lead" style="text-align: left"><b>What information should sellers prepare?</b> Title, planning/use rights, leases, utilities, environmental, taxes, financials, site drawings, photos.</p>
-            <p class="lead" style="text-align: left"><b>How do you protect confidentiality?</b> Tiered data room, NDAs, controlled buyer list, limited disclosures until shortlisted.</p>
-            <p class="lead" style="text-align: left"><b>Can you advise on financing?</b> Yes—banking and capital advisory through licensed partners in compliance with local regulations.</p>
-            <p class="lead" style="text-align: left"><b>Languages and response times?</b> English and Chinese; typical response within one business day.</p>
-        </div>
-    </div>
-    <!-- /FAQ -->
-
-    <!-- Compliance -->
-    <div id="compliance" class="services">
-        <div class="container">
-            <h3 style="text-align: left"><b>Compliance & Risk</b></h3>
-            <p class="lead" style="text-align: left">
-            We operate with strict KYC/AML, sanctions screening, and data room governance. Our processes prioritize regulatory compliance, confidentiality, and risk mitigation across tax, legal, and financing workflows.
-            </p>
-        </div>
-    </div>
-    <!-- /Compliance -->
-
-    <!-- /Intro -->
-<div id="portfolio">
-    <div class="call-to-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2><b>Associated Links</b></h2>
-                </div>
+                    <li>
+                        <a href="#重点推荐" class="smooth">
+                            <i class="linecons-star"></i>
+                            <span class="title">重点推荐</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#收并购需求" class="smooth">
+                            <i class="linecons-wallet"></i>
+                            <span class="title">收并购需求</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#各地存量资产" class="smooth">
+                            <i class="linecons-location"></i>
+                            <span class="title">各地存量资产</span>
+                        </a>
+                    <li>
+                        <a href="#跨境交易与服务" class="smooth">
+                            <i class="linecons-globe"></i>
+                            <span class="title">跨境交易与服务</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="default.html">
+                            <i class="linecons-doc"></i>
+                            <span class="tooltip-blue">English Localization</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+        <div class="main-content">
+            <nav class="navbar user-info-navbar" role="navigation">
+                <!-- User Info, Notifications and Menu Bar -->
+                <!-- Left links for user info navbar -->
+                <ul class="user-info-menu left-links list-inline list-unstyled">
+                </ul>
+                <ul class="user-info-menu right-links list-inline list-unstyled">
+                </ul>
 
-    <!-- Portfolio -->
-    <div id="links" class="callout">
+            </nav>
 
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a href="attachments/Global/Asset-Trading-Salon-en.jpg" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Salon.png" type="image/png">
-                        <source srcset="img/Salon.jpg" type="image/jpeg"> 
-                        <img src="img/Salon.png" alt="Activate Trade" loading="lazy">
-                    </picture>
-                    <div class="caption">
-                        <h3>Activate Trade</h3>
-                        <p style="text-align: left">Connect serious investors to exclusive, high-potential second-hand asset opportunities.​</p>
-                    </a>
+            <!-- 重点推荐 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="重点推荐"></i>重点推荐</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/funder.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="资方">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>资方</strong>
+                                </span>
+                                <p class="overflowClip_2">cue到你了老板</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a href="attachments/Global/Social-Media.pdf" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Social-Media.png" type="image/png">
-                        <source srcset="img/Social-Media.jpg" type="image/jpeg">
-                        <img src="img/Social-Media.png" alt="Social Media" loading="lazy">
-                    </picture>
-                    <div class="caption">
-                        <h3>Social Media</h3>
-                        <p style="text-align: left">Providing professional Chinese social media management and compliance services.</p>
-                    </a>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/Industry.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="产业IP">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>产业IP</strong>
+                                </span>
+                                <p class="overflowClip_2">适用于产业勾地、招商引资</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <a href="attachments/Global/Copywriting.pdf" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Copywriting.png" type="image/png">
-                        <source srcset="img/Copywriting.jpg" type="image/jpeg">
-                        <img src="img/Copywriting.png" alt="Taling Copywriting" loading="lazy">
-                    </picture>
-                   <div class="caption">
-                        <h3>Content Creation</h3>
-                        <p style="text-align: left">Delivering professional, exceptional quality copywriting in both English and Chinese.</p> 
-                    </a>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/taxation.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="税务稽查应对">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>税务稽查应对</strong>
+                                </span>
+                                <p class="overflowClip_2">临阵磨枪，不快也光！</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /Portfolio -->
-
-    <!-- Findoutmore -->
-    <div id="contact" class="call-to-action">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/Training-Consulting.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="经认证的私教课程清单">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>经认证的私教课程清单</strong>
+                                </span>
+                                <p class="overflowClip_2">没有单价，需要的联系一下</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
-        </div>
-    </div>
-    <!-- /Findoutmore -->
-
-    <br><br>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
+            <br />
+            <!-- END 重点推荐 -->
+            
+            <!-- 收并购需求 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="收并购需求"></i>收并购需求</h4>
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
- 
-            <ul class="list-inline spaced">
-                <li><a href="#about" title="Brief Introduction" onClick="ga('send', 'event', 'Navbar', 'Click', 'About');"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
-                <li><a href="#portfolio" title="Associated Links" onClick="ga('send', 'event', 'Navbar', 'Click', 'Portfolio');"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
-                <li><a href="nav.html" target="_blank"  title="Chinese Localization" onClick="ga('send', '_trackEvent', 'Links', 'Resume', 'Resume top');"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
-            </ul>
-                    <ul class="list-unstyled size-m spaced">
-                        <li><i class="fa-solid fa-location-dot"></i> Shanghai, China</li>
-                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:business@kb727.com" target="_blank" onClick="ga('send', '_trackEvent', 'Links', 'Email', 'Email bottom');">business@kb727.com</a>
-                    </ul>
-                <div class="top-scroll">
-                <a href="#top" title="Back to top"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/wy.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="买壳">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>买壳</strong>
+                                </span>
+                                <p class="overflowClip_2">收购20-30亿元市值标的</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/office.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购整幢办公楼</strong>
+                                </span>
+                                <p class="overflowClip_2">另类投资、化债</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/hotel.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购酒店资产</strong>
+                                </span>
+                                <p class="overflowClip_2">附踏勘信息要素</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/warehousing.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购物流仓储一手及二手地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购物流仓储一手及二手地</strong>
+                                </span>
+                                <p class="overflowClip_2">江浙沪京，穗佛莞深</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/lsh-jcs.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购商业门面">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购商业门面</strong>
+                                </span>
+                                <p class="overflowClip_2">用于电商中转集包</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/shanghai.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购上海二手工业厂房">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购上海二手工业厂房</strong>
+                                </span>
+                                <p class="overflowClip_2">浦东、奉贤、闵行</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/dongguan.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购东莞一手及二手地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购东莞一手及二手地</strong>
+                                </span>
+                                <p class="overflowClip_2">长安、虎门、沙田、厚街</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/wrs-xxp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="找帐篷营地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>找帐篷营地</strong>
+                                </span>
+                                <p class="overflowClip_2">可分享开发案例</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/gd.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购上海存量资产">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购上海存量资产</strong>
+                                </span>
+                                <p class="overflowClip_2">适合做不良资产交易</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br />
+            <!-- END 收并购需求 -->
+
+            <!-- 各地存量资产 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="各地存量资产"></i>各地存量资产</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/wzp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海青浦产业园转让">
+                        <div class="xe-comment-entry">
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海青浦产业园转让</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地97亩+2.5万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/yym-gd.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥小独栋写字楼出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥小独栋写字楼出售</strong>
+                                </span>
+                                <p class="overflowClip_2">单价3万内，送车位，返租</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/xxp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海祟明森林度假村转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海祟明森林度假村转让</strong>
+                                </span>
+                                <p class="overflowClip_2">占地30亩，14栋楼，6千㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/pzqa.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥五星级酒店转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥五星级酒店转让</strong>
+                                </span>
+                                <p class="overflowClip_2">两个酒店年收入各近亿元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/pzqb.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥5A写字楼出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥5A写字楼出售</strong>
+                                </span>
+                                <p class="overflowClip_2">适合总部选址，近虹桥火车站</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/tzf.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="嘉兴平湖5万㎡高标仓转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>嘉兴平湖5万㎡高标仓转让</strong>
+                                </span>
+                                <p class="overflowClip_2">当前满租，年租金约2600万元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/wmyfhm.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="浙江桐庐民居出租">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>浙江桐庐民居出租</strong>
+                                </span>
+                                <p class="overflowClip_2">独栋二层，邻近千岛湖景区</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/hrf.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都武侯区底层商铺出租">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>成都武侯区底层商铺出租</strong>
+                                </span>
+                                <p class="overflowClip_2">之前是外资银行长期租用的</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/dyja.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都产业园转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>成都产业园转让</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地522.87亩+131500㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/dyjb.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="青岛产业园转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>青岛产业园转让</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地200.9亩+4.2万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/lys.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞沙田一手地360亩出让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞沙田一手地360亩出让</strong>
+                                </span>
+                                <p class="overflowClip_2">物流仓储用地，倒是不太多了</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/zdh.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="武汉产业园转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>武汉产业园转让</strong>
+                                </span>
+                                <p class="overflowClip_2">物流仓储用地156亩+9万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/kangqiao.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海浦东康桥半岛租售">
+                        <div class="xe-comment-entry">
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海浦东康桥半岛租售</strong>
+                                </span>
+                                <p class="overflowClip_2">商用独栋6998㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/huangjiang.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞市黄江镇厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞市黄江镇厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地193亩+17621㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/huizhou.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="惠州仲恺高新区厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>惠州仲恺高新区厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地191亩+59244.75㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/qiangqiang.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞清溪二手厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞清溪二手厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地80亩+56424.52㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/zhongdun.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞大岭山二手厂房出售">
+                        <div class="xe-comment-entry">
+                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞大岭山二手厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">相邻3个地块300多亩工业用地</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <!--END 各地存量资产 -->
+
+            <!-- 跨境交易与服务 -->
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="跨境交易与服务"></i>跨境交易与服务</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/fund.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="马来西亚主权基金合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>马来西亚主权基金合作</strong>
+                                </span>
+                                <p class="overflowClip_2">主营优质资产REITs、能源、物流仓储</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/chain.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="RWA 稳定币合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>RWA 稳定币合作</strong>
+                                </span>
+                                <p class="overflowClip_2">同时涉及区块链溯源及数据保障、代币金融、伊斯兰金融</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/Lion-Parcel-Malaysia.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东南亚航空物流与快递、跨境电商机会">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东南亚航空物流与快递、跨境电商机会</strong>
+                                </span>
+                                <p class="overflowClip_2">LION PARCEL EXPRESS & LOGISTIC SDN BHD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/custom-processing-of-fasteners.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="紧固件定制加工">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>紧固件研发+定制+服务</strong>
+                                </span>
+                                <p class="overflowClip_2">适合跨境电商备货的通用型、高强度、耐蚀螺栓和螺母</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br />
+            <!--END 跨境交易与服务 -->
+
+            <!-- Main Footer -->
+            <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
+            <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
+            <!-- Or class "fixed" to  always fix the footer to the end of page -->
+            <footer class="main-footer sticky footer-type-1">
+                <div class="footer-inner">
+                    <!-- Add your copyright text here -->
+                    <div class="footer-text">
 <style>
 a:link,a:visited,a:hover,a:active
 {
@@ -389,44 +583,123 @@ color:#333333;
 text-decoration:none;
 }
 </style>
-            <p>Copyright &copy; 2025, KB727.COM all rights reserved. Please refer to <a href="attachments/Global/terms.pdf">Legal Terms</a>. Unauthorized resale for commercial purposes will face legal action.</p><br><br>
+                        <style>
+                        /* Footer go-top visual adjustments */
+                        .main-footer .go-up {
+                            margin-bottom: 0 !important;
+                            display: flex;
+                            align-items: flex-end;
+                            height: 100%;
+                        }
+                        .main-footer .go-up a {
+                            background: transparent !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            padding: 0 !important;
+                        }
+                        .main-footer .go-up a i {
+                            font-size: 48px; /* roughly 2x typical icon size */
+                            line-height: 1;
+                            color: #222;
+                            /* Simulate thicker glyph for better prominence */
+                            text-shadow: 0 0 1px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.2);
+                        }
+                        .main-footer .list-inline.spaced i {
+                            font-size: 2em !important; /* 图标大小 */
+                            line-height: 1;
+                        }
+                        </style>
+                        <ul class="list-inline spaced">
+                            <li><a href="https://www.amap.com/search?query=上海市浦东新区秀沿路1088号" title="导航去上海市浦东新区秀沿路1088号" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
+                            <li><a href="default.html" target="_blank" title="English Localization"><i class="fa-solid fa-globe"></i></a></li>
+                            <li><a href="mailto:business@kb727.com" title="发送电子邮件给我们" target="_blank"><i class="fa-solid fa-paper-plane"></i></a></li>
+                        </ul>
+                        Copyright &copy; 2025，KB727.COM 版权保护。<br />参阅<a href="attachments/Global/terms.pdf">法律条款</a>，未经授权用于商业转售将面临法律诉讼。
+                    </div>
+                    <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+                    <div class="go-up">
+                        <a href="KB727.COM" rel="go-top">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </footer>
-    <!-- /Footer -->
+    </div>
+    <!-- 锚点平滑移动 -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+         //img lazy loaded
+         const observer = lozad();
+         observer.observe();
 
-    <!-- Load JavaScript asynchronously -->
-    <script>
-        // Load scripts asynchronously to prevent render blocking
-        function loadScript(src, callback) {
-            var script = document.createElement('script');
-            script.src = src;
-            script.onload = callback;
-            document.head.appendChild(script);
-        }
-        
-        // Load critical scripts first, then non-critical
-        loadScript('js/jquery.js', function() {
-            loadScript('js/bootstrap.js', function() {
-                loadScript('js/main.js');
+
+        $(document).on('click', '.has-sub', function(){
+            var _this = $(this)
+            if(!$(this).hasClass('expanded')) {
+               setTimeout(function(){
+                    _this.find('ul').attr("style","")
+               }, 300);
+              
+            } else {
+                $('.has-sub ul').each(function(id,ele){
+                    var _that = $(this)
+                    if(_this.find('ul')[0] != ele) {
+                        setTimeout(function(){
+                            _that.attr("style","")
+                        }, 300);
+                    }
+                })
+            }
+        })
+        $('.user-info-menu .hidden-sm').click(function(){
+            if($('.sidebar-menu').hasClass('collapsed')) {
+                $('.has-sub.expanded > ul').attr("style","")
+            } else {
+                $('.has-sub.expanded > ul').show()
+            }
+        })
+        $("#main-menu li ul li").click(function() {
+            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+            $(this).addClass('active'); // 添加当前元素的样式
+        });
+        $("a.smooth").click(function(ev) {
+            ev.preventDefault();
+
+            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+            ps_destroy();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top - 30
+            }, {
+                duration: 500,
+                easing: "swing"
             });
         });
-        
-        // Load non-critical scripts after page load
-        window.addEventListener('load', function() {
-            loadScript('js/jquery.scrolldepth.min.js');
+        return false;
+    });
+
+    var href = "";
+    var pos = 0;
+    $("a.smooth").click(function(e) {
+        $("#main-menu li").each(function() {
+            $(this).removeClass("active");
         });
-        
-        // Font loading optimization
-        if ('fonts' in document) {
-            document.fonts.ready.then(function() {
-                document.documentElement.classList.add('fonts-loaded');
-            });
-        }
-        
-        // Prevent layout shift during font loading
-        document.documentElement.style.fontFamily = "'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+        $(this).parent("li").addClass("active");
+        e.preventDefault();
+        href = $(this).attr("href");
+        pos = $(href).position().top - 30;
+    });
     </script>
+    <!-- Bottom Scripts -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/TweenMax.min.js"></script>
+    <script src="./assets/js/resizeable.js"></script>
+    <script src="./assets/js/joinable.js"></script>
+    <script src="./assets/js/xenon-api.js"></script>
+    <script src="./assets/js/xenon-toggles.js"></script>
+    <!-- JavaScripts initializations and stuff -->
+    <script src="./assets/js/xenon-custom.js"></script>
+    <script src="./assets/js/lozad.js"></script>
 </body>
+
 </html>
