@@ -1,1 +1,1 @@
-### KB727 | Global real assets marketing and advisory: industrial parks, land, logistics, hotels, offices, retail.
+### KB727 - Shaping the Future of Advanced Manufacturing.
