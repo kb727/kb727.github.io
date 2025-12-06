@@ -27,6 +27,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v20251015" color="#5bbad5">
     <link rel="shortcut icon" href="/favicon.ico?v20251015">
 
+    <!-- 关键 CSS - 同步加载 -->
     <link rel="stylesheet" href="./assets/fonts/arimo-local.css">
     <link rel="stylesheet" href="./assets/css/fonts/linecons/css/linecons.css">
     <link rel="stylesheet" href="./font-awesome/css/all.min.css">
@@ -35,6 +36,15 @@
     <link rel="stylesheet" href="./assets/css/xenon-components.css">
     <link rel="stylesheet" href="./assets/css/xenon-skins.css">
     <link rel="stylesheet" href="./assets/css/nav.css">
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="./assets/js/jquery-1.11.1.min.js" as="script">
+    <link rel="preload" href="./assets/js/bootstrap.min.js" as="script">
+    
+    <!-- Resource hints for performance -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    
     <script src="./assets/js/jquery-1.11.1.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -51,18 +61,18 @@
                 <header class="logo-env">
                     <!-- logo -->
                     <div class="logo">
-                        <a href="nav.html" class="logo-expanded">
+                        <a href="#" class="logo-expanded">
                             <div style="text-align: left;">
                                 <div style="font-size: 24px; font-weight: bold; color: white; letter-spacing: 0.8px;">KB727.COM</div>
                                 <div style="font-size: 14px; color: white; margin-top: 2px; letter-spacing: 0.2px;">上海彩虹桥产业会客厅</div>
                             </div>
                         </a>
-                        <a href="nav.html" class="logo-collapsed">
+                        <a href="#" class="logo-collapsed">
                             <span style="font-size: 16px; font-weight: bold; color: white; letter-spacing: 0.5px;">KB727.COM</span>
                         </a>
                     </div>
                     <div class="mobile-menu-toggle visible-xs">
-                        <a href="KB727.COM" data-toggle="mobile-menu">
+                        <a href="#" data-toggle="mobile-menu" aria-label="切换菜单">
                             <i class="fa-solid fa-bars"></i>
                         </a>
                     </div>
@@ -96,10 +106,17 @@
                             <i class="linecons-location"></i>
                             <span class="title">各地存量资产</span>
                         </a>
+                    </li>
                     <li>
                         <a href="#跨境交易与服务" class="smooth">
                             <i class="linecons-globe"></i>
                             <span class="title">跨境交易与服务</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#社交媒体传播投屏" class="smooth">
+                            <i class="linecons-desktop"></i>
+                            <span class="title">社交媒体传播投屏</span>
                         </a>
                     </li>
                     <li>
@@ -113,20 +130,13 @@
         </div>
         <div class="main-content">
             <nav class="navbar user-info-navbar" role="navigation">
-                <!-- User Info, Notifications and Menu Bar -->
-                <!-- Left links for user info navbar -->
-                <ul class="user-info-menu left-links list-inline list-unstyled">
-                </ul>
-                <ul class="user-info-menu right-links list-inline list-unstyled">
-                </ul>
-
             </nav>
 
             <!-- 重点推荐 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="重点推荐"></i>重点推荐</h4>
+            <h4 class="text-gray"><i class="linecons-tag" id="重点推荐"></i>重点推荐</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/funder.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="陆续更新的资方信息">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Spotlight/funder.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="陆续更新的资方信息">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -138,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/Industry.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="陆续更新的产业IP信息">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Spotlight/Industry.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="陆续更新的产业IP信息">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -150,7 +160,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/taxation.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="提供税务稽查协助">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Spotlight/taxation.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="提供税务稽查协助">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -162,7 +172,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Spotlight/Training-Consulting.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="经认证的私教课程清单">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Spotlight/Training-Consulting.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="经认证的私教课程清单">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -180,10 +190,10 @@
             <!-- END 重点推荐 -->
             
             <!-- 收并购需求 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="收并购需求"></i>收并购需求</h4>
+            <h4 class="text-gray"><i class="linecons-tag" id="收并购需求"></i>收并购需求</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/wy.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="买壳">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/wy.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="买壳">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -195,7 +205,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/office.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/office.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -207,7 +217,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/hotel.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/hotel.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -219,7 +229,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/warehousing.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购物流仓储一手及二手地">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/warehousing.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购物流仓储一手及二手地">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -231,7 +241,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/lsh-jcs.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购商业门面">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/lsh-jcs.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购商业门面">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -243,7 +253,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/shanghai.png', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购上海二手工业厂房">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/shanghai.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购上海二手工业厂房">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -255,7 +265,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/dongguan.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购东莞一手及二手地">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/dongguan.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购东莞一手及二手地">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -267,7 +277,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/wrs-xxp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="找帐篷营地">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/wrs-xxp.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="找帐篷营地">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -279,7 +289,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Acquisition/gd.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购上海存量资产">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/gd.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购上海存量资产">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -297,12 +307,11 @@
             <!-- END 收并购需求 -->
 
             <!-- 各地存量资产 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="各地存量资产"></i>各地存量资产</h4>
+            <h4 class="text-gray"><i class="linecons-tag" id="各地存量资产"></i>各地存量资产</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/wzp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海青浦产业园转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wzp.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海青浦产业园转让">
                         <div class="xe-comment-entry">
-                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>上海青浦产业园转让</strong>
@@ -313,7 +322,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/yym-gd.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥小独栋写字楼出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/yym-gd.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥小独栋写字楼出售">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -325,7 +334,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/xxp.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海祟明森林度假村转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/xxp.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海祟明森林度假村转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -337,7 +346,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/pzqa.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥五星级酒店转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/pzqa.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥五星级酒店转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -349,7 +358,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/pzqb.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥5A写字楼出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/pzqb.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥5A写字楼出售">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -361,7 +370,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/tzf.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="嘉兴平湖5万㎡高标仓转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/tzf.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="嘉兴平湖5万㎡高标仓转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -373,7 +382,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/wmyfhm.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="浙江桐庐民居出租">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wmyfhm.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="浙江桐庐民居出租">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -385,7 +394,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/hrf.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都武侯区底层商铺出租">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/hrf.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都武侯区底层商铺出租">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -397,7 +406,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/dyja.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都产业园转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/dyja.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都产业园转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -409,7 +418,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/dyjb.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="青岛产业园转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/dyjb.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="青岛产业园转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -421,7 +430,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/lys.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞沙田一手地360亩出让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/lys.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞沙田一手地360亩出让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -433,7 +442,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/zdh.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="武汉产业园转让">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/zdh.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="武汉产业园转让">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -445,9 +454,8 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/kangqiao.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海浦东康桥半岛租售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/kangqiao.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海浦东康桥半岛租售">
                         <div class="xe-comment-entry">
-                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>上海浦东康桥半岛租售</strong>
@@ -458,7 +466,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/huangjiang.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞市黄江镇厂房出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/huangjiang.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞市黄江镇厂房出售">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -470,7 +478,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/huizhou.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="惠州仲恺高新区厂房出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/huizhou.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="惠州仲恺高新区厂房出售">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -482,7 +490,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/qiangqiang.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞清溪二手厂房出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/qiangqiang.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞清溪二手厂房出售">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -494,9 +502,8 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/zhongdun.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞大岭山二手厂房出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/zhongdun.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞大岭山二手厂房出售">
                         <div class="xe-comment-entry">
-                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>东莞大岭山二手厂房出售</strong>
@@ -507,9 +514,8 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/gjt.jpg', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞望牛墩200亩物流用地出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/gjt.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞望牛墩200亩物流用地出售">
                         <div class="xe-comment-entry">
-                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>东莞望牛墩200亩物流用地出售</strong>
@@ -520,9 +526,8 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/National/zhongtang.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞中堂镇二手地出售">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/zhongtang.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞中堂镇二手地出售">
                         <div class="xe-comment-entry">
-                            <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>东莞中堂镇二手地出售</strong>
@@ -538,10 +543,10 @@
             <!--END 各地存量资产 -->
 
             <!-- 跨境交易与服务 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="跨境交易与服务"></i>跨境交易与服务</h4>
+            <h4 class="text-gray"><i class="linecons-tag" id="跨境交易与服务"></i>跨境交易与服务</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/fund.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="马来西亚主权基金合作">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/fund.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="马来西亚主权基金合作">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -553,7 +558,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/chain.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="RWA 稳定币合作">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/chain.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="RWA 稳定币合作">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -565,7 +570,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/Lion-Parcel-Malaysia.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东南亚航空物流与快递、跨境电商机会">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Lion-Parcel-Malaysia.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东南亚航空物流与快递、跨境电商机会">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -577,7 +582,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/custom-processing-of-fasteners.pdf', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="紧固件定制加工">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/custom-processing-of-fasteners.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="紧固件定制加工">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -589,7 +594,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('attachments/Global/Amanda.Yan.jpg', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="美国酒店交易列表">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Amanda.Yan.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="美国酒店交易列表">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -605,57 +610,52 @@
             <br />
             <!--END 跨境交易与服务 -->
 
+            <!-- 社交媒体传播投屏 -->
+            <h4 class="text-gray"><i class="linecons-tag" id="社交媒体传播投屏"></i>社交媒体传播投屏</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Media/taxation.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="税务咨询">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>税务咨询</strong>
+                                </span>
+                                <p class="overflowClip_2">1991年版电视剧《雪山飞狐》片尾曲《追梦人》琵琶吉他合奏</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Media/meeting.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="存量资产碰头会">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>存量资产碰头会</strong>
+                                </span>
+                                <p class="overflowClip_2">《Lemon Tree》驻唱版 ﻿#talentmakersinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br />
+            <!--END 社交媒体传播投屏 -->
+
             <!-- Main Footer -->
-            <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
-            <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
-            <!-- Or class "fixed" to  always fix the footer to the end of page -->
             <footer class="main-footer sticky footer-type-1">
                 <div class="footer-inner">
-                    <!-- Add your copyright text here -->
                     <div class="footer-text">
-<style>
-a:link,a:visited,a:hover,a:active
-{
-color:#333333;
-text-decoration:none;
-}
-</style>
-                        <style>
-                        /* Footer go-top visual adjustments */
-                        .main-footer .go-up {
-                            margin-bottom: 0 !important;
-                            display: flex;
-                            align-items: flex-end;
-                            height: 100%;
-                        }
-                        .main-footer .go-up a {
-                            background: transparent !important;
-                            box-shadow: none !important;
-                            border: none !important;
-                            padding: 0 !important;
-                        }
-                        .main-footer .go-up a i {
-                            font-size: 48px; /* roughly 2x typical icon size */
-                            line-height: 1;
-                            color: #222;
-                            /* Simulate thicker glyph for better prominence */
-                            text-shadow: 0 0 1px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.2);
-                        }
-                        .main-footer .list-inline.spaced i {
-                            font-size: 2em !important; /* 图标大小 */
-                            line-height: 1;
-                        }
-                        </style>
                         <ul class="list-inline spaced">
                             <li><a href="https://www.amap.com/search?query=上海市浦东新区秀沿路1088号" title="导航去上海市浦东新区秀沿路1088号" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
                             <li><a href="default.html" target="_blank" title="English Localization"><i class="fa-solid fa-globe"></i></a></li>
                             <li><a href="mailto:business@kb727.com" title="发送电子邮件给我们" target="_blank"><i class="fa-solid fa-paper-plane"></i></a></li>
-                        </ul>
+                        </ul><br />
                         Copyright &copy; 2025，KB727.COM 版权保护。<br />参阅<a href="attachments/Global/terms.pdf">法律条款</a>，未经授权用于商业转售将面临法律诉讼。
                     </div>
-                    <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
                     <div class="go-up">
-                        <a href="KB727.COM" rel="go-top">
+                        <a href="#" rel="go-top" aria-label="返回顶部">
                             <i class="fa-solid fa-angle-up"></i>
                         </a>
                     </div>
@@ -663,71 +663,138 @@ text-decoration:none;
             </footer>
         </div>
     </div>
-    <!-- 锚点平滑移动 -->
+    <!-- 页面初始化脚本 -->
     <script type="text/javascript">
     $(document).ready(function() {
-         //img lazy loaded
-         const observer = lozad();
-         observer.observe();
-
-
-        $(document).on('click', '.has-sub', function(){
-            var _this = $(this)
-            if(!$(this).hasClass('expanded')) {
-               setTimeout(function(){
-                    _this.find('ul').attr("style","")
-               }, 300);
-              
-            } else {
-                $('.has-sub ul').each(function(id,ele){
-                    var _that = $(this)
-                    if(_this.find('ul')[0] != ele) {
-                        setTimeout(function(){
-                            _that.attr("style","")
-                        }, 300);
+        // 图片懒加载初始化
+        // 注意：如果图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
+        // 例如：<img class="lozad" data-src="image.jpg" alt="description">
+        if (typeof lozad !== 'undefined') {
+            try {
+                const observer = lozad('.lozad', {
+                    rootMargin: '10px 0px',
+                    threshold: 0.1,
+                    loaded: function(el) {
+                        el.classList.add('loaded');
                     }
-                })
+                });
+                observer.observe();
+            } catch (e) {
+                console.warn('Lozad lazy loading initialization failed:', e);
             }
-        })
-        $('.user-info-menu .hidden-sm').click(function(){
-            if($('.sidebar-menu').hasClass('collapsed')) {
-                $('.has-sub.expanded > ul').attr("style","")
-            } else {
-                $('.has-sub.expanded > ul').show()
+        }
+        
+        // 对于没有使用 lozad 的图片，使用原生懒加载
+        if ('loading' in HTMLImageElement.prototype) {
+            var images = document.querySelectorAll('img:not([loading])');
+            images.forEach(function(img) {
+                // 只对不在视口内的图片启用懒加载
+                if (img.getBoundingClientRect().top > window.innerHeight) {
+                    img.loading = 'lazy';
+                }
+            });
+        }
+        
+        // 优化：使用事件委托处理所有卡片点击事件，替代内联 onclick
+        // 支持键盘导航（Enter 和 Space 键）
+        $(document).on('click keydown', '.xe-widget[data-href]', function(e) {
+            // 如果是键盘事件，只处理 Enter 和 Space 键
+            if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) {
+                return;
             }
-        })
-        $("#main-menu li ul li").click(function() {
-            $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
-            $(this).addClass('active'); // 添加当前元素的样式
+            if (e.type === 'keydown') {
+                e.preventDefault();
+            }
+            
+            var href = $(this).attr('data-href');
+            if (href) {
+                window.open(href, '_blank', 'noopener,noreferrer');
+            }
         });
-        $("a.smooth").click(function(ev) {
-            ev.preventDefault();
-
-            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-            ps_destroy();
-            $("html, body").animate({
-                scrollTop: $($(this).attr("href")).offset().top - 30
-            }, {
-                duration: 500,
-                easing: "swing"
+        
+        // 为可点击的卡片添加可访问性属性
+        $('.xe-widget[data-href]').each(function() {
+            var $this = $(this);
+            var title = $this.attr('data-original-title') || $this.attr('title') || '打开链接';
+            $this.attr({
+                'role': 'button',
+                'tabindex': '0',
+                'aria-label': title
             });
         });
-        return false;
-    });
 
-    var href = "";
-    var pos = 0;
-    $("a.smooth").click(function(e) {
-        $("#main-menu li").each(function() {
-            $(this).removeClass("active");
+        // 子菜单展开/收起处理
+        $(document).on('click', '.has-sub', function(){
+            var $this = $(this);
+            if(!$this.hasClass('expanded')) {
+                setTimeout(function(){
+                    $this.find('ul').attr("style","");
+                }, 300);
+            } else {
+                $('.has-sub ul').each(function(id, ele){
+                    var $that = $(this);
+                    if($this.find('ul')[0] !== ele) {
+                        setTimeout(function(){
+                            $that.attr("style","");
+                        }, 300);
+                    }
+                });
+            }
         });
-        $(this).parent("li").addClass("active");
-        e.preventDefault();
-        href = $(this).attr("href");
-        pos = $(href).position().top - 30;
+
+        // 用户信息菜单点击处理
+        $('.user-info-menu .hidden-sm').click(function(){
+            if($('.sidebar-menu').hasClass('collapsed')) {
+                $('.has-sub.expanded > ul').attr("style","");
+            } else {
+                $('.has-sub.expanded > ul').show();
+            }
+        });
+
+        // 主菜单子项激活状态处理
+        $("#main-menu li ul li").click(function() {
+            $(this).siblings('li').removeClass('active');
+            $(this).addClass('active');
+        });
+        
+        // 平滑滚动和菜单激活 - 合并的事件处理
+        $("a.smooth").click(function(e) {
+            e.preventDefault();
+            var target = $(this).attr("href");
+            
+            if (!target || target === '#') {
+                return false;
+            }
+            
+            // 更新菜单激活状态
+            $("#main-menu li").each(function() {
+                $(this).removeClass("active");
+            });
+            $(this).parent("li").addClass("active");
+            
+            // 移动端菜单处理
+            if (typeof public_vars !== 'undefined' && public_vars.$mainMenu) {
+                public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+            }
+            if (typeof ps_destroy === 'function') {
+                ps_destroy();
+            }
+            
+            // 平滑滚动到目标位置
+            var targetElement = $(target);
+            if (targetElement.length) {
+                $("html, body").animate({
+                    scrollTop: targetElement.offset().top - 30
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+            }
+        });
     });
     </script>
     <!-- Bottom Scripts -->
+    <!-- 核心脚本 - 同步加载 -->
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/TweenMax.min.js"></script>
     <script src="./assets/js/resizeable.js"></script>
@@ -736,7 +803,8 @@ text-decoration:none;
     <script src="./assets/js/xenon-toggles.js"></script>
     <!-- JavaScripts initializations and stuff -->
     <script src="./assets/js/xenon-custom.js"></script>
-    <script src="./assets/js/lozad.js"></script>
+    <!-- 懒加载库 - 在页面内容加载后加载 -->
+    <script src="./assets/js/lozad.js" defer></script>
 </body>
 
 </html>

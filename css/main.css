@@ -6,6 +6,22 @@ body {
   width: 100%;
 }
 
+/* Global link styles - remove underline and color changes for all links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Allow specific color overrides for certain contexts */
+.vert-text .list-inline a {
+  color: white !important;
+}
+
 .vert-text {
   display: table-cell;
   vertical-align: middle;
@@ -27,10 +43,6 @@ body {
 
 .list-inline > li {
   vertical-align: middle;
-}
-
-.vert-text .list-inline a {
-  color: white;
 }
 
 .resume {
@@ -212,7 +224,7 @@ i.service-icon {
 
 .caption a {
   color: #DCE9F5;
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 
 /* Call to Action */
@@ -298,4 +310,94 @@ i.scroll:hover {
 
 .shy-a h1 {
   background: #0a5175;
+}
+
+/* Default.html specific styles */
+.text-left {
+  text-align: left;
+}
+
+.text-white {
+  color: white;
+}
+
+.sidebar-description {
+  text-align: left;
+  margin: -5px 20px 0px 20px;
+  color: #F3EEEE;
+}
+
+/* Portfolio section - remove underline and color changes for links */
+#portfolio .caption a,
+#portfolio .thumbnail a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+#portfolio .caption a:hover,
+#portfolio .caption a:focus,
+#portfolio .caption a:active,
+#portfolio .thumbnail a:hover,
+#portfolio .thumbnail a:focus,
+#portfolio .thumbnail a:active {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* Footer list-inline spaced - ensure proper display */
+footer .list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: block;
+}
+
+footer .list-inline li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .list-inline.spaced {
+  margin: 35px 0;
+}
+
+footer .list-inline.spaced li {
+  margin: 0 15px;
+}
+
+footer .list-inline a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+footer .list-inline a:hover,
+footer .list-inline a:focus {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.8;
+}
+
+/* Footer list-unstyled - ensure email address is visible */
+footer .list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+footer .list-unstyled li {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+}
+
+footer .list-unstyled a {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+footer .list-unstyled a:hover,
+footer .list-unstyled a:focus {
+  color: #333 !important;
+  text-decoration: none !important;
 }

@@ -145,3 +145,83 @@
         letter-spacing: 0.3px !important;
     }
 }
+
+/* Logo 文字样式 */
+.logo-expanded > div {
+    text-align: left;
+}
+
+.logo-expanded .logo-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+.logo-expanded .logo-subtitle {
+    font-size: 14px;
+    color: white;
+    margin-top: 2px;
+    letter-spacing: 0.2px;
+}
+
+.logo-collapsed span {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Footer 样式 */
+.footer-text a:link,
+.footer-text a:visited,
+.footer-text a:hover,
+.footer-text a:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Footer go-top 视觉调整 */
+.main-footer .go-up {
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.main-footer .go-up a {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.main-footer .go-up a i {
+    font-size: 60px;
+    line-height: 1;
+    color: #222;
+    text-shadow: 0 0 1px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.2);
+}
+
+.main-footer .list-inline.spaced i {
+    font-size: 3em !important;
+    line-height: 1;
+}
+
+.main-footer .list-inline.spaced li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main-footer .list-inline.spaced li:first-child {
+    margin-left: 0;
+}
+
+.main-footer .list-inline.spaced li:last-child {
+    margin-right: 0;
+}
+
+/* 标题图标间距 */
+h4.text-gray i.linecons-tag {
+    margin-right: 7px;
+}
