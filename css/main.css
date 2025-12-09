@@ -81,7 +81,7 @@ a:active {
 }
 
 .sidebar-nav li a {
-  color: #F3EEEE;
+  color: #FFFFFF;
   display: block;
   text-decoration: none;
 }
@@ -104,7 +104,7 @@ a:active {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #F3EEEE;
+  color: #FFFFFF;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -324,7 +324,7 @@ i.scroll:hover {
 .sidebar-description {
   text-align: left;
   margin: -5px 20px 0px 20px;
-  color: #F3EEEE;
+  color: #FFFFFF;
 }
 
 /* Portfolio section - remove underline and color changes for links */

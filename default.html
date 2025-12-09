@@ -14,10 +14,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
-    <!-- Resource hints for performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="//cdnjs.cloudflare.com">
+    <!-- Local resources only -->
     
     <!-- Preload critical fonts -->
     <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -57,6 +54,13 @@
         #sidebar-wrapper.active {
             margin-right: 0 !important;
             right: 0 !important;
+        }
+        
+        /* 侧边栏文本颜色设置 */
+        .sidebar-nav li a,
+        .sidebar-nav > .sidebar-brand a,
+        .sidebar-description {
+            color: #FFFFFF !important;
         }
     </style>
 
