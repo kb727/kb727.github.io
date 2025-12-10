@@ -132,19 +132,10 @@ a:active {
 /* Full Page Image Header Area */
 
 .header {
-  display: table;
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../images/bg.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* 修复移动端背景图片显示异常 */
-@media (max-width: 768px) {
-  .header {
-    background-attachment: scroll;
-  }
+  overflow: hidden;
 }
 
 /* Intro */
