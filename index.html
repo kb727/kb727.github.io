@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh">
 
 <head>
@@ -38,110 +38,19 @@
     <link rel="stylesheet" href="./static/css/assets/fonts/linecons/css/linecons.css">
     
     <!-- 预加载关键资源 -->
+    <link rel="preload" href="./static/js/assets/jquery-1.11.1.min.js" as="script">
+    <link rel="preload" href="./static/js/assets/bootstrap.min.js" as="script">
+    
     <!-- Resource hints for performance -->
     <!-- Local resources only -->
     <!-- Local fonts only -->
+    
+    <script src="./static/js/assets/jquery-1.11.1.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="./static/js/assets/html5shiv.min.js"></script>
         <script src="./static/js/assets/respond.min.js"></script>
     <![endif]-->
-  <style type="text/css">
-    /* Additional styles for index page */
-    .blog-post-title {
-      margin-top: 0;
-    }
-    
-    .blog-post-meta {
-      color: #999;
-      margin-bottom: 20px;
-    }
-    
-    .blog-post-excerpt {
-      margin-bottom: 30px;
-    }
-    
-    .blog-post-excerpt p:last-child {
-      margin-bottom: 0;
-    }
-    
-    /* Sidebar menu styles for mobile */
-    @media (max-width: 767px) {
-      .sidebar-menu {
-        display: none;
-        background-color: #669900;
-        color: #fff;
-      }
-      
-      .sidebar-menu.mobile-menu-visible {
-        display: block !important;
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        z-index: 1000;
-        overflow-y: visible;
-      }
-      
-      .sidebar-menu .sidebar-menu-inner {
-        background-color: #669900;
-      }
-      
-      .sidebar-menu .logo-env {
-        background-color: #669900;
-        padding: 10px 20px;
-      }
-      
-      .sidebar-menu .logo a {
-        background-color: #669900;
-      }
-      
-      .sidebar-menu .logo a .logo-expanded,
-      .sidebar-menu .logo a .logo-collapsed {
-        color: #fff;
-      }
-      
-      .sidebar-menu .mobile-menu-toggle {
-        background-color: #669900;
-      }
-      
-      .sidebar-menu .main-menu {
-        background-color: #669900;
-      }
-      
-      .sidebar-menu .main-menu li a {
-        color: #fff;
-        display: block;
-        padding: 10px 20px;
-        border-radius: 0;
-      }
-      
-      .sidebar-menu .main-menu li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-    }
-    
-    .sidebar-menu ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .sidebar-menu li {
-      margin-bottom: 10px;
-    }
-    
-    .sidebar-menu a {
-      color: #fff;
-      text-decoration: none;
-      display: block;
-      padding: 10px;
-      border-radius: 4px;
-    }
-    
-    .sidebar-menu a:hover {
-      background-color: #555;
-    }
-  </style>
 </head>
 
 <body class="page-body">
@@ -783,13 +692,12 @@
     <!-- 页面初始化脚本 -->
     <script type="text/javascript">
     $(document).ready(function() {
-        // 图片懒加载初始化 - 仅针对attachments目录内的文件
-        // 注意：如果attachments目录下的图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
-        // 例如：<img class="lozad" data-src="attachments/image.jpg" alt="description">
+        // 图片懒加载初始化
+        // 注意：如果图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
+        // 例如：<img class="lozad" data-src="image.jpg" alt="description">
         if (typeof lozad !== 'undefined') {
             try {
-                // 仅对attachments目录下的图片启用lozad懒加载
-                const observer = lozad('.lozad[data-src*="attachments/"]', {
+                const observer = lozad('.lozad', {
                     rootMargin: '10px 0px',
                     threshold: 0.1,
                     loaded: function(el) {
@@ -802,10 +710,9 @@
             }
         }
         
-        // 对于没有使用 lozad 的attachments目录下的图片，使用原生懒加载
+        // 对于没有使用 lozad 的图片，使用原生懒加载
         if ('loading' in HTMLImageElement.prototype) {
-            // 仅对attachments目录下的图片启用原生懒加载
-            var images = document.querySelectorAll('img[src*="attachments/"]:not([loading])');
+            var images = document.querySelectorAll('img:not([loading])');
             images.forEach(function(img) {
                 // 只对不在视口内的图片启用懒加载
                 if (img.getBoundingClientRect().top > window.innerHeight) {
@@ -913,8 +820,15 @@
     });
     </script>
     <!-- Bottom Scripts -->
-    <!-- Main JavaScript -->
-    <script src="./static/js/main.js"></script>
+    <!-- 核心脚本 - 同步加载 -->
+    <script src="./static/js/assets/bootstrap.min.js"></script>
+    <script src="./static/js/assets/TweenMax.min.js"></script>
+    <script src="./static/js/assets/resizeable.js"></script>
+    <script src="./static/js/assets/joinable.js"></script>
+    <script src="./static/js/assets/xenon-api.js"></script>
+    <script src="./static/js/assets/xenon-toggles.js"></script>
+    <!-- JavaScripts initializations and stuff -->
+    <script src="./static/js/assets/xenon-custom.js"></script>
     <!-- 懒加载库 - 在页面内容加载后加载 -->
     <script src="./static/js/assets/lozad.js" defer></script>
 </body>
