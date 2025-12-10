@@ -693,8 +693,6 @@
     <script type="text/javascript">
     $(document).ready(function() {
         // 图片懒加载初始化
-        // 注意：如果图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
-        // 例如：<img class="lozad" data-src="image.jpg" alt="description">
         if (typeof lozad !== 'undefined') {
             try {
                 const observer = lozad('.lozad', {
@@ -710,21 +708,8 @@
             }
         }
         
-        // 对于没有使用 lozad 的图片，使用原生懒加载
-        if ('loading' in HTMLImageElement.prototype) {
-            var images = document.querySelectorAll('img:not([loading])');
-            images.forEach(function(img) {
-                // 只对不在视口内的图片启用懒加载
-                if (img.getBoundingClientRect().top > window.innerHeight) {
-                    img.loading = 'lazy';
-                }
-            });
-        }
-        
         // 优化：使用事件委托处理所有卡片点击事件，替代内联 onclick
-        // 支持键盘导航（Enter 和 Space 键）
         $(document).on('click keydown', '.xe-widget[data-href]', function(e) {
-            // 如果是键盘事件，只处理 Enter 和 Space 键
             if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) {
                 return;
             }
@@ -747,75 +732,6 @@
                 'tabindex': '0',
                 'aria-label': title
             });
-        });
-
-        // 子菜单展开/收起处理
-        $(document).on('click', '.has-sub', function(){
-            var $this = $(this);
-            if(!$this.hasClass('expanded')) {
-                setTimeout(function(){
-                    $this.find('ul').attr("style","");
-                }, 300);
-            } else {
-                $('.has-sub ul').each(function(id, ele){
-                    var $that = $(this);
-                    if($this.find('ul')[0] !== ele) {
-                        setTimeout(function(){
-                            $that.attr("style","");
-                        }, 300);
-                    }
-                });
-            }
-        });
-
-        // 用户信息菜单点击处理
-        $('.user-info-menu .hidden-sm').click(function(){
-            if($('.sidebar-menu').hasClass('collapsed')) {
-                $('.has-sub.expanded > ul').attr("style","");
-            } else {
-                $('.has-sub.expanded > ul').show();
-            }
-        });
-
-        // 主菜单子项激活状态处理
-        $("#main-menu li ul li").click(function() {
-            $(this).siblings('li').removeClass('active');
-            $(this).addClass('active');
-        });
-        
-        // 平滑滚动和菜单激活 - 合并的事件处理
-        $("a.smooth").click(function(e) {
-            e.preventDefault();
-            var target = $(this).attr("href");
-            
-            if (!target || target === '#') {
-                return false;
-            }
-            
-            // 更新菜单激活状态
-            $("#main-menu li").each(function() {
-                $(this).removeClass("active");
-            });
-            $(this).parent("li").addClass("active");
-            
-            // 移动端菜单处理
-            if (typeof public_vars !== 'undefined' && public_vars.$mainMenu) {
-                public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-            }
-            if (typeof ps_destroy === 'function') {
-                ps_destroy();
-            }
-            
-            // 平滑滚动到目标位置
-            var targetElement = $(target);
-            if (targetElement.length) {
-                $("html, body").animate({
-                    scrollTop: targetElement.offset().top - 30
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-            }
         });
     });
     </script>

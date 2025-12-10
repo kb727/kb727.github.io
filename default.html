@@ -309,8 +309,8 @@
             document.documentElement.classList.add('loaded');
             
             // 加载关键脚本
-            loadScript('./static/js/jquery.js', function() {
-                loadScript('./static/js/bootstrap.js', function() {
+            loadScript('./static/js/assets/jquery-1.11.1.min.js', function() {
+                loadScript('./static/js/assets/bootstrap.min.js', function() {
                     loadScript('./static/js/main.js', function() {
                         // 脚本加载完成后，确保菜单可以正常显示
                         var sidebar = document.getElementById('sidebar-wrapper');
