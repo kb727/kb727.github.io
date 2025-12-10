@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 
 <head>
@@ -692,10 +692,11 @@
     <!-- 页面初始化脚本 -->
     <script type="text/javascript">
     $(document).ready(function() {
-        // 图片懒加载初始化
+        // 图片懒加载初始化 - 仅对attachments目录的文件应用懒加载
         if (typeof lozad !== 'undefined') {
             try {
-                const observer = lozad('.lozad', {
+                // 选择所有指向attachments目录的图片或链接
+                const observer = lozad('[src*="attachments/"], [href*="attachments/"] img', {
                     rootMargin: '10px 0px',
                     threshold: 0.1,
                     loaded: function(el) {
