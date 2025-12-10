@@ -692,22 +692,7 @@
     <!-- 页面初始化脚本 -->
     <script type="text/javascript">
     $(document).ready(function() {
-        // 图片懒加载初始化 - 仅对attachments目录的文件应用懒加载
-        if (typeof lozad !== 'undefined') {
-            try {
-                // 选择所有指向attachments目录的图片或链接
-                const observer = lozad('[src*="attachments/"], [href*="attachments/"] img', {
-                    rootMargin: '10px 0px',
-                    threshold: 0.1,
-                    loaded: function(el) {
-                        el.classList.add('loaded');
-                    }
-                });
-                observer.observe();
-            } catch (e) {
-                console.warn('Lozad lazy loading initialization failed:', e);
-            }
-        }
+
         
         // 优化：使用事件委托处理所有卡片点击事件，替代内联 onclick
         $(document).on('click keydown', '.xe-widget[data-href]', function(e) {
@@ -739,15 +724,17 @@
     <!-- Bottom Scripts -->
     <!-- 核心脚本 - 同步加载 -->
     <script src="./static/js/assets/bootstrap.min.js"></script>
-    <script src="./static/js/assets/TweenMax.min.js"></script>
-    <script src="./static/js/assets/resizeable.js"></script>
-    <script src="./static/js/assets/joinable.js"></script>
-    <script src="./static/js/assets/xenon-api.js"></script>
-    <script src="./static/js/assets/xenon-toggles.js"></script>
-    <!-- JavaScripts initializations and stuff -->
-    <script src="./static/js/assets/xenon-custom.js"></script>
-    <!-- 懒加载库 - 在页面内容加载后加载 -->
-    <script src="./static/js/assets/lozad.js" defer></script>
+    <!-- 移动端菜单切换处理 -->
+    <script>
+    // 处理移动端导航按钮点击事件
+    $(document).ready(function() {
+        $(".mobile-menu-toggle a[data-toggle='mobile-menu']").click(function(e) {
+            e.preventDefault();
+            // 切换侧边栏菜单的显示/隐藏状态
+            $(".main-menu").toggleClass("mobile-is-visible");
+        });
+    });
+    </script>
 </body>
 
 </html>
