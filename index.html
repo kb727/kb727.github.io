@@ -687,12 +687,13 @@
     <!-- 页面初始化脚本 -->
     <script type="text/javascript">
     $(document).ready(function() {
-        // 图片懒加载初始化
-        // 注意：如果图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
-        // 例如：<img class="lozad" data-src="image.jpg" alt="description">
+        // 图片懒加载初始化 - 仅针对attachments目录内的文件
+        // 注意：如果attachments目录下的图片需要使用懒加载，请添加 class="lozad" 和 data-src 属性
+        // 例如：<img class="lozad" data-src="attachments/image.jpg" alt="description">
         if (typeof lozad !== 'undefined') {
             try {
-                const observer = lozad('.lozad', {
+                // 仅对attachments目录下的图片启用lozad懒加载
+                const observer = lozad('.lozad[data-src*="attachments/"]', {
                     rootMargin: '10px 0px',
                     threshold: 0.1,
                     loaded: function(el) {
@@ -705,9 +706,10 @@
             }
         }
         
-        // 对于没有使用 lozad 的图片，使用原生懒加载
+        // 对于没有使用 lozad 的attachments目录下的图片，使用原生懒加载
         if ('loading' in HTMLImageElement.prototype) {
-            var images = document.querySelectorAll('img:not([loading])');
+            // 仅对attachments目录下的图片启用原生懒加载
+            var images = document.querySelectorAll('img[src*="attachments/"]:not([loading])');
             images.forEach(function(img) {
                 // 只对不在视口内的图片启用懒加载
                 if (img.getBoundingClientRect().top > window.innerHeight) {
