@@ -206,16 +206,16 @@ slideRight
 
 
 .slideRight{
-	animation-name: slideRight;
-	-webkit-animation-name: slideRight;	
+animation-name: slideRight;
+-webkit-animation-name: slideRight;	
 
-	animation-duration: 1s;	
-	-webkit-animation-duration: 1s;
+animation-duration: 1s;	
+-webkit-animation-duration: 1s;
 
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
+animation-timing-function: ease-in-out;	
+-webkit-animation-timing-function: ease-in-out;		
 
-	visibility: visible !important;	
+visibility: visible !important;	
 }
 
 @keyframes slideRight {

@@ -10,18 +10,18 @@
     <meta name="apple-mobile-web-app-title" content="KB727">
     <meta name="application-name" content="KB727">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="mstile-144x144.png?v20250523">
+    <meta name="msapplication-TileImage" content="./static/images/icons/mstile-144x144.png?v20250523">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
     <!-- Local resources only -->
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preload critical images -->
-    <link rel="preload" href="img/bg.jpg" as="image">
+    <link rel="preload" href="./static/images/bg.jpg" as="image">
 
     <title>KB727.COM</title>
 
@@ -29,7 +29,7 @@
     <style>
         /* Critical styles for initial render */
         body { margin: 0; font-family: 'Open Sans', sans-serif; }
-        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bg.jpg') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./static/images/bg.jpg') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; }
         .vert-text { text-align: center; color: white; }
         .expandUp h2, .expandUp h3 { margin: 0; }
         .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
@@ -65,33 +65,33 @@
     </style>
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="fonts/open-sans.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./static/css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./static/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./static/fonts/open-sans/open-sans.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./static/fonts/font-awesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- Non-critical CSS - Load asynchronously -->
-    <link href="css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
     
     <!-- Fallback for browsers that don't support preload -->
     <noscript>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <link href="fonts/open-sans.css" rel="stylesheet">
-        <link href="font-awesome/css/all.min.css" rel="stylesheet">
+        <link href="./static/css/bootstrap.css" rel="stylesheet">
+        <link href="./static/css/main.css" rel="stylesheet">
+        <link href="./static/fonts/open-sans/open-sans.css" rel="stylesheet">
+        <link href="./static/fonts/font-awesome/css/all.min.css" rel="stylesheet">
     </noscript>
 
     <!-- Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v20251015">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v20251015">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v20251015">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v20251015">
-    <link rel="icon" type="image/png" sizes="512x512" href="/web-app-manifest-512x512.png?v20251015">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v20251015">
-    <link rel="icon" href="/safari-pinned-tab.svg" type="image/svg+xml">
-    <link rel="manifest" href="/site.webmanifest?v20251015">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v20251015" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon.ico?v20251015">
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20251015">
+    <link rel="icon" type="image/png" sizes="96x96" href="./static/images/icons/favicon-96x96.png?v20251015">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/icons/favicon-32x32.png?v20251015">
+    <link rel="icon" type="image/png" sizes="192x192" href="./static/images/icons/android-chrome-192x192.png?v20251015">
+    <link rel="icon" type="image/png" sizes="512x512" href="./static/images/icons/web-app-manifest-512x512.png?v20251015">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/images/icons/favicon-16x16.png?v20251015">
+    <link rel="icon" href="./static/images/icons/safari-pinned-tab.svg" type="image/svg+xml">
+    <link rel="manifest" href="./site.webmanifest?v20251015">
+    <link rel="mask-icon" href="./static/images/icons/safari-pinned-tab.svg?v20251015" color="#5bbad5">
+    <link rel="shortcut icon" href="./static/images/icons/favicon.ico">
 </head>
 
 <body>
@@ -138,7 +138,7 @@
                 <div class="col-md-3 col-md-offset-0 text-center">
                    <div class="pixelMe toSlideRight"></div>
                 </div>
-        <div class="container">
+                <div class="col-md-9">
                 <h3 class="text-left"><b>KB727 - Forging Advanced Manufacturing Hubs</b></h3>
                 <p class="lead text-left">
             KB727 is an international industrial real estate firm headquartered in Shanghai, China. We specialize in strategic investment promotion and ecosystem development. We partner with regional governments to build and strengthen key industrial chains​ and vibrant advanced manufacturing clusters​ across China. Our platform facilitates this growth through dedicated matchmaking sessions and one-on-one networking events, fostering collaboration and technological exchange.
@@ -146,10 +146,10 @@
             <p class="lead" style="text-align: left">
             We warmly welcome partnerships, particularly in the following sectors of advanced manufacturing:
             </p>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
     <!-- /Overview -->
 
     <!-- Services -->
@@ -195,29 +195,24 @@
     <!-- /Services -->
 
     <!-- /Intro -->
-<div id="portfolio">
-    <div class="call-to-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2><b>Associated Links</b></h2>
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2><b>Associated Links</b></h2>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Portfolio -->
-    <div id="links" class="callout">
-
-        <div class="row">
+        <!-- Portfolio -->
+        <div id="portfolio">
+        <div class="container">
+            <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="attachments/Global/Asset-Trading-Salon-en.jpg" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Salon.png" type="image/png">
-                        <source srcset="img/Salon.jpg" type="image/jpeg"> 
-                        <img src="img/Salon.png" alt="Activate Trade" loading="lazy">
-                    </picture>
+                    <a href="static/images/attachments/Global/Asset-Trading-Salon-en.jpg" target="_blank" style="color:white;">
+                    <img src="./static/images/Salon.png" alt="Activate Trade" loading="lazy">
                     <div class="caption">
                         <h3>Activate Trade</h3>
                         <p style="text-align: left">Connect serious investors to exclusive, high-potential second-hand asset opportunities.​</p>
@@ -228,12 +223,8 @@
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="attachments/Global/Social-Media.pdf" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Social-Media.png" type="image/png">
-                        <source srcset="img/Social-Media.jpg" type="image/jpeg">
-                        <img src="img/Social-Media.png" alt="Social Media" loading="lazy">
-                    </picture>
+                    <a href="static/images/attachments/Global/Social-Media.pdf" target="_blank" style="color:white;">
+                    <img src="./static/images/Social-Media.png" alt="Social Media" loading="lazy">
                     <div class="caption">
                         <h3>Social Media</h3>
                         <p style="text-align: left">Providing professional Chinese social media management and compliance services.</p>
@@ -244,12 +235,8 @@
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="attachments/Global/Copywriting.pdf" target="_blank" style="color:white;">
-                    <picture>
-                        <source srcset="img/Copywriting.png" type="image/png">
-                        <source srcset="img/Copywriting.jpg" type="image/jpeg">
-                        <img src="img/Copywriting.png" alt="Taling Copywriting" loading="lazy">
-                    </picture>
+                    <a href="static/images/attachments/Global/Copywriting.pdf" target="_blank" style="color:white;">
+                    <img src="./static/images/Copywriting.png" alt="Taling Copywriting" loading="lazy">
                    <div class="caption">
                         <h3>Content Creation</h3>
                         <p style="text-align: left">Delivering professional, exceptional quality copywriting in both English and Chinese.</p> 
@@ -259,8 +246,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        </div>
     <!-- /Portfolio -->
 
 
@@ -285,7 +271,7 @@
                 <a href="#top" title="Back to top"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
                 </div>
                 <hr>
-            <p>Copyright &copy; 2025, KB727.COM all rights reserved. Please refer to <a href="attachments/Global/terms.pdf">Legal Terms</a>. Unauthorized resale for commercial purposes will face legal action.</p><br><br>
+            <p>Copyright &copy; 2025, KB727.COM all rights reserved. Please refer to <a href="static/images/attachments/Global/terms.pdf">Legal Terms</a>. Unauthorized resale for commercial purposes will face legal action.</p><br><br>
                 </div>
             </div>
         </div>
@@ -323,9 +309,9 @@
             document.documentElement.classList.add('loaded');
             
             // 加载关键脚本
-            loadScript('js/jquery.js', function() {
-                loadScript('js/bootstrap.js', function() {
-                    loadScript('js/main.js', function() {
+            loadScript('./static/js/jquery.js', function() {
+                loadScript('./static/js/bootstrap.js', function() {
+                    loadScript('./static/js/main.js', function() {
                         // 脚本加载完成后，确保菜单可以正常显示
                         var sidebar = document.getElementById('sidebar-wrapper');
                         if (sidebar) {
@@ -339,7 +325,7 @@
         
         // Load non-critical scripts after page load
         window.addEventListener('load', function() {
-            loadScript('js/jquery.scrolldepth.min.js');
+            loadScript('./static/js/jquery.scrolldepth.min.js');
         });
         
         // Font loading optimization
