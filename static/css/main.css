@@ -140,6 +140,13 @@ a:active {
   background-size: cover;
 }
 
+/* 修复移动端背景图片显示异常 */
+@media (max-width: 768px) {
+  .header {
+    background-attachment: scroll;
+  }
+}
+
 /* Intro */
 
 .intro {
@@ -188,6 +195,13 @@ i.service-icon {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/* 修复移动端callout背景图片显示异常 */
+@media (max-width: 768px) {
+  .callout {
+    background-attachment: scroll;
+  }
 }
 
 /* Portfolio */
