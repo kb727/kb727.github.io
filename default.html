@@ -309,23 +309,14 @@
             document.documentElement.classList.add('loaded');
             
             // 加载关键脚本
-            loadScript('./static/js/jquery.js', function() {
-                loadScript('./static/js/bootstrap.js', function() {
-                    loadScript('./static/js/main.js', function() {
-                        // 脚本加载完成后，确保菜单可以正常显示
-                        var sidebar = document.getElementById('sidebar-wrapper');
-                        if (sidebar) {
-                            sidebar.style.visibility = '';
-                            sidebar.style.opacity = '';
-                        }
-                    });
-                });
+            loadScript('./static/js/main.js', function() {
+                // 脚本加载完成后，确保菜单可以正常显示
+                var sidebar = document.getElementById('sidebar-wrapper');
+                if (sidebar) {
+                    sidebar.style.visibility = '';
+                    sidebar.style.opacity = '';
+                }
             });
-        });
-        
-        // Load non-critical scripts after page load
-        window.addEventListener('load', function() {
-            loadScript('./static/js/jquery.scrolldepth.min.js');
         });
         
         // Font loading optimization
