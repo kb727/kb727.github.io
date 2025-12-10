@@ -29,9 +29,16 @@
     <style>
         /* Critical styles for initial render */
         body { margin: 0; font-family: 'Open Sans', sans-serif; }
-        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./static/images/bg.jpg') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .header { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./static/images/bg.jpg') center/cover no-repeat fixed; height: 100vh; display: flex; align-items: center; justify-content: center; }
         .vert-text { text-align: center; color: white; }
         .expandUp h2, .expandUp h3 { margin: 0; }
+        
+        /* 修复移动端背景图片显示异常 */
+        @media (max-width: 768px) {
+            .header {
+                background-attachment: scroll;
+            }
+        }
         .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
         .list-inline { list-style: none; padding: 0; }
         .list-inline li { display: inline-block; margin: 0 10px; }
