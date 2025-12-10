@@ -46,6 +46,102 @@
         <script src="./static/js/assets/html5shiv.min.js"></script>
         <script src="./static/js/assets/respond.min.js"></script>
     <![endif]-->
+  <style type="text/css">
+    /* Additional styles for index page */
+    .blog-post-title {
+      margin-top: 0;
+    }
+    
+    .blog-post-meta {
+      color: #999;
+      margin-bottom: 20px;
+    }
+    
+    .blog-post-excerpt {
+      margin-bottom: 30px;
+    }
+    
+    .blog-post-excerpt p:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* Sidebar menu styles for mobile */
+    @media (max-width: 767px) {
+      .sidebar-menu {
+        display: none;
+        background-color: #669900;
+        color: #fff;
+      }
+      
+      .sidebar-menu.mobile-menu-visible {
+        display: block !important;
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        z-index: 1000;
+        overflow-y: visible;
+      }
+      
+      .sidebar-menu .sidebar-menu-inner {
+        background-color: #669900;
+      }
+      
+      .sidebar-menu .logo-env {
+        background-color: #669900;
+        padding: 10px 20px;
+      }
+      
+      .sidebar-menu .logo a {
+        background-color: #669900;
+      }
+      
+      .sidebar-menu .logo a .logo-expanded,
+      .sidebar-menu .logo a .logo-collapsed {
+        color: #fff;
+      }
+      
+      .sidebar-menu .mobile-menu-toggle {
+        background-color: #669900;
+      }
+      
+      .sidebar-menu .main-menu {
+        background-color: #669900;
+      }
+      
+      .sidebar-menu .main-menu li a {
+        color: #fff;
+        display: block;
+        padding: 10px 20px;
+        border-radius: 0;
+      }
+      
+      .sidebar-menu .main-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+    
+    .sidebar-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar-menu li {
+      margin-bottom: 10px;
+    }
+    
+    .sidebar-menu a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    
+    .sidebar-menu a:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 
 <body class="page-body">

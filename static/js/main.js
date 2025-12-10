@@ -19,7 +19,9 @@ const DOM = {
     scrollDepthElements: null,
     menuClose: null,
     menuToggle: null,
+    mobileMenuToggle: null,
     sidebarWrapper: null,
+    sidebarMenu: null,
     smoothScrollLinks: null
 };
 
@@ -34,7 +36,9 @@ function cacheDOM() {
     };
     DOM.menuClose = document.getElementById('menu-close');
     DOM.menuToggle = document.getElementById('menu-toggle');
+    DOM.mobileMenuToggle = document.querySelector('[data-toggle="mobile-menu"]');
     DOM.sidebarWrapper = document.getElementById('sidebar-wrapper');
+    DOM.sidebarMenu = document.querySelector('.sidebar-menu');
     DOM.smoothScrollLinks = document.querySelectorAll('a[href*="#"]:not([href="#"])');
 }
 
@@ -139,7 +143,21 @@ function initTooltips() {
 function initMenuToggle() {
     function toggleSidebar(e) {
         e.preventDefault();
-        DOM.sidebarWrapper.classList.toggle('active');
+        
+        // Check if we're on a mobile device
+        const isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+            // For mobile devices (index.html structure)
+            if (DOM.sidebarMenu) {
+                DOM.sidebarMenu.classList.toggle('mobile-menu-visible');
+            }
+        } else {
+            // For desktop devices (default.html structure)
+            if (DOM.sidebarWrapper) {
+                DOM.sidebarWrapper.classList.toggle('active');
+            }
+        }
     }
     
     if (DOM.menuClose) {
@@ -148,6 +166,10 @@ function initMenuToggle() {
     
     if (DOM.menuToggle) {
         DOM.menuToggle.addEventListener('click', toggleSidebar);
+    }
+    
+    if (DOM.mobileMenuToggle) {
+        DOM.mobileMenuToggle.addEventListener('click', toggleSidebar);
     }
 }
 
