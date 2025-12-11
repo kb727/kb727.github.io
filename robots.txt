@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap (local version)
+# Sitemap
+Sitemap: https://kb727.com/sitemap.xml
 
 # Allow all crawlers to access all content
 Disallow:
