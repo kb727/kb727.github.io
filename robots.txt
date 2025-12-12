@@ -9,7 +9,6 @@ Disallow:
 
 # Specific pages to prioritize
 Allow: /index.html
-Allow: /nav.html
 
 # Crawl delay (optional - 1 second between requests)
 Crawl-delay: 1
