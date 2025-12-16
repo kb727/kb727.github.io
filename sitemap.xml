@@ -3,7 +3,7 @@
     <!-- 主页 -->
     <url>
         <loc>https://kb727.com/</loc>
-        <lastmod>2025-12-14</lastmod>
+        <lastmod>2025-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,7 +11,7 @@
     <!-- 默认页面 -->
     <url>
         <loc>https://kb727.com/default.html</loc>
-        <lastmod>2025-12-14</lastmod>
+        <lastmod>2025-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -19,8 +19,16 @@
     <!-- 404页面 -->
     <url>
         <loc>https://kb727.com/404.html</loc>
-        <lastmod>2025-12-14</lastmod>
+        <lastmod>2025-12-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.1</priority>
+    </url>
+    
+    <!-- 重要资源页面 -->
+    <url>
+        <loc>https://kb727.com/attachments/global/terms.pdf</loc>
+        <lastmod>2025-12-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
