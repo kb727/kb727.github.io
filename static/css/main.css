@@ -1,0 +1,337 @@
+/* Global Styles */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Global link styles - remove underline and color changes for all links */
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Allow specific color overrides for certain contexts */
+.vert-text .list-inline a {
+  color: white !important;
+}
+
+.vert-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  text-shadow: black 3px 1px 3px;
+}
+
+.list-inline > li {
+  vertical-align: middle;
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+  margin-right: -250px;
+  right: 0;
+  width: 250px;
+  background: #669900;
+  position: fixed;
+  height: 315px;
+  border-bottom-left-radius: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #FFFFFF;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #FFFFFF;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#menu-toggle {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+#sidebar-wrapper.active {
+  right: 0;
+  width: 250px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.toggle {
+  border-radius: 0 0 0 4px;
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  z-index: 1001;
+}
+
+/* 确保按钮始终可见且可点击 */
+#menu-toggle {
+  display: block !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  padding: 15px 20px;
+  background-color: #669900;
+  border: none;
+  color: white;
+  border-radius: 0 0 0 4px;
+  cursor: pointer;
+}
+
+#menu-close {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1002;
+  padding: 10px 15px;
+  background-color: #669900;
+  border: none;
+  color: white;
+  border-radius: 0 0 0 4px;
+  cursor: pointer;
+}
+
+/* Full Page Image Header Area */
+
+.header {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Services */
+
+.services {
+  padding: 0px 0;
+}
+
+.pixelMe {
+  height: 250px;
+  width: 250px;
+  margin: 17px auto;
+  background: url(../images/favicon.jpg);
+  visibility: visible;
+}
+
+
+
+/* Portfolio */
+
+#portfolio {
+  background: url(../images/callout.jpg) no-repeat center center scroll;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+#portfolio .row {
+  max-width: 900px;
+  margin:0 auto;
+}
+
+
+#portfolio .caption {
+  width: 250px;
+  margin: 10px auto;
+  background-color: rgba(102, 153, 0, 0.45);
+  border-radius: 14px;
+  color: white;
+}
+
+#portfolio .thumbnail {
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+}
+
+#portfolio .thumbnail img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.caption h4 {
+  margin: 0 auto;
+}
+
+
+
+/* Call to Action */
+
+.call-to-action {
+  color: #ffffff;
+  background: #0a5175;
+  padding: 5px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+.call-to {
+  text-shadow: none;
+}
+
+/* Footer */
+
+.top-scroll {
+  margin-top: 50px;
+}
+
+.top-scroll a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i.scroll {
+  color: #333333;
+}
+
+i.scroll:hover {
+  color: #0a5175;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+	
+  .call-to {
+    margin-bottom: 35px;
+  }
+}
+
+.spaced {
+  margin:35px;
+}
+
+.block {
+  display:block;
+}
+
+.size-m {
+  font-size: 1.5em
+}
+
+/* Default.html specific styles */
+.text-left {
+  text-align: left;
+}
+
+.text-white {
+  color: white;
+}
+
+.sidebar-description {
+  text-align: left;
+  margin: -5px 20px 0px 20px;
+  color: #FFFFFF;
+}
+
+/* Portfolio section - remove underline and color changes for links */
+#portfolio .caption a,
+#portfolio .thumbnail a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* Footer list-inline spaced - ensure proper display */
+footer .list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: block;
+}
+
+footer .list-inline li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .list-inline.spaced {
+  margin: 35px 0;
+}
+
+footer .list-inline.spaced li {
+  margin: 0 15px;
+}
+
+footer .list-inline a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/* Footer list-unstyled - ensure email address is visible */
+footer .list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+footer .list-unstyled li {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+}
+
+footer .list-unstyled a {
+  color: #333 !important;
+  text-decoration: none;
+}
+

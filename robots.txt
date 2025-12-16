@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Crawl delay (1 second between requests)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://kb727.com/sitemap.xml

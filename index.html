@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KB727 - Shaping the Future of Advanced Manufacturing.">
+    <meta name="keywords" content="Industrial Investment Promotion,Industry Salons,Manufacturing Seminars,Enterprise Reception Hall / Corporate Guest Center,Key Industrial Chains,Industrial Clusters / Advanced Manufacturing Hubs,High-End New Materials,Major Technical Equipment,Intelligent Manufacturing & Robotics,Aero-Engines and Gas Turbines,BeiDou Industrial Applications,New Energy Vehicles (NEVs) & Intelligent Connected Vehicles (ICVs),High-End Medical Equipment & Innovative Drugs,Agricultural Machinery Equipment">
+    <meta name="author" content="KB727.COM">
+    <meta name="apple-mobile-web-app-title" content="KB727">
+    <meta name="application-name" content="KB727">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="./static/images/icons/mstile-144x144.png?v20251015">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+
+    <!-- Local resources only -->
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="./static/images/bg.jpg" as="image">
+
+    <title>KB727.COM</title>
+
+    <!-- Critical CSS - Inline for above-the-fold content -->
+    <style>
+        /* Critical styles for initial render */
+        body { margin: 0; font-family: 'Open Sans', sans-serif; }
+        .header { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .header img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 0; }
+        .vert-text { text-align: center; color: white; position: relative; z-index: 1; }
+        .expandUp h2, .expandUp h3 { margin: 0; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        
+        /* 防止菜单预显示 - 关键优化 */
+        #sidebar-wrapper {
+            margin-right: -250px;
+            visibility: hidden;
+            opacity: 0;
+            background: #669900;
+            position: fixed;
+            right: 0;
+            width: 250px;
+            height: 315px;
+            border-bottom-left-radius: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+        /* 页面加载完成后显示菜单（如果 CSS 已加载） */
+        html.loaded #sidebar-wrapper {
+            visibility: visible;
+            opacity: 1;
+        }
+        /* 菜单激活状态 */
+        #sidebar-wrapper.active {
+            margin-right: 0;
+            right: 0;
+        }
+        
+        /* 侧边栏文本颜色设置 */
+        .sidebar-nav li a,
+        .sidebar-nav > .sidebar-brand a,
+        .sidebar-description {
+            color: #FFFFFF !important;
+        }
+        
+        /* Portfolio色块颜色设置 */
+        #portfolio .caption {
+            background-color: rgba(102, 153, 0, 0.45) !important;
+        }
+        
+        /* 菜单按钮颜色设置 */
+        .btn-primary, .btn-index {
+            background-color: #e2452d;
+            border-color: #e2452d;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            z-index: 1001; /* 确保按钮在侧边栏之上 */
+        }
+        
+        /* 菜单切换按钮样式 */
+        #menu-toggle {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1001;
+            border-radius: 0 0 0 4px;
+        }
+        
+        /* 菜单关闭按钮样式 */
+        #menu-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1002;
+            border-radius: 0 0 0 4px;
+        }
+        
+        /* Screen Casting横幅颜色设置 */
+        .call-to-action {
+            background-color: #669900 !important;
+        }
+    </style>
+
+    <!-- 加载关键CSS资源 -->
+    <link rel="stylesheet" href="./static/css/bootstrap.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
+    <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link href="./static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript>
+        <link href="./static/css/bootstrap.css" rel="stylesheet">
+        <link href="./static/css/main.css" rel="stylesheet">
+        <link href="./static/fonts/open-sans/open-sans.css" rel="stylesheet">
+        <link href="./static/fonts/font-awesome/css/all.min.css" rel="stylesheet">
+    </noscript>
+
+    <!-- Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20251015">
+    <link rel="icon" type="image/png" sizes="96x96" href="./static/images/icons/favicon-96x96.png?v20251015">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/icons/favicon-32x32.png?v20251015">
+    <link rel="icon" type="image/png" sizes="192x192" href="./static/images/icons/android-chrome-192x192.png?v20251015">
+    <link rel="icon" type="image/png" sizes="512x512" href="./static/images/icons/web-app-manifest-512x512.png?v20251015">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/images/icons/favicon-16x16.png?v20251015">
+    <link rel="icon" href="./static/images/icons/safari-pinned-tab.svg" type="image/svg+xml">
+    <link rel="manifest" href="./site.webmanifest?v20251015">
+    <link rel="mask-icon" href="./static/images/icons/safari-pinned-tab.svg?v20251015" color="#5bbad5">
+    <link rel="shortcut icon" href="./static/images/icons/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" onclick="toggleMenu(event)"><i class="fa fa-reorder"></i></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="关闭菜单" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
+            <li><a href="#about">Brief Profile</a></li>
+            <li><a href="#portfolio">Screen Casting</a></li>
+            <li><a href="default.html">Chinese Localization</a></li>
+            <li><a href="mailto:business@kb727.com">Dispatch an electronic mail</a></li>
+            <hr>
+                    <p class="small sidebar-description">KB727 - Shaping the Future of Advanced Manufacturing.</p>
+        </ul>
+    </div>
+    <!-- /Side Menu -->
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <img src="./static/images/bg.jpg" alt="KB727 Background" class="bg-img">
+        <div class="vert-text">
+            <div class="expandUp">
+            <h2><b>​​Your Gateway to</b></h2>
+            <h2><b>​​Industrial Excellence</b></h2>
+            </div><br><br><br><br>
+            <ul class="list-inline spaced">
+                <li><a href="#about" title="Brief Profile"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
+                <li><a href="#portfolio" title="Screen Casting"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
+                <li><a href="mailto:business@kb727.com" title="Dispatch an electronic mail" target="_blank"><i class="fa-regular fa-envelope fa-3x"></i></a></li>
+                <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /Full Page Image Header Area -->
+
+    <br>
+
+    <!-- Overview -->
+    <div id="about" class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-0 text-center">
+                   <div class="pixelMe toSlideRight"></div>
+                </div>
+                <div class="col-md-9">
+                <h3 class="text-left"><b>KB727 - Forging Advanced Manufacturing Hubs</b></h3>
+                <p class="lead text-left">
+            KB727 is an international industrial real estate firm headquartered in Shanghai, China. We specialize in strategic investment promotion and ecosystem development. We partner with regional governments to build and strengthen key industrial chains​ and vibrant advanced manufacturing clusters​ across China. Our platform facilitates this growth through dedicated matchmaking sessions and one-on-one networking events, fostering collaboration and technological exchange.
+            </p>
+            <p class="lead" style="text-align: left">
+            We warmly welcome partnerships, particularly in the following sectors of advanced manufacturing:
+            </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Overview -->
+
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <h3 class="text-left"><b>1. High-End New Materials</b></h3>
+            <p class="lead text-left">
+            Focusing on the R&D and application of advanced materials, including high-end rare-earth functional materials, high-quality special steels, performance alloys, high-purity rare metals, advanced ceramics, electronic glass, carbon fiber and aramid composites, bio-based and biomedical materials, metallocene polyethylene, and high-purity electronic materials like photoresists for integrated circuits.
+            </p>
+            <h3 style="text-align: left"><b>2. Major Technical Equipment</b></h3>
+            <p class="lead" style="text-align: left">
+            Supporting the development and application of key equipment such as the CR450 high-speed standard train series, standardized metro trains, high-end machine tools, advanced engineering machinery, key components for nuclear power units, cruise ships, large LNG carriers, and deep-sea oil and gas platforms. We also engage in the demonstration operations of the C919 passenger aircraft and the serial development of the ARJ21 regional jet.
+            </p>
+            <h3 style="text-align: left"><b>3. Intelligent Manufacturing and Robotics</b></h3>
+            <p class="lead" style="text-align: left">
+            Engaging in the development of industrial control equipment like distributed control systems and programmable logic controllers, alongside key robotics technologies such as advanced controllers, high-precision servo drives, high-performance reducers, and additive manufacturing (3D printing) .
+            </p>
+            <h3 style="text-align: left"><b>4. Aero-Engines and Gas Turbines</b></h3>
+            <p class="lead" style="text-align: left">
+            Involved in the R&D and validation of key technologies for advanced aero-engines, the development of commercial high-bypass turbofan engines like the CJ1000, and the industrialization of heavy-duty gas turbines.
+            </p>
+            <h3 style="text-align: left"><b>5. BeiDou Industrial Applications</b></h3>
+            <p class="lead" style="text-align: left">
+            Promoting the integrated application of BeiDou navigation technology across various industries, including communications, finance, energy, and civil aviation, as well as its large-scale use in consumer domains like vehicle navigation, smartphones, and wearable devices.
+            </p>
+            <h3 style="text-align: left"><b>6. New Energy Vehicles (NEVs) and Intelligent Connected Vehicles (ICVs)</b></h3>
+            <p class="lead" style="text-align: left">
+            Focusing on key technologies for new energy vehicles, including high-safety batteries, efficient drive motors, and high-performance powertrains, alongside the R&D of foundational platforms and key components like smart hardware systems and wire-controlled chassis for ICVs.
+            </p>
+            <h3 style="text-align: left"><b>7. High-End Medical Equipment and Innovative Drugs</b></h3>
+            <p class="lead" style="text-align: left">
+            Supporting the R&D of core technologies for advanced medical devices and innovative pharmaceuticals, including robotic surgical systems, ECMO machines, high-end medical imaging and radiotherapy equipment, implants, vaccines, and novel drugs for critical diseases.
+            </p>
+            <h3 style="text-align: left"><b>8. Agricultural Machinery Equipment</b></h3>
+            <p class="lead" style="text-align: left">
+            Driving the development of advanced agricultural machinery, such as high-horsepower intelligent tractors, precision planters, efficient combine harvesters, and specialized equipment for hilly areas, as well as smart breeding and farming technologies.
+            </p>
+            <p class="lead" style="text-align: left">
+            KB727 serves as a dynamic bridge connecting global innovation with local industrial capacity. We are committed to co-creating the future of manufacturing through strategic partnerships.
+            </p>
+        </div>
+    </div>
+    <!-- /Services -->
+
+    <!-- /Intro -->
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h2><b>Screen Casting</b></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div id="portfolio">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./static/images/IndustrialMatchmaking.mp4" target="_blank" style="color:white;">
+                    <img src="./static/images/SmartConnections.png" alt="Smart Connections">
+                    <div class="caption">
+                        <h3>Smart Connections</h3>
+                        <p style="text-align: left">Connect premium projects with dedicated investors for growth.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./static/images/ResearchInsights.mp4" target="_blank" style="color:white;">
+                    <img src="./static/images/In-DepthResearch.png" alt="In-Depth Research">
+                    <div class="caption">
+                        <h3>In-Depth Research</h3>
+                        <p style="text-align: left">Reveal key industrial trends and valuable emerging opportunities.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a href="./static/images/ProjectConsulting.mp4" target="_blank" style="color:white;">
+                    <img src="./static/images/TailoredSolutions.png" alt="Tailored Solutions">
+                   <div class="caption">
+                        <h3>Tailored Solutions</h3>
+                        <p style="text-align: left">Provide specific strategies to unlock unique value in your assets.</p> 
+                    </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <!-- /Portfolio -->
+
+    <br><br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+ 
+            <ul class="list-inline spaced">
+                <li><a href="#about" title="Brief Profile"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
+                <li><a href="#portfolio" title="Screen Casting"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
+                <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+            </ul>
+                    <ul class="list-unstyled size-m spaced">
+                        <li><i class="fa-solid fa-location-dot"></i> Shanghai, China</li>
+                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:business@kb727.com" target="_blank">business@kb727.com</a>
+                    </ul>
+                <div class="top-scroll">
+                <a href="#top" title="Back to top"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
+                </div>
+                <hr>
+            <p>Copyright &copy; 2025, KB727.COM all rights reserved. Please refer to <a href="attachments/global/terms.pdf">Legal Terms</a>. Unauthorized resale for commercial purposes will face legal action.</p><br><br>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Load JavaScript asynchronously -->
+    <!-- 移除了内联的侧边栏初始样式设置，改为通过CSS控制 -->
+    
+    <!-- 页面底部加载脚本，确保DOM完全加载 -->
+    <script>
+        // 直接定义切换菜单函数，用于内联事件处理
+        function toggleMenu(e) {
+            e.preventDefault();
+            console.log('切换菜单点击事件触发（内联处理）');
+            const sidebarWrapper = document.getElementById('sidebar-wrapper');
+            if (sidebarWrapper) {
+                console.log('当前active类状态:', sidebarWrapper.classList.contains('active'));
+                sidebarWrapper.classList.toggle('active');
+                console.log('切换后active类状态:', sidebarWrapper.classList.contains('active'));
+            } else {
+                console.error('未找到sidebar-wrapper元素');
+            }
+        }
+        
+        // 脚本加载完成后，标记页面已加载，允许菜单显示
+        document.documentElement.classList.add('loaded');
+    </script>
+    <script src="./static/js/main.js"></script>
+</body>
+</html>

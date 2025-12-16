@@ -1,0 +1,216 @@
+.box2 {
+    height: 86px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0px 30px;
+    background-color: #fff;
+    border: 1px solid #e4ecf3;
+    margin: 20px 0 0 0;
+    transition: all 0.3s ease;
+}
+
+.box2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+    transition: all 0.3s ease;
+}
+
+.xe-comment-entry img {
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+.xe-comment {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+.xe-comment-entry .xe-user-img:not(:empty) + .xe-comment {
+    margin-left: 50px;
+}
+.xe-comment p {
+    margin-bottom: 0px;
+    margin-right: 15px;
+}
+.overflowClip_1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.overflowClip_2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.submit-tag{
+    margin-top: 50px;
+
+}
+
+.img-circle {
+    padding: 7px 0;
+}
+
+/* 移动端菜单切换按钮样式自定义 */
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a {
+    background-color: white !important;
+    border-radius: 8px;
+    padding: 12px 16px !important;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a i {
+    font-size: 24px !important;
+    color: #333 !important;
+    line-height: 1 !important;
+    position: relative !important;
+    top: 0 !important;
+}
+
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:hover,
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:active,
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a:focus {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 移动端菜单切换按钮垂直位置：与 logo 文字上端齐平 */
+.page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle {
+    margin-top: 6px;
+}
+
+/* LOGO字间距调整 - 桌面端和移动端对齐优化 */
+.logo-expanded div:first-child {
+    letter-spacing: 0.8px !important;
+}
+
+.logo-expanded div:last-child {
+    letter-spacing: 0.2px !important;
+}
+
+.logo-collapsed span {
+    letter-spacing: 0.5px !important;
+}
+
+/* 响应式字间距调整 */
+@media (max-width: 768px) {
+    .logo-expanded div:first-child {
+        letter-spacing: 0.6px !important;
+    }
+    
+    .logo-expanded div:last-child {
+        letter-spacing: 0.15px !important;
+    }
+    
+    .logo-collapsed span {
+        letter-spacing: 0.4px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-expanded div:first-child {
+        letter-spacing: 0.4px !important;
+    }
+    
+    .logo-expanded div:last-child {
+        letter-spacing: 0.1px !important;
+    }
+    
+    .logo-collapsed span {
+        letter-spacing: 0.3px !important;
+    }
+}
+
+/* Logo 文字样式 */
+.logo-expanded > div {
+    text-align: left;
+}
+
+.logo-expanded .logo-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+.logo-expanded .logo-subtitle {
+    font-size: 14px;
+    color: white;
+    margin-top: 2px;
+    letter-spacing: 0.2px;
+}
+
+.logo-collapsed span {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Footer 样式 */
+.footer-text a:link,
+.footer-text a:visited,
+.footer-text a:hover,
+.footer-text a:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Footer go-top 视觉调整 */
+.main-footer .go-up {
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.main-footer .go-up a {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.main-footer .go-up a i {
+    font-size: 60px;
+    line-height: 1;
+    color: #222;
+    text-shadow: 0 0 1px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.2);
+}
+
+.main-footer .list-inline.spaced i {
+    font-size: 3em !important;
+    line-height: 1;
+}
+
+.main-footer .list-inline.spaced li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main-footer .list-inline.spaced li:first-child {
+    margin-left: 0;
+}
+
+.main-footer .list-inline.spaced li:last-child {
+    margin-right: 0;
+}
+
+/* 标题图标间距 */
+h4.text-gray i.linecons-tag {
+    margin-right: 7px;
+}
