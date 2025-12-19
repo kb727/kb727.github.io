@@ -119,7 +119,7 @@ a:active {
   z-index: 1001;
 }
 
-/* 确保按钮始终可见且可点击 */
+/* Ensure button is always visible and clickable */
 #menu-toggle {
   display: block !important;
   position: fixed;

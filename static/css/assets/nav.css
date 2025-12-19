@@ -57,7 +57,7 @@
     padding: 7px 0;
 }
 
-/* 移动端菜单切换按钮样式自定义 */
+/* Mobile menu toggle button style customization */
 .page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle a {
     background-color: white !important;
     border-radius: 8px;
@@ -88,12 +88,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* 移动端菜单切换按钮垂直位置：与 logo 文字上端齐平 */
+/* Mobile menu toggle button vertical position: aligned with logo text top */
 .page-container .sidebar-menu .sidebar-menu-inner .logo-env .mobile-menu-toggle {
     margin-top: 6px;
 }
 
-/* LOGO字间距调整 - 桌面端和移动端对齐优化 */
+/* LOGO letter spacing adjustment - desktop and mobile alignment optimization */
 .logo-expanded div:first-child {
     letter-spacing: 0.8px !important;
 }
@@ -106,7 +106,7 @@
     letter-spacing: 0.5px !important;
 }
 
-/* 响应式字间距调整 */
+/* Responsive letter spacing adjustment */
 @media (max-width: 768px) {
     .logo-expanded div:first-child {
         letter-spacing: 0.6px !important;
@@ -135,7 +135,7 @@
     }
 }
 
-/* Logo 文字样式 */
+/* Logo text style */
 .logo-expanded > div {
     text-align: left;
 }
@@ -161,7 +161,7 @@
     letter-spacing: 0.5px;
 }
 
-/* Footer 样式 */
+/* Footer style */
 .footer-text a:link,
 .footer-text a:visited,
 .footer-text a:hover,
@@ -170,7 +170,7 @@
     text-decoration: none;
 }
 
-/* Footer go-top 视觉调整 */
+/* Footer go-top visual adjustment */
 .main-footer .go-up {
     margin-bottom: 0 !important;
     display: flex;
@@ -210,7 +210,7 @@
     margin-right: 0;
 }
 
-/* 标题图标间距 */
+/* Title icon spacing */
 h4.text-gray i.linecons-tag {
     margin-right: 7px;
 }

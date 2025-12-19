@@ -1,10 +1,10 @@
 // Local-only version - Google Analytics removed
 // Optimized: Converted to native JavaScript, removed jQuery dependency
 
-// 移除了JavaScript事件监听器，避免与HTML中的内联onclick事件处理程序冲突
-// 菜单切换功能已在HTML中通过内联onclick事件实现
+// Removed JavaScript event listeners to avoid conflicts with inline onclick handlers in HTML
+// Menu toggle functionality is implemented through inline onclick events in HTML
   
-// 平滑滚动功能
+// Smooth scrolling functionality
 const initSmoothScroll = () => {
   document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -44,10 +44,10 @@ const initSmoothScroll = () => {
   });
 };
 
-// 初始化平滑滚动
+// Initialize smooth scrolling
 initSmoothScroll();
 
-// 滚动触发动画（仅保留使用的slideRight效果）
+// Scroll-triggered animations (only kept for slideRight effect)
 window.addEventListener('scroll', function() {
   document.querySelectorAll('.toSlideRight').forEach(element => {
     const itemPos = element.getBoundingClientRect().top + window.pageYOffset;

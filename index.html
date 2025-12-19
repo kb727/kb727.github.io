@@ -36,7 +36,7 @@
         .expandUp h2, .expandUp h3 { margin: 0; }
         .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
         
-        /* 防止菜单预显示 - 关键优化 */
+        /* Prevent menu pre-display - critical optimization */
         #sidebar-wrapper {
             margin-right: -250px;
             visibility: hidden;
@@ -51,30 +51,30 @@
             z-index: 1000;
             transition: all 0.4s ease;
         }
-        /* 页面加载完成后显示菜单（如果 CSS 已加载） */
+        /* Show menu after page load (if CSS is loaded) */
         html.loaded #sidebar-wrapper {
             visibility: visible;
             opacity: 1;
         }
-        /* 菜单激活状态 */
+        /* Menu active state */
         #sidebar-wrapper.active {
             margin-right: 0;
             right: 0;
         }
         
-        /* 侧边栏文本颜色设置 */
+        /* Sidebar text color settings */
         .sidebar-nav li a,
         .sidebar-nav > .sidebar-brand a,
         .sidebar-description {
             color: #FFFFFF !important;
         }
         
-        /* Portfolio色块颜色设置 */
+        /* Portfolio color block settings */
         #portfolio .caption {
             background-color: rgba(102, 153, 0, 0.45) !important;
         }
         
-        /* 菜单按钮颜色设置 */
+        /* Menu button color settings */
         .btn-primary, .btn-index {
             background-color: #669900;
             border-color: #669900;
@@ -83,10 +83,10 @@
             border-radius: 5px;
             color: #669900;
             text-decoration: none;
-            z-index: 1001; /* 确保按钮在侧边栏之上 */
+            z-index: 1001; /* Ensure button is above sidebar */
         }
         
-        /* 菜单切换按钮样式 */
+        /* Menu toggle button style */
         #menu-toggle {
             position: fixed;
             top: 0;
@@ -95,7 +95,7 @@
             border-radius: 0 0 0 4px;
         }
         
-        /* 菜单关闭按钮样式 */
+        /* Menu close button style */
         #menu-close {
             position: absolute;
             top: 0;
@@ -104,13 +104,13 @@
             border-radius: 0 0 0 4px;
         }
         
-        /* Screen Casting横幅颜色设置 */
+        /* Screen Casting banner color settings */
         .call-to-action {
             background-color: #669900 !important;
         }
     </style>
 
-    <!-- 加载关键CSS资源 -->
+    <!-- Load critical CSS resources -->
     <link rel="stylesheet" href="./static/css/bootstrap.css">
     <link rel="stylesheet" href="./static/css/main.css">
     <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
@@ -325,25 +325,25 @@
     <!-- /Footer -->
 
     <!-- Load JavaScript asynchronously -->
-    <!-- 移除了内联的侧边栏初始样式设置，改为通过CSS控制 -->
+    <!-- Removed inline sidebar initial style settings, switched to CSS control -->
     
-    <!-- 页面底部加载脚本，确保DOM完全加载 -->
+    <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
     <script>
-        // 直接定义切换菜单函数，用于内联事件处理
+        // Directly define toggleMenu function for inline event handling
         function toggleMenu(e) {
             e.preventDefault();
-            console.log('切换菜单点击事件触发（内联处理）');
+            console.log('Menu toggle click event triggered (inline handling)');
             const sidebarWrapper = document.getElementById('sidebar-wrapper');
             if (sidebarWrapper) {
-                console.log('当前active类状态:', sidebarWrapper.classList.contains('active'));
+                console.log('Current active class status:', sidebarWrapper.classList.contains('active'));
                 sidebarWrapper.classList.toggle('active');
-                console.log('切换后active类状态:', sidebarWrapper.classList.contains('active'));
+                console.log('Active class status after toggle:', sidebarWrapper.classList.contains('active'));
             } else {
-                console.error('未找到sidebar-wrapper元素');
+                console.error('sidebar-wrapper element not found');
             }
         }
         
-        // 脚本加载完成后，标记页面已加载，允许菜单显示
+        // After script loads, mark page as loaded to allow menu display
         document.documentElement.classList.add('loaded');
     </script>
     <script src="./static/js/main.js"></script>
