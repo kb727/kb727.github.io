@@ -95,13 +95,6 @@ a:active {
   background: none;
 }
 
-#menu-toggle {
-  top: 0;
-  right: 0;
-  position: fixed;
-  z-index: 1;
-}
-
 #sidebar-wrapper.active {
   right: 0;
   width: 250px;
@@ -120,33 +113,45 @@ a:active {
 }
 
 /* Ensure button is always visible and clickable */
+/* Single consolidated menu toggle style definition */
 #menu-toggle {
   display: block !important;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1001;
-  padding: 15px 20px;
-  background-color: #669900;
-  border: none;
-  color: white;
-  border-radius: 0 0 0 4px;
-  cursor: pointer;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  z-index: 1001 !important;
+  padding: 15px 20px !important;
+  background-color: #669900 !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 0 0 0 4px !important;
+  cursor: pointer !important;
   /* 增强固定定位稳定性 */
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
+  backface-visibility: hidden !important;
+  transform: translateZ(0) !important;
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-backface-visibility: hidden !important;
+  -webkit-transform: translateZ(0) !important;
   /* 确保不会被其他元素遮挡 */
-  pointer-events: auto;
+  pointer-events: auto !important;
   /* 防止滚动时的重排和重绘 */
-  will-change: auto;
+  will-change: auto !important;
   /* 确保在所有移动设备上都能正确固定 */
   left: auto !important;
   bottom: auto !important;
   margin: 0 !important;
+  /* 确保不受父元素影响 */
+  float: none !important;
+  clear: none !important;
+  /* 确保按钮始终在视口中 */
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* 防止文本选择 */
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
 }
 
 /* Set menu toggle icon to white */
@@ -359,4 +364,6 @@ footer .list-unstyled a {
   color: #333 !important;
   text-decoration: none;
 }
+
+
 
