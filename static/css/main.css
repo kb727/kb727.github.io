@@ -134,6 +134,11 @@ a:active {
   cursor: pointer;
 }
 
+/* Set menu toggle icon to white */
+#menu-toggle i {
+  color: white !important;
+}
+
 #menu-close {
   display: block !important;
   position: absolute;
@@ -146,6 +151,11 @@ a:active {
   color: white;
   border-radius: 0 0 0 4px;
   cursor: pointer;
+}
+
+/* Set menu close icon to white */
+#menu-close i {
+  color: white !important;
 }
 
 /* Full Page Image Header Area */

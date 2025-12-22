@@ -1,4 +1,4 @@
-# robots.txt for KB727.COM - Industrial Investment & Manufacturing Platform
+﻿# robots.txt for KB727.COM - Industrial Investment & Manufacturing Platform
 
 # Allow all crawlers access to the site
 User-agent: *
@@ -31,4 +31,4 @@ Crawl-delay: 1
 # Sitemap location - ensure it's accessible
 Sitemap: https://kb727.com/sitemap.xml
 
-# Updated on 2025-12-19 to reflect comment translation and resource optimization
+# Updated on 2025-12-22 to reflect comment translation and resource optimization
