@@ -132,13 +132,21 @@ a:active {
   color: white;
   border-radius: 0 0 0 4px;
   cursor: pointer;
-  /* 添加以下属性提高移动端稳定性 */
+  /* 增强固定定位稳定性 */
   backface-visibility: hidden;
   transform: translateZ(0);
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
+  /* 确保不会被其他元素遮挡 */
+  pointer-events: auto;
+  /* 防止滚动时的重排和重绘 */
+  will-change: auto;
+  /* 确保在所有移动设备上都能正确固定 */
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
 }
 
 /* Set menu toggle icon to white */
