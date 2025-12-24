@@ -29,13 +29,15 @@
 
     <!-- Critical CSS - Synchronous loading -->
     <link rel="stylesheet" href="./static/fonts/arimo/arimo-local.css">
-    <link rel="stylesheet" href="./static/css/assets/xenon-components.css">
     <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="./static/css/assets/bootstrap.css">
-    <link rel="stylesheet" href="./static/css/assets/xenon-core.css">
-    <link rel="stylesheet" href="./static/css/assets/xenon-skins.css">
-    <link rel="stylesheet" href="./static/css/assets/nav.css">
     <link rel="stylesheet" href="./static/css/assets/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="./static/css/assets/bootstrap.css">
+    
+    <!-- Core layout CSS - Synchronous loading -->
+    <link rel="stylesheet" href="./static/css/assets/xenon-core.css">
+    <link rel="stylesheet" href="./static/css/assets/nav.css">
+    <link rel="stylesheet" href="./static/css/assets/xenon-components.css">
+    <link rel="stylesheet" href="./static/css/assets/xenon-skins.css">
     
     <!-- Removed preloading for jQuery and Bootstrap since these libraries are no longer used -->
     
@@ -760,60 +762,9 @@
             </footer>
         </div>
     </div>
-    <!-- Page initialization script -->
-    <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        // Optimization: Using event delegation to handle all card click events instead of inline onclick
-        document.addEventListener('click', function(e) {
-            var target = e.target;
-            while (target && !target.classList.contains('xe-widget')) {
-                target = target.parentElement;
-            }
-            if (target && target.dataset.href) {
-                window.open(target.dataset.href, '_blank', 'noopener,noreferrer');
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            var target = e.target;
-            if (target.classList.contains('xe-widget') && target.dataset.href) {
-                if (e.which === 13 || e.which === 32) {
-                    e.preventDefault();
-                    window.open(target.dataset.href, '_blank', 'noopener,noreferrer');
-                }
-            }
-        });
-
-        // Add accessibility attributes to clickable cards
-        var widgets = document.querySelectorAll('.xe-widget[data-href]');
-        widgets.forEach(function(widget) {
-            var title = widget.getAttribute('data-original-title') || widget.getAttribute('title') || '打开链接';
-            widget.setAttribute('role', 'button');
-            widget.setAttribute('tabindex', '0');
-            widget.setAttribute('aria-label', title);
-        });
-    });
-    </script>
     <!-- Bottom Scripts -->
-    <!-- Core script - Only loading main.js since it's been optimized to use native JavaScript -->
+    <!-- Core script - All functionality is now consolidated in main.js -->
     <script src="./static/js/main.js"></script>
-    <!-- Mobile menu toggle handling - Implemented with native JavaScript -->
-    <script>
-    // Handle mobile navigation button click event
-    document.addEventListener('DOMContentLoaded', function() {
-        var mobileToggleBtn = document.querySelector(".mobile-menu-toggle a[data-toggle='mobile-menu']");
-        if (mobileToggleBtn) {
-            mobileToggleBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Toggle sidebar menu visibility
-                var mainMenu = document.querySelector(".main-menu");
-                if (mainMenu) {
-                    mainMenu.classList.toggle("mobile-is-visible");
-                }
-            });
-        }
-    });
-    </script>
 </body>
 
 </html>

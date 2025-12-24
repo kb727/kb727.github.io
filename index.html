@@ -111,21 +111,13 @@
     </style>
 
     <!-- Load critical CSS resources -->
-    <link rel="stylesheet" href="./static/css/bootstrap.css">
-    <link rel="stylesheet" href="./static/css/main.css">
     <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
     <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/bootstrap.css">
+    <link rel="stylesheet" href="./static/css/main.css">
     
     <!-- Non-critical CSS - Load asynchronously -->
     <link href="./static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for browsers that don't support preload -->
-    <noscript>
-        <link href="./static/css/bootstrap.css" rel="stylesheet">
-        <link href="./static/css/main.css" rel="stylesheet">
-        <link href="./static/fonts/open-sans/open-sans.css" rel="stylesheet">
-        <link href="./static/fonts/font-awesome/css/all.min.css" rel="stylesheet">
-    </noscript>
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20251015">
@@ -146,7 +138,7 @@
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" onclick="toggleMenu(event)"><i class="fa fa-reorder"></i></a>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="关闭菜单" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
             <li><a href="#about">Brief Profile</a></li>
             <li><a href="#portfolio">Screen Casting</a></li>
@@ -328,24 +320,6 @@
     <!-- Removed inline sidebar initial style settings, switched to CSS control -->
     
     <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
-    <script>
-        // Directly define toggleMenu function for inline event handling
-        function toggleMenu(e) {
-            e.preventDefault();
-            console.log('Menu toggle click event triggered (inline handling)');
-            const sidebarWrapper = document.getElementById('sidebar-wrapper');
-            if (sidebarWrapper) {
-                console.log('Current active class status:', sidebarWrapper.classList.contains('active'));
-                sidebarWrapper.classList.toggle('active');
-                console.log('Active class status after toggle:', sidebarWrapper.classList.contains('active'));
-            } else {
-                console.error('sidebar-wrapper element not found');
-            }
-        }
-        
-        // After script loads, mark page as loaded to allow menu display
-        document.documentElement.classList.add('loaded');
-    </script>
     <script src="./static/js/main.js"></script>
 </body>
 </html>
