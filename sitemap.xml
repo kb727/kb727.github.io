@@ -3,7 +3,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://kb727.com/</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -11,7 +11,7 @@
     <!-- Default Chinese Page -->
     <url>
         <loc>https://kb727.com/default.html</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -19,7 +19,7 @@
     <!-- English Page -->
     <url>
         <loc>https://kb727.com/index.html</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -27,7 +27,7 @@
     <!-- Emoji Symbols Page -->
     <url>
         <loc>https://kb727.com/emoji.html</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -35,7 +35,7 @@
     <!-- 404 Page -->
     <url>
         <loc>https://kb727.com/404.html</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.1</priority>
     </url>
@@ -43,7 +43,7 @@
     <!-- Important Resource Page -->
     <url>
         <loc>https://kb727.com/attachments/global/terms.pdf</loc>
-        <lastmod>2025-12-25</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

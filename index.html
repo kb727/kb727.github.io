@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="KB727 - Shaping the Future of Advanced Manufacturing.">
-    <meta name="keywords" content="Shanghai Industrial Real Estate,China Manufacturing Clusters,Asia Advanced Manufacturing,Global Industrial Investment,China Industrial Parks,Shanghai Investment Promotion,Chinese Manufacturing Partnerships,Advanced Manufacturing Hub,Manufacturing Cluster Development,Industrial Real Estate China,Smart Manufacturing Partnerships,High-End Materials Innovation,New Energy Vehicle Industry,Medical Equipment Manufacturing,Agricultural Machinery Technology,Industrial Matchmaking,Technology Transfer China,Cross-border Industrial Collaboration,Manufacturing Ecosystem Development,English Localization,English Services,International Version,Global Partnerships,Industrial Investment Promotion,Industry Salons,Manufacturing Seminars,Enterprise Reception Hall / Corporate Guest Center,Key Industrial Chains,Industrial Clusters / Advanced Manufacturing Hubs,High-End New Materials,Major Technical Equipment,Intelligent Manufacturing & Robotics,Aero-Engines and Gas Turbines,BeiDou Industrial Applications,New Energy Vehicles (NEVs) & Intelligent Connected Vehicles (ICVs),High-End Medical Equipment & Innovative Drugs,Agricultural Machinery Equipment">
+    <meta name="keywords" content="Shanghai Industrial Real Estate,China Manufacturing Clusters,Asia Advanced Manufacturing,Global Industrial Investment,China Industrial Parks,Shanghai Investment Promotion,Chinese Manufacturing Partnerships,Advanced Manufacturing Hub,Manufacturing Cluster Development,Industrial Real Estate China,Smart Manufacturing Partnerships,High-End Materials Innovation,New Energy Vehicle Industry,Medical Equipment Manufacturing,Agricultural Machinery Technology,Industrial Matchmaking,Technology Transfer China,Cross-border Industrial Collaboration,Manufacturing Ecosystem Development,English Localization,English Services,International Version,Global Partnerships,Industrial Investment Promotion,Industry Salons,Manufacturing Seminars,Enterprise Reception Hall,Key Industrial Chains,Industrial Clusters,High-End New Materials,Major Technical Equipment,Intelligent Manufacturing,Robotics,Aero-Engines,Gas Turbines,BeiDou Industrial Applications,New Energy Vehicles,Intelligent Connected Vehicles,High-End Medical Equipment,Innovative Drugs,Agricultural Machinery Equipment,Shanghai Industrial Investment,China Manufacturing Hubs,Advanced Manufacturing Technology,Industrial Ecosystem Development,Strategic Investment Promotion,Regional Government Partnerships,Manufacturing Chain Development,Industrial Matchmaking Sessions,Networking Events,Technological Exchange,High-End Rare-Earth Materials,Special Steels,Performance Alloys,High-Purity Rare Metals,Advanced Ceramics,Electronic Glass,Carbon Fiber,Aramid Composites,Bio-based Materials,Biomedical Materials,High-Speed Trains,Metro Trains,High-End Machine Tools,Advanced Engineering Machinery,Nuclear Power Components,Cruise Ships,LNG Carriers,Deep-Sea Platforms,C919 Aircraft,ARJ21 Regional Jet,Industrial Control Equipment,Distributed Control Systems,Programmable Logic Controllers,Robotics Technologies,Advanced Controllers,High-Precision Servo Drives,High-Performance Reducers,Additive Manufacturing,3D Printing,Advanced Aero-Engines,Commercial Turbofan Engines,CJ1000 Engine,Heavy-Duty Gas Turbines,BeiDou Navigation Technology,Integrated Application,Vehicle Navigation,Smartphones,Wearable Devices,High-Safety Batteries,Efficient Drive Motors,High-Performance Powertrains,Smart Hardware Systems,Wire-Controlled Chassis,Robotic Surgical Systems,ECMO Machines,High-End Medical Imaging,Radiotherapy Equipment,Medical Implants,Vaccels,Novel Drugs,Critical Diseases,High-Horsepower Intelligent Tractors,Precision Planters,Efficient Combine Harvesters,Hilly Area Equipment,Smart Breeding,Farming Technologies,Global Innovation,Local Industrial Capacity,Strategic Partnerships,Manufacturing Future">
     <meta name="author" content="KB727.COM">
     <meta name="apple-mobile-web-app-title" content="KB727">
     <meta name="application-name" content="KB727">
@@ -300,6 +300,9 @@
                 <li><a href="#about" title="Brief Profile"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
                 <li><a href="#portfolio" title="Screen Casting"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
                 <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToFacebook(event)" title="Share to Facebook"><i class="fa-brands fa-facebook fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToTwitter(event)" title="Share to Twitter"><i class="fa-brands fa-twitter fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToLinkedIn(event)" title="Share to LinkedIn"><i class="fa-brands fa-linkedin fa-3x"></i></a></li>
             </ul>
                     <ul class="list-unstyled size-m spaced">
                         <li><i class="fa-solid fa-location-dot"></i> Reception, No. 262 Xumin Road, <br>Qingpu District, Shanghai, China</li>
@@ -321,5 +324,29 @@
     
     <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
     <script src="./static/js/main.js"></script>
+    <script>
+        // Social media sharing functions
+        function shareToFacebook(event) {
+            event.preventDefault();
+            const url = encodeURIComponent(window.location.href);
+            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        function shareToTwitter(event) {
+            event.preventDefault();
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Check out KB727 - Forging Advanced Manufacturing Hubs');
+            const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        function shareToLinkedIn(event) {
+            event.preventDefault();
+            const url = encodeURIComponent(window.location.href);
+            const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    </script>
 </body>
 </html>
