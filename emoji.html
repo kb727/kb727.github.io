@@ -258,34 +258,62 @@
         });
     });
     </script>
+    
+    <!-- WeChat QR Code Modal -->
+    <div id="wechatModal" class="wechat-modal" style="display: none;">
+        <div class="wechat-modal-content">
+            <span class="wechat-modal-close" onclick="closeWeChatModal()">&times;</span>
+            <div class="wechat-modal-header">
+                <h3>分享到微信</h3>
+            </div>
+            <div class="wechat-modal-body">
+                <p>请使用微信扫描二维码</p>
+                <div class="qr-code-container">
+                    <img id="wechatQRCode" src="" alt="微信分享二维码" />
+                </div>
+                <p class="qr-url" id="qrUrl"></p>
+            </div>
+        </div>
+    </div>
+    
     <!-- Bottom Scripts -->
     <!-- Core script - Only loading main.js since it's been optimized to use native JavaScript -->
     <script src="./static/js/main.js"></script>
-    <!-- Mobile menu toggle handling - Implemented with native JavaScript -->
-    <script>
-    // Handle mobile navigation button click event
-    document.addEventListener('DOMContentLoaded', function() {
-        var mobileToggleBtn = document.querySelector(".mobile-menu-toggle a[data-toggle='mobile-menu']");
-        if (mobileToggleBtn) {
-            mobileToggleBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Toggle sidebar menu visibility
-                var mainMenu = document.querySelector(".main-menu");
-                if (mainMenu) {
-                    mainMenu.classList.toggle("mobile-is-visible");
-                }
-            });
-        }
-    });
-    </script>
     <!-- 社交媒体分享功能 -->
     <script>
     // 分享到微信
     function shareToWeChat() {
         var currentUrl = window.location.href;
-        var currentTitle = document.title;
-        alert('请复制链接到微信分享：\n\n' + currentUrl + '\n\n标题：' + currentTitle);
-        copyToClipboard(currentUrl);
+        var modal = document.getElementById('wechatModal');
+        var qrCode = document.getElementById('wechatQRCode');
+        var qrUrl = document.getElementById('qrUrl');
+        
+        // 固定指向kb727.com/default.html
+        var fixedUrl = 'https://kb727.com/default.html';
+        
+        // 使用API生成二维码
+        qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(fixedUrl);
+        qrUrl.textContent = fixedUrl;
+        
+        // 显示模态框
+        modal.style.display = 'flex';
+        
+        // 防止页面滚动
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeWeChatModal() {
+        var modal = document.getElementById('wechatModal');
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // 点击模态框外部关闭
+    window.onclick = function(event) {
+        var modal = document.getElementById('wechatModal');
+        if (event.target == modal) {
+            closeWeChatModal();
+        }
     }
 
     // 分享到抖音
@@ -349,6 +377,126 @@
         document.body.removeChild(textarea);
     }
     </script>
+    
+    <!-- WeChat Modal Styles -->
+    <style>
+    .wechat-modal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .wechat-modal-content {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        max-width: 400px;
+        width: 90%;
+        position: relative;
+        animation: slideIn 0.3s ease-in-out;
+    }
+
+    .wechat-modal-close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #999;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.2s;
+        line-height: 1;
+    }
+
+    .wechat-modal-close:hover {
+        color: #333;
+    }
+
+    .wechat-modal-header {
+        padding: 20px 20px 10px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .wechat-modal-header h3 {
+        margin: 0;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .wechat-modal-body {
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .wechat-modal-body p {
+        margin: 0 0 15px;
+        color: #666;
+        font-size: 15px;
+    }
+
+    .qr-code-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+    }
+
+    .qr-code-container img {
+        max-width: 200px;
+        height: auto;
+        display: block;
+    }
+
+    .qr-url {
+        font-size: 12px;
+        color: #999;
+        word-break: break-all;
+        margin-top: 10px !important;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .wechat-modal-content {
+            width: 95%;
+        }
+
+        .qr-code-container img {
+            max-width: 180px;
+        }
+    }
+    </style>
 </body>
 
 </html>
