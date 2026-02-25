@@ -39,6 +39,92 @@
     <link rel="stylesheet" href="../../static/css/assets/nav.css">
     <link rel="stylesheet" href="../../static/css/assets/fonts/linecons/css/linecons.css">
     
+    <!-- Logo alignment fix -->
+    <style>
+        /* Ensure logo alignment with sidebar text */
+        .logo-env {
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+        }
+        
+        /* Ensure sidebar text alignment with proper spacing */
+        #main-menu p {
+            margin: -10px 0 20px 0 !important;
+            padding: 0 !important;
+        }
+        
+        /* Ensure menu items alignment with logo */
+        .main-menu a {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        
+        /* Add vertical spacing after the last menu item */
+        #main-menu li:last-child {
+            margin-bottom: 20px !important;
+        }
+        
+        /* Ensure menu icons alignment */
+        .main-menu a>i {
+            margin-right: 10px !important;
+        }
+        
+        /* Mobile alignment fix */
+        @media (max-width: 768px) {
+            /* Ensure logo alignment with sidebar text */
+            .logo-env {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            
+            /* Ensure sidebar text and menu items are properly indented to align with logo */
+            #main-menu p {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+            
+            .main-menu li {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+            
+            .main-menu a {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Ensure menu icons alignment */
+            .main-menu a>i {
+                margin-right: 10px !important;
+            }
+            
+            /* Ensure mobile menu toggle button doesn't affect alignment */
+            .mobile-menu-toggle {
+                position: relative;
+                z-index: 10;
+            }
+            
+            /* Ensure sidebar is properly aligned when opened on mobile */
+            .sidebar-menu.mobile-open .sidebar-menu-inner {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+            
+            /* Ensure table inside sidebar has no margins */
+            #main-menu table {
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            /* Ensure table cells have no padding */
+            #main-menu table td {
+                padding: 0 !important;
+            }
+        }
+    </style>
+    
     <!-- Removed preloading for jQuery and Bootstrap since these libraries are no longer used -->
     
     <!-- Resource hints for performance -->
@@ -80,7 +166,7 @@
                 <ul id="main-menu" class="main-menu">
 
                     <p style="overflow: hidden;">
-                        <table style="border: 0; border-collapse: collapse; margin: 0 9px; width: calc(100% - 9px);">
+                        <table style="border: 0; border-collapse: collapse; margin: 0; width: 100%;">
                             <tr>
                                 <td style="border: 0; padding: 0; color: white; text-align: justify;">
                                     <span class="title">KB727是一个总部在上海、国际化的产业投资联合体，结合地方发展定位、产业布局和参与投资各方共同的产业蓝图，通过资本、资产、技术、市场、政策等资源的联合投入与深度绑定，共同开发、建设、运营重点产业链和产业集群，助力地方构建战略性新兴产业，创造长期的产业竞争力、就业和税收。<br /><br />本平台仅展示经人工认证的可交易大宗物业资产、产业资源及企业服务信息。联系方式：business@kb727.com，1小时内回复。</span>
