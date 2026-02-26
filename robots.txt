@@ -31,4 +31,4 @@ Crawl-delay: 1
 # Sitemap location - ensure it's accessible
 Sitemap: https://kb727.com/sitemap.xml
 
-# Updated on 2026-02-25 to update sitemap last modification dates
+# Updated on 2026-02-26 to update sitemap last modification dates
