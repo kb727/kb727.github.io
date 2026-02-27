@@ -23,6 +23,10 @@ Crawl-delay: 1
 
 # Disallow specific directories and files that don't need indexing
 Disallow: /static/images/icons/
+# Allow Spotlight, Acquisition and National directories for indexing
+Allow: /attachments/Spotlight/
+Allow: /attachments/Acquisition/
+Allow: /attachments/National/
 Disallow: /attachments/
 
 # Crawl delay for all crawlers
@@ -31,4 +35,4 @@ Crawl-delay: 1
 # Sitemap location - ensure it's accessible
 Sitemap: https://kb727.com/sitemap.xml
 
-# Updated on 2026-02-26 to update sitemap last modification dates
+# Updated on 2026-02-27 to update sitemap last modification dates

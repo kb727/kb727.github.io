@@ -67,8 +67,136 @@
     <!-- Subscriber Page -->
     <url>
         <loc>https://kb727.com/subscriber.html</loc>
-        <lastmod>2026-02-26</lastmod>
+        <lastmod>2026-02-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+    </url>
+    
+    <!-- Private Business Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Spotlight/Private-Business.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Industry and Capital Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Spotlight/Industry-and-Capital.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Training and Consulting Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Spotlight/Training-Consulting.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Acquisition: sz-wy Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Acquisition/sz-wy.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Acquisition: lsh-jcs Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Acquisition/lsh-jcs.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Acquisition: dongguan Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Acquisition/dongguan.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Acquisition: sh-hq-gd Page -->
+    <url>
+        <loc>https://kb727.com/attachments/Acquisition/sh-hq-gd.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: sh-hq-yym-gd Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/sh-hq-yym-gd.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: sh-hq-pzq-a Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/sh-hq-pzq-a.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: sh-hq-pzq-b Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/sh-hq-pzq-b.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: sz-taozf Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/sz-taozf.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: chengdu-hrf Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/chengdu-hrf.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: dyj-b Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/dyj-b.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: guojingyan Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/guojingyan.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: xiaogan Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/xiaogan.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- National: huangjiang Page -->
+    <url>
+        <loc>https://kb727.com/attachments/National/huangjiang.html</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
