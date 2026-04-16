@@ -1,4 +1,4 @@
-# robots.txt for KB727.COM - Industrial Investment & Manufacturing Platform
+# robots.txt for KB727.COM - Asset Transaction Consulting Platform
 
 # Allow all crawlers access to the site
 User-agent: *
@@ -23,16 +23,18 @@ Crawl-delay: 1
 
 # Disallow specific directories and files that don't need indexing
 Disallow: /static/images/icons/
-# Allow Spotlight, Acquisition and National directories for indexing
+
+# Allow specific attachment directories for indexing
 Allow: /attachments/Spotlight/
 Allow: /attachments/Acquisition/
 Allow: /attachments/National/
+Allow: /attachments/Global/
 Disallow: /attachments/
 
 # Crawl delay for all crawlers
 Crawl-delay: 1
 
-# Sitemap location - ensure it's accessible
+# Sitemap location
 Sitemap: https://kb727.com/sitemap.xml
 
-# Updated on 2026-04-01 to update sitemap last modification dates
+# Updated on 2026-04-16
