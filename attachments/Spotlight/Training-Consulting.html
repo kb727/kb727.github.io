@@ -238,7 +238,7 @@
                     <div class="footer-text">
                                                 <ul class="list-inline spaced">
                             <li><a href="https://www.amap.com/search?query=上海市浦东新区秀沿路1088号" title="地址导航" target="_blank"><i class="fa-solid fa-location-dot"></i></a></li>
-                            <li><a href="../../index.html" target="_blank" title="咨询服务"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                            <li><a href="../../default.asp" target="_blank" title="咨询服务"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
                             <li><a href="mailto:business@kb727.com" title="联系我们" target="_blank"><i class="fa-solid fa-paper-plane"></i></a></li>
                             <li><a href="javascript:void(0);" onclick="shareToWeChat()" title="分享到微信"><i class="fa-brands fa-weixin"></i></a></li>
                             <li><a href="javascript:void(0);" onclick="shareToDouyin()" title="分享到抖音"><i class="fa-brands fa-tiktok"></i></a></li>
@@ -323,7 +323,7 @@
         var qrUrl = document.getElementById('qrUrl');
         
         // 固定指向kb727.com/../../index.html
-        var fixedUrl = 'https://kb727.com/../../index.html';
+        var fixedUrl = 'https://kb727.com/../../default.asp';
         
         // 使用API生成二维码
         qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(fixedUrl);
