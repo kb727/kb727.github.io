@@ -1,10 +1,8 @@
-# robots.txt for KB727.COM - Asset Transaction Consulting Platform
+# robots.txt for KB727.COM - Logistics Investment & Acquisition Services
 
-# Allow all crawlers access to the site
 User-agent: *
 Allow: /
 
-# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -21,20 +19,8 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 1
 
-# Disallow specific directories and files that don't need indexing
-Disallow: /static/images/icons/
-
-# Allow specific attachment directories for indexing
-Allow: /attachments/Spotlight/
-Allow: /attachments/Acquisition/
-Allow: /attachments/National/
-Allow: /attachments/Global/
-Disallow: /attachments/
-
-# Crawl delay for all crawlers
 Crawl-delay: 1
 
-# Sitemap location
 Sitemap: https://kb727.com/sitemap.xml
 
-# Updated on 2026-05-12
+Updated on 2026-07-10

@@ -91,7 +91,7 @@ AddType font/woff2 .woff2
 # Website Rendering Request Blocking
 # Content Security Policy
 <IfModule mod_headers.c>
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none';"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none';"
 </IfModule>
 
 # Block common crawlers for rendering prevention
