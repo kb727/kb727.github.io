@@ -13,6 +13,13 @@
     <meta name="msapplication-config" content="./browserconfig.xml?v20260711">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KB727.COM | Logistics Investment & Acquisition">
+    <meta name="twitter:description" content="KB727 Group is a professional logistics investment and acquisition service provider.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KB727.COM | Logistics Investment & Acquisition">
+    <meta property="og:description" content="KB727 Group is a professional logistics investment and acquisition service provider.">
+    <meta property="og:url" content="https://kb727.com">
 
     <link rel="apple-touch-icon" sizes="57x57" href="./static/images/icons/apple-touch-icon-57x57.png?v20260711">
     <link rel="apple-touch-icon" sizes="60x60" href="./static/images/icons/apple-touch-icon-60x60.png?v20260711">
@@ -49,23 +56,25 @@
     <link rel="shortcut icon" href="./static/images/icons/favicon.ico?v20260711">
     <link rel="manifest" href="./site.webmanifest?v20260711">
 
-    <title>KB727.COM | Logistics Investment & Acquisition</title>
+    <title>KB727 Group - Professional Logistics Investment & Acquisition Services | Global Network</title>
     <style>
+        :root { --primary-color: #669900; --primary-dark: #446600; --dark-color: #0a0a0a; --light-color: #fff; --accent-color: #FFA500; --spacing-sm: 0.5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 3rem; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #0a0a0a; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: var(--dark-color); }
         h1, h2, h3 { font-weight: 700; }
         .header { height: 100vh; background: linear-gradient(135deg, #669900 0%, #446600 50%, #223300 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
         .header h1 { font-size: 2.8rem; margin-bottom: 1.5rem; }
         .header p { font-size: 2.8rem; font-weight: 700; color: #FFA500; }
         .nav-links { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-        .nav-links a { color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border: 2px solid #fff; border-radius: 6px; font-size: 1.05rem; }
+        .nav-links a { color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border: 2px solid #fff; border-radius: 6px; font-size: 1.05rem; transition: all 0.3s ease; }
         .nav-links a:hover { background: #fff; color: #0a0a0a; }
         .container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
         .section-title { text-align: center; margin-bottom: 2.5rem; font-size: 1.8rem; color: #669900; }
         .about { background: #f0f0f0; }
         .about p { font-size: 1.05rem; margin-bottom: 1.5rem; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .service-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
         .service-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: #669900; }
         .service-card p { font-size: 1.05rem; color: #0a0a0a; }
         .stats { background: #0a0a0a; color: #fff; }
@@ -77,27 +86,32 @@
         .contact .section-title { color: #fff; }
         .contact a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: 700; }
         .contact-icon { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.8rem; }
-        .footer { background: #0a0a0a; color: #fff; text-align: center; padding: 2rem; font-size: 1.05rem; }
+        .footer { background: #0a0a0a; color: #fff; text-align: center; padding: 2rem; font-size: 0.8rem; }
         .footer a { color: #fff; text-decoration: none; }
         .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; }
         .lang-switch a { padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.95); color: #0a0a0a; text-decoration: none; border-radius: 6px; font-size: 1.05rem; font-weight: 600; }
-        @media (max-width: 600px) { .header h1 { font-size: 2rem; } .header p { font-size: 1.05rem; } .container { padding: 3rem 1.5rem; } }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: #669900; color: #fff; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 1000; display: flex; align-items: center; justify-content: center; }
+        .back-to-top.show { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: #446600; }
+        a:focus, button:focus { outline: 3px solid #FFA500; outline-offset: 2px; }
+        @media (max-width: 600px) { .header h1 { font-size: 2rem; } .header p { font-size: 1.05rem; } .container { padding: 3rem 1.5rem; } .service-card h3 { font-size: 1.1rem; } .service-card p { font-size: 0.95rem; } .nav-links a { padding: 0.6rem 1rem; font-size: 0.95rem; min-width: 80px; text-align: center; } .back-to-top { width: 44px; height: 44px; font-size: 1.2rem; } }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(3, 1fr); } }
     </style>
 </head>
 <body>
     <div class="lang-switch"><a href="default.html">中文</a></div>
-    <div class="header" id="top">
+    <header class="header" id="top">
         <div>
             <h1>KB727 GROUP</h1>
             <p>Logistics Investment & Acquisition Services</p>
-            <div class="nav-links">
+            <nav class="nav-links" aria-label="Main Navigation">
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#stats">Global Network</a>
                 <a href="#contact">Contact</a>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>
     <div class="about" id="about">
         <div class="container">
             <h2 class="section-title">About KB727 Group</h2>
@@ -158,13 +172,44 @@
             <div style="font-size: 1.3rem; font-weight: 700; text-align: center; color: #fff;">💬 WeChat: KB727er</div>
         </div>
     </div>
-    <div class="footer">
+    <div style="background: #fff; padding: 3rem 2rem; text-align: center;">
+        <h3 style="font-size: 1.8rem; font-weight: 700; color: #669900; margin-bottom: 1.5rem;">Links</h3>
+        <div style="font-size: 1.05rem; margin-bottom: 0.8rem;">📄 <a href="https://www.docusign.com" style="color: #0a0a0a; text-decoration: none;" target="_blank" rel="noopener noreferrer">KB727 - Docusign</a></div>
+        <div style="font-size: 1.05rem;">🌍 <a href="attachments/Global/industry.html" style="color: #0a0a0a; text-decoration: none;">KB727 - Strategic Industrial Investment</a></div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <footer class="footer">
         <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. Please refer to <a href="attachments/Global/terms.pdf">Legal Terms</a>. Unauthorized commercial resale is prohibited and subject to legal action.</p>
         <br><br>
-    </div>
-    <script>
+    </footer>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "KB727 Group",
+            "url": "https://kb727.com",
+            "logo": "https://kb727.com/static/images/icons/favicon.svg",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "logistics@kb727.com",
+                "contactType": "customer service"
+            }
+        }
+        </script>
+        <script>
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); });
+        });
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
