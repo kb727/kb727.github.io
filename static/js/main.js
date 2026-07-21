@@ -159,7 +159,7 @@ function setupMobileMenuHandler() {
         });
     }
     
-    // Handle specific mobile menu toggle in transaction.html
+    // Handle specific mobile menu toggle in main.html
     const mobileToggleBtn = document.querySelector(".mobile-menu-toggle a[data-toggle='mobile-menu']");
     if (mobileToggleBtn) {
         mobileToggleBtn.addEventListener('click', function(e) {

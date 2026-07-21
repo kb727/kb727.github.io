@@ -9,14 +9,14 @@
 
     <url>
         <loc>https://kb727.com/index.html</loc>
-        <lastmod>2026-07-12</lastmod>
+        <lastmod>2026-07-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://kb727.com/default.html</loc>
-        <lastmod>2026-07-12</lastmod>
+        <lastmod>2026-07-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -36,8 +36,8 @@
     </url>
 
     <url>
-        <loc>https://kb727.com/transaction.html</loc>
-        <lastmod>2026-07-12</lastmod>
+        <loc>https://kb727.com/main.html</loc>
+        <lastmod>2026-07-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -65,13 +65,6 @@
 
     <url>
         <loc>https://kb727.com/attachments/Spotlight/Training-Consulting.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://kb727.com/attachments/Acquisition/sz-wy.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -134,28 +127,7 @@
     </url>
 
     <url>
-        <loc>https://kb727.com/attachments/National/dyj-a.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://kb727.com/attachments/National/dyj-b.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
         <loc>https://kb727.com/attachments/National/guojingyan.html</loc>
-        <lastmod>2026-07-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://kb727.com/attachments/National/xiaogan.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
