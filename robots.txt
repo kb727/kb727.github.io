@@ -19,8 +19,6 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 1
 
-Crawl-delay: 1
-
 Sitemap: https://kb727.com/sitemap.xml
 
 Updated on 2026-07-30
