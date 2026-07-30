@@ -1,4 +1,4 @@
-# robots.txt for KB727.COM - Logistics Investment & Acquisition Services
+# robots.txt for KB727.COM - Logistics Investment, Planning & Supply Chain Finance Services
 
 User-agent: *
 Allow: /
@@ -23,4 +23,4 @@ Crawl-delay: 1
 
 Sitemap: https://kb727.com/sitemap.xml
 
-Updated on 2026-07-24
+Updated on 2026-07-30
