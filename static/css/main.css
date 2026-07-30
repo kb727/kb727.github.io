@@ -348,16 +348,3 @@ footer .list-unstyled a {
   text-decoration: none;
 }
 
-/* Hero subtitle responsive font-size for mobile */
-.hero-subtitle {
-  font-size: 1.8em;
-  line-height: 1.3;
-}
-
-@media (max-width: 768px) {
-  .hero-subtitle {
-    font-size: 1.1em;
-    line-height: 1.2;
-  }
-}
-
