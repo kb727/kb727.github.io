@@ -32,6 +32,8 @@
     <link rel="preload" href="./static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./static/images/KB727-Background-1.jpg" as="image">
+    <link rel="preload" href="./static/images/KB727-Background-2.jpg" as="image">
+    <link rel="preload" href="./static/images/KB727-Background-3.jpg" as="image">
 
     <title>KB727 Group - Logistics Investment, Planning & Supply Chain Finance Services | Global Network</title>
     <link rel="canonical" href="https://kb727.com/">
@@ -42,10 +44,9 @@
     <link rel="stylesheet" href="./static/css/page-header.css">
 
     <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
-    <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
+    <link href="./static/fonts/font-awesome/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./static/css/bootstrap.css">
     <link rel="stylesheet" href="./static/css/main.css">
-    <link rel="stylesheet" href="./static/css/animations.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20260801">
     <link rel="icon" type="image/png" sizes="96x96" href="./static/images/icons/favicon-96x96.png?v20260801">
@@ -102,9 +103,9 @@
 <body>
 
     <a href="#top" class="skip-link">Skip to content</a>
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
+    <button id="menu-toggle" type="button" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></button>
     <div id="sidebar-wrapper">
-        <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu"><i class="fa fa-times"></i></a>
+        <button id="menu-close" type="button" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu"><i class="fa fa-times"></i></button>
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#top"><b>KB727 GROUP</b></a></li>
             <li><a href="#about">About</a></li>
@@ -243,8 +244,6 @@ With over 100 affiliated companies and nearly 6,000 employees worldwide, we cont
         </div>
         </div>
 
-    <br><br>
-
     <footer id="contact">
         <div class="container">
             <div class="row">
@@ -298,6 +297,14 @@ With over 100 affiliated companies and nearly 6,000 employees worldwide, we cont
         var shareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
         window.open(shareUrl, '_blank', 'width=600,height=400,noopener,noreferrer');
     }
+
+    // Space key support for role="button" links (native <a> only responds to Enter)
+    document.addEventListener('keydown', function(e) {
+        if ((e.key === ' ' || e.key === 'Spacebar') && e.target.getAttribute('role') === 'button') {
+            e.preventDefault();
+            e.target.click();
+        }
+    });
     </script>
 </body>
 </html>

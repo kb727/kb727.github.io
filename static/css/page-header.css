@@ -17,7 +17,7 @@ html[lang="zh-CN"] body { font-family: 'Open Sans', 'Microsoft YaHei', sans-seri
 .vert-text { text-align: center; color: white; position: relative; z-index: 1; }
 .expandUp h2, .expandUp h3 { margin: 0; }
 .section-title { font-size: 24px; }
-.btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+.btn { display: inline-block; padding: 10px 20px; background: #669900; color: white; text-decoration: none; border-radius: 5px; border: none; font: inherit; cursor: pointer; }
 
 /* Sidebar wrapper - single source of truth (layout + fade-in init) */
 #sidebar-wrapper {
@@ -94,4 +94,4 @@ html.loaded #sidebar-wrapper {
 
 /* Replace legacy <br> spacing with semantic margins */
 .expandUp { margin-bottom: 4rem; }
-footer { margin-bottom: 2rem; }
+footer { margin-top: 2rem; margin-bottom: 2rem; }

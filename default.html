@@ -32,6 +32,8 @@
     <link rel="preload" href="./static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./static/images/KB727-Background-1.jpg" as="image">
+    <link rel="preload" href="./static/images/KB727-Background-2.jpg" as="image">
+    <link rel="preload" href="./static/images/KB727-Background-3.jpg" as="image">
 
     <title>KB727 Group - 物流投资与收购、物流规划咨询、供应链金融服务提供商 | 全球布局</title>
     <link rel="canonical" href="https://kb727.com/default.html">
@@ -42,11 +44,9 @@
     <link rel="stylesheet" href="./static/css/page-header.css">
 
     <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
-    <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
+    <link href="./static/fonts/font-awesome/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="./static/css/bootstrap.css">
     <link rel="stylesheet" href="./static/css/main.css">
-    <link rel="stylesheet" href="./static/css/animations.css">
-    <link rel="stylesheet" href="./static/css/wechat-modal.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20260801">
     <link rel="icon" type="image/png" sizes="96x96" href="./static/images/icons/favicon-96x96.png?v20260801">
@@ -65,7 +65,7 @@
       "@id": "https://kb727.com/#organization",
       "name": "KB727 Group",
       "alternateName": "KB727 Group",
-      "url": "https://kb727.com/default.html",
+      "url": "https://kb727.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://kb727.com/static/images/icons/web-app-manifest-512x512.png",
@@ -104,9 +104,9 @@
 <body>
 
     <a href="#top" class="skip-link">跳至主要内容</a>
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
+    <button id="menu-toggle" type="button" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></button>
     <div id="sidebar-wrapper">
-        <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu"><i class="fa fa-times"></i></a>
+        <button id="menu-close" type="button" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu"><i class="fa fa-times"></i></button>
         <ul class="sidebar-nav">
             <li class="sidebar-brand"><a href="#top"><b>KB727 GROUP</b></a></li>
             <li><a href="#about">关于我们</a></li>
@@ -246,8 +246,6 @@ KB727 Group是总部位于上海的专业物流投资与收购服务提供商。
         </div>
         </div>
 
-    <br><br>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -255,8 +253,8 @@ KB727 Group是总部位于上海的专业物流投资与收购服务提供商。
  
             <ul class="list-inline spaced">
                 <li><a href="#" onclick="shareToWeChat(event)" title="分享到微信" role="button" aria-label="分享到微信"><i class="fa-brands fa-weixin fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToDouyin(event)" title="分享到抖音" role="button" aria-label="分享到抖音"><i class="fa-brands fa-tiktok fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToXiaohongshu(event)" title="分享到小红书" role="button" aria-label="分享到小红书"><i class="fa-solid fa-book fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToApp(event, '抖音App')" title="分享到抖音" role="button" aria-label="分享到抖音"><i class="fa-brands fa-tiktok fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToApp(event, '小红书App')" title="分享到小红书" role="button" aria-label="分享到小红书"><i class="fa-solid fa-book fa-3x"></i></a></li>
                 <li><a href="index.html" target="_blank" title="英文版本"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
             </ul>
                     <ul class="list-unstyled size-m spaced">
@@ -280,6 +278,8 @@ KB727 Group是总部位于上海的专业物流投资与收购服务提供商。
     if(!window.__kb727){(function(){var t=document.getElementById('menu-toggle'),c=document.getElementById('menu-close'),s=document.getElementById('sidebar-wrapper');if(!s)return;function tg(o){var a=s.classList.contains('active');var w=typeof o==='boolean'?o:!a;if(w){s.style.right='0px';s.classList.add('active');s.setAttribute('aria-hidden','false');if(t)t.setAttribute('aria-expanded','true')}else{s.style.right='-250px';s.classList.remove('active');s.setAttribute('aria-hidden','true');if(t)t.setAttribute('aria-expanded','false')}}if(t)t.addEventListener('click',function(e){e.preventDefault();tg()});if(c)c.addEventListener('click',function(e){e.preventDefault();tg(false)});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&s.classList.contains('active'))tg(false)})})()}
 
     // Social media share functions
+    var weChatModalLastFocus = null;
+
     function shareToWeChat(event) {
         event.preventDefault();
         var modal = document.getElementById('wechatModal');
@@ -291,55 +291,67 @@ KB727 Group是总部位于上海的专业物流投资与收购服务提供商。
         qrUrl.textContent = fixedUrl;
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        // Focus trap: store trigger element and focus the close button
+        weChatModalLastFocus = document.activeElement;
+        var closeBtn = modal.querySelector('.wechat-modal-close');
+        if (closeBtn) closeBtn.focus();
     }
 
     function closeWeChatModal() {
         var modal = document.getElementById('wechatModal');
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
+        // Restore focus to the element that opened the modal
+        if (weChatModalLastFocus && typeof weChatModalLastFocus.focus === 'function') {
+            weChatModalLastFocus.focus();
+        }
     }
 
-    // Close modal when clicking the backdrop (addEventListener avoids clobbering other handlers)
+    // Close modal when clicking the backdrop (short-circuit if not visible)
     window.addEventListener('click', function(event) {
         var modal = document.getElementById('wechatModal');
-        if (event.target === modal) { closeWeChatModal(); }
+        if (modal && modal.style.display === 'flex' && event.target === modal) {
+            closeWeChatModal();
+        }
     });
 
-    // Close modal on Escape for keyboard accessibility
+    // Close modal on Escape + focus trap within modal
     document.addEventListener('keydown', function(event) {
+        var modal = document.getElementById('wechatModal');
+        if (!modal || modal.style.display !== 'flex') return;
+
         if (event.key === 'Escape') {
-            var modal = document.getElementById('wechatModal');
-            if (modal && modal.style.display === 'flex') { closeWeChatModal(); }
+            closeWeChatModal();
+        } else if (event.key === 'Tab') {
+            // Focus trap: keep Tab within the modal
+            var focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (!focusable.length) return;
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
         }
     });
 
-    function shareToDouyin(event) {
+    // Generic share function for Douyin / Xiaohongshu (replaces duplicate functions)
+    function shareToApp(event, appName) {
         event.preventDefault();
         var currentUrl = window.location.href;
         var currentTitle = document.title;
+        var tip = '链接已复制，请在' + appName + '中粘贴分享';
         if (navigator.share) {
             navigator.share({ title: currentTitle, url: currentUrl }).catch(function() {
                 copyToClipboard(currentUrl);
-                alert('链接已复制，请在抖音App中粘贴分享');
+                alert(tip);
             });
         } else {
             copyToClipboard(currentUrl);
-            alert('链接已复制，请在抖音App中粘贴分享');
-        }
-    }
-
-    function shareToXiaohongshu(event) {
-        event.preventDefault();
-        var currentUrl = window.location.href;
-        var currentTitle = document.title;
-        if (navigator.share) {
-            navigator.share({ title: currentTitle, url: currentUrl }).catch(function() {
-                copyToClipboard(currentUrl);
-                alert('链接已复制，请在小红书App中粘贴分享');
-            });
-        } else {
-            copyToClipboard(currentUrl);
-            alert('链接已复制，请在小红书App中粘贴分享');
+            alert(tip);
         }
     }
 
@@ -362,6 +374,14 @@ KB727 Group是总部位于上海的专业物流投资与收购服务提供商。
         try { document.execCommand('copy'); } catch (err) { /* noop */ }
         document.body.removeChild(textarea);
     }
+
+    // Space key support for role="button" links (native <a> only responds to Enter)
+    document.addEventListener('keydown', function(e) {
+        if ((e.key === ' ' || e.key === 'Spacebar') && e.target.getAttribute('role') === 'button') {
+            e.preventDefault();
+            e.target.click();
+        }
+    });
     </script>
 
     <div id="wechatModal" class="wechat-modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="wechatModalTitle" tabindex="-1">
