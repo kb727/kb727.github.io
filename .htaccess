@@ -1,7 +1,25 @@
+# ====================================================================
+# KB727.COM server configuration
+# --------------------------------------------------------------------
+# IMPORTANT: This site is deployed on GitHub Pages, which does NOT
+# support Apache .htaccess (mod_rewrite / mod_headers / mod_expires).
+# Rules below are therefore NOT enforced on the current host.
+#
+# Effective measures for GitHub Pages are implemented in HTML instead:
+#   - Content-Security-Policy via <meta http-equiv> in each <head>
+#   - HTTPS enforcement via GitHub Pages setting / DNS provider
+#   - Caching relies on GitHub Pages defaults + asset versioning (?v=)
+#
+# This file is kept for reference and for a future migration to a host
+# that supports Apache modules (or as a basis for Netlify _headers /
+# vercel.json equivalents). It has been corrected to remove rules that
+# conflicted with SEO and social-share functionality.
+# ====================================================================
+
 # Cache Policy for Static Assets
 <IfModule mod_expires.c>
     ExpiresActive On
-    
+
     # Images - Cache for 1 year
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
@@ -10,13 +28,13 @@
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
-    
+
     # CSS and JavaScript - Cache for 1 year with far-future expiration
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType text/javascript "access plus 1 year"
     ExpiresByType application/x-javascript "access plus 1 year"
-    
+
     # Fonts - Cache for 1 year
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType font/woff2 "access plus 1 year"
@@ -26,14 +44,14 @@
     ExpiresByType font/eot "access plus 1 year"
     ExpiresByType application/font-ttf "access plus 1 year"
     ExpiresByType application/font-eot "access plus 1 year"
-    
+
     # HTML - Cache for 1 hour with must-revalidate
     ExpiresByType text/html "access plus 1 hour"
-    
+
     # Documents - Cache for 7 days
     ExpiresByType application/pdf "access plus 7 days"
     ExpiresByType text/plain "access plus 7 days"
-    
+
     # Default - Cache for 1 day
     ExpiresDefault "access plus 1 day"
 </IfModule>
@@ -44,27 +62,31 @@
     <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
-    
+
     # HTML - short cache with must-revalidate
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "public, max-age=3600, must-revalidate"
     </FilesMatch>
-    
+
     # Documents - moderate cache
     <FilesMatch "\.(pdf|txt)$">
         Header set Cache-Control "public, max-age=604800"
     </FilesMatch>
-    
+
     # Disable cache for sensitive files
     <FilesMatch "\.(xml|json|config)$">
         Header set Cache-Control "no-cache, must-revalidate, max-age=0"
     </FilesMatch>
-    
+
     # Security headers
     Header always set X-Content-Type-Options nosniff
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Content Security Policy
+    # img-src allows api.qrserver.com for the WeChat QR code in default.html
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://api.qrserver.com; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
 </IfModule>
 
 # Compression
@@ -88,29 +110,25 @@
 AddType font/woff .woff
 AddType font/woff2 .woff2
 
-# Website Rendering Request Blocking
-# Content Security Policy
-<IfModule mod_headers.c>
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none';"
-</IfModule>
-
-# Block common crawlers for rendering prevention
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
+
     # Force HTTPS
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-    
-    # Block specific user agents used for rendering
-    RewriteCond %{HTTP_USER_AGENT} (googlebot-mobile|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator)
-    RewriteRule .* - [R=403,L]
-    
+
     # Prevent image hotlinking
-    RewriteCond %{HTTP_REFERER} !^$ 
+    RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?kb727\.com [NC]
     RewriteRule \.(jpg|jpeg|png|gif|svg|webp)$ - [NC,F,L]
 </IfModule>
+
+# NOTE: The previous "Block specific user agents" rule was removed because
+# it contradicted robots.txt (Allow: /) and the site's social-share buttons.
+# Blocking facebookexternalhit / twitterbot / linkedinbot prevented share
+# preview cards from rendering; blocking baiduspider / bingbot conflicted
+# with the SEO allow-list. Crawler control is now handled solely by
+# robots.txt + <meta name="robots">.
 
 # Disable directory listing
 Options -Indexes

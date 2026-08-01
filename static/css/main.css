@@ -13,8 +13,8 @@ a:visited,
 a:hover,
 a:focus,
 a:active {
-  text-decoration: none !important;
-  color: inherit !important;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Allow specific color overrides for certain contexts */
@@ -34,22 +34,8 @@ a:active {
   vertical-align: middle;
 }
 
-/* Side Menu */
-
-#sidebar-wrapper {
-  margin-right: -250px;
-  right: 0;
-  width: 250px;
-  background: #669900;
-  position: fixed;
-  height: 370px;
-  min-height: 200px;
-  max-height: 90vh;
-  border-bottom-left-radius: 20px;
-  overflow-y: auto;
-  z-index: 1000;
-  transition: all 0.4s ease;
-}
+/* Side Menu - #sidebar-wrapper layout + fade-in moved to page-header.css
+   (single source of truth). .sidebar-nav item styles remain here. */
 
 .sidebar-nav {
   position: absolute;
@@ -97,21 +83,13 @@ a:active {
   background: none;
 }
 
-#menu-toggle {
-  top: 0;
-  right: 0;
-  position: fixed;
-  z-index: 1;
+/* Sidebar meta item (divider + description) - reset li defaults to preserve layout */
+.sidebar-nav > li.sidebar-meta {
+  text-indent: 0;
+  line-height: inherit;
 }
 
-#sidebar-wrapper.active {
-  right: 0;
-  width: 250px;
-  margin-right: 0;
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.4s ease;
-}
+/* #sidebar-wrapper.active moved to page-header.css (single source of truth). */
 
 .toggle {
   border-radius: 0 0 0 4px;
@@ -161,19 +139,16 @@ a:active {
   color: white !important;
 }
 
-/* Full Page Image Header Area */
-
-.header {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
+/* Full Page Image Header Area - .header moved to page-header.css. */
 
 /* Services */
 
 .services {
   padding: 0px 0;
+}
+
+.services h3 {
+  text-align: left;
 }
 
 .pixelMe {
@@ -226,20 +201,10 @@ a:active {
 
 
 
-/* Call to Action */
-
-.call-to-action {
-  color: #ffffff;
-  background: #0a5175;
-  padding: 5px 0;
-}
+/* Call to Action - .call-to-action main block moved to page-header.css. */
 
 .call-to-action .btn {
   margin: 10px;
-}
-
-.call-to {
-  text-shadow: none;
 }
 
 /* Footer */
@@ -263,18 +228,13 @@ i.scroll:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-	
-  .call-to {
+  .call-to-action {
     margin-bottom: 35px;
   }
 }
 
 .spaced {
   margin:35px;
-}
-
-.block {
-  display:block;
 }
 
 .size-m {
@@ -284,10 +244,6 @@ i.scroll:hover {
 /* Default.html specific styles */
 .text-left {
   text-align: left;
-}
-
-.text-white {
-  color: white;
 }
 
 .sidebar-description {
