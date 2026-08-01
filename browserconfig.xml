@@ -6,11 +6,7 @@
             <square150x150logo src="./static/images/icons/mstile-150x150.png?v20260801"/>
             <wide310x150logo src="./static/images/icons/mstile-310x150.png?v20260801"/>
             <square310x310logo src="./static/images/icons/mstile-310x310.png?v20260801"/>
-<<<<<<< HEAD
             <TileColor>#da532c</TileColor>
-=======
-            <TileColor>#669900</TileColor>
->>>>>>> 0437e12a1cdaef6dbec758eaa4934c52ee372c67
         </tile>
         <application>
             <page>
