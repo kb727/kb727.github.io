@@ -91,16 +91,9 @@ a:active {
 
 /* #sidebar-wrapper.active moved to page-header.css (single source of truth). */
 
-.toggle {
-  border-radius: 0 0 0 4px;
-  display: block;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-  z-index: 1001;
-}
+/* #menu-toggle / #menu-close - .toggle class removed (ID selectors cover all properties).
+   font: inherit resets <button> defaults (element changed from <a> for semantics). */
 
-/* Ensure button is always visible and clickable */
 #menu-toggle {
   display: block !important;
   position: fixed;
@@ -113,9 +106,14 @@ a:active {
   color: white;
   border-radius: 0 0 0 4px;
   cursor: pointer;
+  font: inherit;
+  outline: none;
 }
 
-/* Set menu toggle icon to white */
+#menu-toggle:focus-visible {
+  border: 3px solid red;
+}
+
 #menu-toggle i {
   color: white !important;
 }
@@ -132,9 +130,14 @@ a:active {
   color: white;
   border-radius: 0 0 0 4px;
   cursor: pointer;
+  font: inherit;
+  outline: none;
 }
 
-/* Set menu close icon to white */
+#menu-close:focus-visible {
+  border: 3px solid red;
+}
+
 #menu-close i {
   color: white !important;
 }
@@ -145,6 +148,13 @@ a:active {
 
 .services {
   padding: 0px 0;
+  /* Skip rendering for offscreen sections to improve performance */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+.services h3 {
+  text-align: left;
 }
 
 .pixelMe {
@@ -155,14 +165,14 @@ a:active {
   visibility: visible;
 }
 
-
-
 /* Portfolio */
 
 #portfolio {
   background: url(../images/KB727-Background-3.jpg) no-repeat center center scroll;
   background-size: cover;
   padding: 60px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 #portfolio .row {
@@ -170,11 +180,10 @@ a:active {
   margin:0 auto;
 }
 
-
+/* background-color moved to page-header.css (with !important); only layout props here */
 #portfolio .caption {
   width: 250px;
   margin: 10px auto;
-  background-color: rgba(102, 153, 0, 0.45);
   border-radius: 14px;
   color: white;
 }
@@ -191,20 +200,19 @@ a:active {
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
 .caption h4 {
   margin: 0 auto;
 }
 
 
 
+=======
+>>>>>>> 0437e12a1cdaef6dbec758eaa4934c52ee372c67
 /* Call to Action - .call-to-action main block moved to page-header.css. */
 
 .call-to-action .btn {
   margin: 10px;
-}
-
-.call-to {
-  text-shadow: none;
 }
 
 /* Footer */
@@ -223,23 +231,19 @@ i.scroll {
 }
 
 i.scroll:hover {
-  color: #0a5175;
+  color: #669900;
 }
+
 /* Responsive */
 
 @media (max-width: 768px) {
-	
-  .call-to {
+  .call-to-action {
     margin-bottom: 35px;
   }
 }
 
 .spaced {
   margin:35px;
-}
-
-.block {
-  display:block;
 }
 
 .size-m {
@@ -249,10 +253,6 @@ i.scroll:hover {
 /* Default.html specific styles */
 .text-left {
   text-align: left;
-}
-
-.text-white {
-  color: white;
 }
 
 .sidebar-description {
@@ -313,3 +313,151 @@ footer .list-unstyled a {
   text-decoration: none;
 }
 
+/* ===== CSS3 Animations (merged from animations.css, -webkit- prefixes removed) ===== */
+
+/* expandUp - used in header */
+.expandUp {
+  animation-name: expandUp;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  visibility: visible !important;
+}
+
+@keyframes expandUp {
+  0% { transform: translateY(100%) scale(0.6) scaleY(0.5); }
+  60% { transform: translateY(-7%) scaleY(1.12); }
+  75% { transform: translateY(3%); }
+  100% { transform: translateY(0%) scale(1) scaleY(1); }
+}
+
+/* slideRight - used for .pixelMe element */
+.slideRight {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  visibility: visible !important;
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(-150%); }
+  50% { transform: translateX(8%); }
+  65% { transform: translateX(-4%); }
+  80% { transform: translateX(4%); }
+  95% { transform: translateX(-2%); }
+  100% { transform: translateX(0%); }
+}
+
+/* ===== WeChat Modal (merged from wechat-modal.css) ===== */
+
+.wechat-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.wechat-modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.wechat-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #999;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+  /* Reset <button> defaults (element changed from span for accessibility) */
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.wechat-modal-close:hover {
+  color: #333;
+}
+
+.wechat-modal-header {
+  padding: 20px 20px 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.wechat-modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wechat-modal-body {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.wechat-modal-body p {
+  margin: 0 0 15px;
+  color: #666;
+  font-size: 15px;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.qr-code-container img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+.qr-url {
+  font-size: 12px;
+  color: #999;
+  word-break: break-all;
+  margin-top: 10px !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .wechat-modal-content {
+    width: 95%;
+  }
+  .qr-code-container img {
+    max-width: 180px;
+  }
+}

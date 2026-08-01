@@ -1,0 +1,32 @@
+/* 404 page styles - extracted from 404.html inline <style>
+   to allow CSP style-src 'self' (without 'unsafe-inline'). */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #669900;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #669900;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+}
