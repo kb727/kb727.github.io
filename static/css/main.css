@@ -180,7 +180,7 @@ a:active {
   height: 250px;
   width: 250px;
   margin: 17px auto;
-  background: url(../images/favicon.jpg);
+  background: url(../images/KB727-Background-2.jpg);
   visibility: visible;
 }
 
@@ -189,7 +189,7 @@ a:active {
 /* Portfolio */
 
 #portfolio {
-  background: url(../images/callout.jpg) no-repeat center center scroll;
+  background: url(../images/KB727-Background-3.jpg) no-repeat center center scroll;
   background-size: cover;
   padding: 60px 0;
 }
