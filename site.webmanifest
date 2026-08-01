@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#da532c",
+  "theme_color": "#669900",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -49,7 +49,11 @@
       "type": "image/png"
     },
     {
+<<<<<<< HEAD
       "src": "./static/images/icons/android-chrome-512x512.png?v20260801",
+=======
+      "src": "./static/images/icons/web-app-manifest-512x512.png?v20260801",
+>>>>>>> 0437e12a1cdaef6dbec758eaa4934c52ee372c67
       "sizes": "512x512",
       "type": "image/png"
     }
