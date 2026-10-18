@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KB727 is an international business inspection organization headquartered in Shanghai, China. We arrange international enterprise inspections, executive visits, business school study tours, institutional visits, and seminars across eight advanced manufacturing sectors plus fintech, payments, AI, healthcare, biopharmaceuticals, commercial banking, cross-border finance, capital markets, and technological innovation in China, Asia, North America, and Europe.">
-    <meta name="keywords" content="Shanghai Business Inspection,China Enterprise Visits,International Business Tours,Executive Visits China,Business School Study Tours,Institutional Visits,Business Seminars China,Business Reception China,Advanced Manufacturing Tours,Factory Tours China,Fintech Visits,Payments Industry,AI Company Visits,Healthcare Tours,Biopharmaceutical Visits,Commercial Banking Visits,Cross-border Finance,Capital Markets,Technology Innovation,In-depth Business Exchange,Corporate Executives,Industry Experts,Business Leaders,China Business Delegation,Mainland China Programs,Hong Kong Business Visits,Taiwan Enterprise Visits,Japan Business Tours,South Korea Company Visits,Singapore Institutional Visits,Malaysia Business Tours,Thailand Company Visits,Laos Business Visits,United States Business Tours,Canada Enterprise Visits,France Institutional Visits,High-End New Materials,Major Technical Equipment,Intelligent Manufacturing,Robotics,Aero-Engines,Gas Turbines,BeiDou Applications,New Energy Vehicles,Intelligent Connected Vehicles,High-End Medical Equipment,Innovative Drugs,Agricultural Machinery,Plastic Resins,Plastic Resin Market Zhangmutou,Dongguan Zhangmutou Plastics,Guangdong Plastics Industry,Tai Chi Shanghai,Tai Chi Practice,Senior Tai Chi Coaches,Shanghai Tai Chi Venues,Financial Technology,Shanghai Fintech Institutions,Fintech Seminars,Cutting-edge Fintech,Shanghai Business Services,KB727">
+    <meta name="description" content="中颐复聚是一个总部在上海的大宗物业资产交易咨询服务机构，接受大宗物业资产出售委托，并提供企业考察、高管访问、机构参访等商务服务。">
+    <meta name="keywords" content="大宗物业出售,资产出售顾问,资产处置咨询,资产出售委托,独家委托代理,资产估值,DCF估值,交易架构设计,尽职调查,财税筹划,法律合规,买家资源匹配,交易谈判,交割服务,产业园区出售,工业厂房出售,工业用地转让,物流仓储出售,酒店资产出售,写字楼出售,商业综合体转让,数据中心出售,企业资产剥离,国企混改,外资在华退出,不良资产处置,REITs,资产盘活,资产变现,过桥融资,并购贷款,单边顾问服务,上海资产出售,长三角,大湾区,京津冀,成渝,商务服务,商务考察,商务接待,税务稽查协助,私教课程,紧固件定制,马来西亚主权基金,RWA稳定币,东南亚物流">
     <meta name="author" content="KB727.COM">
     <meta name="apple-mobile-web-app-title" content="KB727">
     <meta name="application-name" content="KB727">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="./static/images/icons/mstile-144x144.png?v20251015">
+    <meta name="msapplication-TileImage" content="static/images/icons/mstile-144x144.png?v20251015">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
     <!-- Local resources only -->
     
     <!-- Preload critical fonts -->
-    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/open-sans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preload critical images -->
-    <link rel="preload" href="./static/images/KB727-Background-1.jpg" as="image">
+    <link rel="preload" href="static/images/bg.jpg" as="image">
 
-    <title>KB727 - International Business Inspection &amp; Executive Visits in China</title>
+    <title>KB727.COM - 中颐复聚 - 资产交易咨询服务</title>
 
     <!-- Critical CSS - Inline for above-the-fold content -->
     <style>
         /* Critical styles for initial render */
         body { margin: 0; font-family: 'Open Sans', sans-serif; }
         .header { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .header img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .header .bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
         .header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 0; }
         .vert-text { text-align: center; color: white; position: relative; z-index: 1; }
+        .logo-img { display: block; margin: 0 auto 20px; width: 200px; height: 200px; filter: saturate(1.6); }
         .expandUp h2, .expandUp h3 { margin: 0; }
         .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
         
@@ -104,7 +105,7 @@
             border-radius: 0 0 0 4px;
         }
         
-        /* Best Options banner color settings */
+        /* Screen Casting banner color settings */
         .call-to-action {
             background-color: #669900 !important;
             color: #FFFFFF !important;
@@ -112,28 +113,99 @@
         .call-to-action h2 {
             color: #FFFFFF !important;
         }
+        
+        /* WeChat Modal Styles */
+        .wechat-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .wechat-modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        
+        .wechat-modal-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .wechat-modal-close:hover,
+        .wechat-modal-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .wechat-modal-header {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .wechat-modal-body {
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .qr-code-container {
+            margin: 20px 0;
+        }
+        
+        .qr-code-container img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .qr-url {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            word-break: break-all;
+        }
+        /* Business Links directory titles */
+        .text-gray { color: #555; }
     </style>
 
     <!-- Load critical CSS resources -->
-    <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
-    <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="./static/css/bootstrap.css">
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="static/fonts/open-sans/open-sans.css">
+    <link rel="stylesheet" href="static/fonts/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/assets/xenon-components.css">
+    <link rel="stylesheet" href="static/css/assets/nav.css">
+    <link rel="stylesheet" href="static/css/assets/fonts/linecons/css/linecons.css">
     
     <!-- Non-critical CSS - Load asynchronously -->
-    <link href="./static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20251015">
-    <link rel="icon" type="image/png" sizes="96x96" href="./static/images/icons/favicon-96x96.png?v20251015">
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/icons/favicon-32x32.png?v20251015">
-    <link rel="icon" type="image/png" sizes="192x192" href="./static/images/icons/android-chrome-192x192.png?v20251015">
-    <link rel="icon" type="image/png" sizes="512x512" href="./static/images/icons/web-app-manifest-512x512.png?v20251015">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/images/icons/favicon-16x16.png?v20251015">
-    <link rel="icon" href="./static/images/icons/safari-pinned-tab.svg" type="image/svg+xml">
-    <link rel="manifest" href="./site.webmanifest?v20251015">
-    <link rel="mask-icon" href="./static/images/icons/safari-pinned-tab.svg?v20251015" color="#5bbad5">
-    <link rel="shortcut icon" href="./static/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/icons/apple-touch-icon.png?v20251015">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/images/icons/favicon-96x96.png?v20251015">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/icons/favicon-32x32.png?v20251015">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/images/icons/android-chrome-192x192.png?v20251015">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/images/icons/web-app-manifest-512x512.png?v20251015">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/icons/favicon-16x16.png?v20251015">
+    <link rel="icon" href="static/images/icons/safari-pinned-tab.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest?v20251015">
+    <link rel="mask-icon" href="static/images/icons/safari-pinned-tab.svg?v20251015" color="#5bbad5">
+    <link rel="shortcut icon" href="static/images/icons/favicon.ico">
 </head>
 
 <body>
@@ -144,30 +216,31 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
-            <li><a href="#about">Brief Profile</a></li>
-            <li><a href="#portfolio">Best Options</a></li>
-            <li><a href="default.html">Chinese Localization</a></li>
-            <li><a href="mailto:business@kb727.com">Dispatch an electronic mail</a></li>
+            <li><a href="#about">关于我们</a></li>
+            <li><a href="#services">咨询服务</a></li>
+            <li><a href="default.html">English Version</a></li>
+            <li><a href="mailto:webmaster@kb727.com">联系我们</a></li>
             <hr>
-                    <p class="small sidebar-description">KB727 - Enterprise Visits &amp; Executive Exchanges in China</p>
+                    <p class="small sidebar-description">中颐复聚是一个总部在上海的大宗物业资产交易咨询服务机构。</p>
         </ul>
     </div>
     <!-- /Side Menu -->
 
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
-        <img src="./static/images/KB727-Background-1.jpg" alt="KB727 Background" class="bg-img">
+        <img src="static/images/bg.jpg" alt="KB727 Background" class="bg-img" loading="eager" fetchpriority="high">
         <div class="vert-text">
             <div class="expandUp">
-            <h1 class="hero-subtitle"><b>​​Your Gateway to</b></h1>
-            <h1 class="hero-subtitle"><b>​​Industrial Excellence</b></h1>
+            <img src="static/images/icons/android-chrome-384x384.png" alt="KB727 Logo" class="logo-img">
+            <h5><b>
+                    <ul class="list-unstyled size-m spaced">
+                        <li> 💬 WeChat: KB727er</li>
+                        <li><i class="fa-solid fa-book"></i> Xiaohongshu: KB727er</li>
+                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Hongqiao Hub, Shanghai, China</li>
+                    </ul></b></h5>
+
             </div><br><br><br><br>
-            <ul class="list-inline spaced">
-                <li><a href="#about" title="Brief Profile"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
-                <li><a href="#portfolio" title="Best Options"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
-                <li><a href="mailto:business@kb727.com" title="Dispatch an electronic mail" target="_blank"><i class="fa-regular fa-envelope fa-3x"></i></a></li>
-                <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
-            </ul>
         </div>
     </div>
     <!-- /Full Page Image Header Area -->
@@ -182,12 +255,15 @@
                    <div class="pixelMe toSlideRight"></div>
                 </div>
                 <div class="col-md-9">
-                <h3 class="text-left"><b>About KB727</b></h3>
+                <h3 class="text-left"><b>接受大宗物业资产出售委托，单边服务费600万元/年起</b></h3>
 <p class="lead text-left">
-KB727 is an international business inspection organization headquartered in Shanghai, China. We provide business reception programs including international enterprise inspections, executive visits, business school study tours, institutional visits, and seminars. These programs cover the eight advanced manufacturing sectors listed below, together with fintech, payments, artificial intelligence, healthcare, biopharmaceuticals, commercial banking, cross-border finance, capital markets, and technological innovation.
+中颐复聚是一个总部在上海的大宗物业资产交易咨询服务机构。我们深耕产业园区、工业用地、物流仓储、酒店、写字楼及商业综合体等存量资产处置领域，为资产持有方提供从估值定价、买家筛选、交易架构设计到交割落地的全流程出售顾问服务。我们以高效、合规、专业为核心理念，致力于实现客户资产价值最大化。
 </p>
 <p class="lead text-left">
-We maintain real enterprise and institutional resources across mainland China, Hong Kong, Taiwan, Japan, South Korea, Singapore, Malaysia, Thailand, Laos, the United States, Canada, and France, with programs in mainland China as our current focus. We arrange in-depth exchanges with substantive content, connecting clients with corporate executives, business leaders, or industry experts, far beyond simple showroom visits or ordinary tourism.
+核心团队成员平均从业年限超过25年，累计完成80余项资产出售委托，交易金额逾100亿元人民币。我们深谙国内资产交易市场的政策法规与商业逻辑，与产业投资方、机构投资者、开发商、REITs及私募基金管理人保持长期稳定的合作关系，具备强大的精准买家触达能力。
+</p>
+<p class="lead text-left">
+有关变现、瘦身、盘活、调仓、止损、化债及资产出售相关咨询请添加微信号 KB727er 或联系 <a href="mailto:webmaster@kb727.com">webmaster@kb727.com</a>，欢迎访问<a href="index.html">中颐复聚资产交易平台</a>了解最新案例与服务详情。
 </p>
                 </div>
             </div>
@@ -198,44 +274,124 @@ We maintain real enterprise and institutional resources across mainland China, H
     <!-- Services -->
     <div id="services" class="services">
         <div class="container">
+            <h3 style="text-align: left"><b>资产出售顾问服务</b></h3>
             <p class="lead" style="text-align: left">
-            We arrange in-depth business inspection and exchange programs across the following eight advanced manufacturing sectors. Each program combines real enterprise visits with substantive discussions hosted by corporate executives, business leaders, or industry experts.
+            我们为资产持有方提供专业化、系统化的资产出售全流程顾问服务，涵盖出售策略制定、估值定价、买家筛选、交易架构设计、谈判支持及交割保障，确保资产价值最大化与交易安全。
             </p>
-            <h3 class="text-left"><b>1. High-End New Materials</b></h3>
-            <p class="lead text-left">
-            Visit leading producers and R&amp;D centers working with high-end rare-earth functional materials, high-quality special steels, performance alloys, high-purity rare metals, advanced ceramics, electronic glass, carbon fiber and aramid composites, bio-based and biomedical materials, metallocene polyethylene, and high-purity electronic materials such as photoresists for integrated circuits. Inspections cover production lines, laboratories, and real applications, with technical and commercial leaders available for discussion.
-            </p>
-            <h3 style="text-align: left"><b>2. Major Technical Equipment</b></h3>
-            <p class="lead" style="text-align: left">
-            Inspect manufacturers of CR450 high-speed standard trains, standardized metro trains, high-end machine tools, advanced engineering machinery, key components for nuclear power units, cruise ships, large LNG carriers, and deep-sea oil and gas platforms. We also arrange visits related to C919 passenger aircraft demonstration operations and serial development of the ARJ21 regional jet, with engineering and project leaders hosting the exchanges.
-            </p>
-            <h3 style="text-align: left"><b>3. Intelligent Manufacturing and Robotics</b></h3>
-            <p class="lead" style="text-align: left">
-            Tour enterprises developing industrial control equipment such as distributed control systems and programmable logic controllers, together with key robotics technologies including advanced controllers, high-precision servo drives, high-performance reducers, and additive manufacturing (3D printing). Smart factories and automation lines can be observed on site, with engineers and product leaders available for in-depth questions.
-            </p>
-            <h3 style="text-align: left"><b>4. Aero-Engines and Gas Turbines</b></h3>
-            <p class="lead" style="text-align: left">
-            Visit R&amp;D and validation bases for key advanced aero-engine technologies, commercial high-bypass turbofan engines such as the CJ1000, and heavy-duty gas turbine industrialization. Programs focus on manufacturing processes, testing, and the supply chain, hosted by senior engineers and program managers.
-            </p>
-            <h3 style="text-align: left"><b>5. BeiDou Industrial Applications</b></h3>
-            <p class="lead" style="text-align: left">
-            Inspect enterprises applying BeiDou navigation technology across communications, finance, energy, and civil aviation, as well as its large-scale consumer use in vehicle navigation, smartphones, and wearable devices. Visits include live solution demonstrations and discussions on integrated applications with technical and business executives.
-            </p>
-            <h3 style="text-align: left"><b>6. New Energy Vehicles (NEVs) and Intelligent Connected Vehicles (ICVs)</b></h3>
-            <p class="lead" style="text-align: left">
-            Tour companies working on key new energy vehicle technologies, including high-safety batteries, efficient drive motors, and high-performance powertrains, together with foundational platforms and key ICV components such as smart hardware systems and wire-controlled chassis. Factory visits are paired with exchanges on technology roadmaps and market strategy.
-            </p>
-            <h3 style="text-align: left"><b>7. High-End Medical Equipment and Innovative Drugs</b></h3>
-            <p class="lead" style="text-align: left">
-            Visit developers of advanced medical devices and innovative pharmaceuticals, including robotic surgical systems, ECMO machines, high-end medical imaging and radiotherapy equipment, implants, vaccines, and novel drugs for critical diseases. Programs cover manufacturing and R&amp;D facilities, hosted by medical, regulatory, and commercial experts.
-            </p>
-            <h3 style="text-align: left"><b>8. Agricultural Machinery Equipment</b></h3>
-            <p class="lead" style="text-align: left">
-            Inspect manufacturers of advanced agricultural machinery, including high-horsepower intelligent tractors, precision planters, efficient combine harvesters, and specialized equipment for hilly areas, together with smart breeding and farming technologies. Field demonstrations and discussions with engineers and agronomists can be arranged.
-            </p>
-            <p class="lead" style="text-align: left">
-Across all eight sectors, KB727 connects visiting executives with the right enterprises and the right people, turning every inspection into a substantive exchange rather than a showroom walkthrough.
-</p>
+            <ul class="lead" style="text-align: left">
+                <li>资产出售策略：资产价值评估、市场定位分析、最佳出售时机判断、交易结构方案比选。</li>
+                <li>估值与定价：DCF现金流折现估值建模、可比交易法分析、资产定价策略。</li>
+                <li>买家资源匹配：精准筛选产业投资方、机构投资者、开发商、REITs及私募买家。</li>
+                <li>交易架构设计：资产转让、股权交易、售后回租、合资合作、整售/散售等多元化方案。</li>
+                <li>财税尽职调查：税务筹划、历史税务风险排查、交易税费测算与优化。</li>
+                <li>法律合规审查：权属瑕疵识别、隐形债务排查、合规风险预警、交割风险规避。</li>
+                <li>交易执行支持：信息备忘录编制、数据室筹备、投标管理、协议谈判、交割协调。</li>
+                <li>融资配套顾问：通过持牌合作机构提供过桥融资、并购贷款等配套金融服务。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>服务区域与资产类型</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>服务区域：长三角、大湾区、成渝、京津冀等国内核心市场。</li>
+                <li>资产类型：产业园区、工业用地、物流仓储、数据中心、酒店、写字楼、商业综合体等存量资产。</li>
+                <li>交易规模：人民币5000万元以上。</li>
+                <li>跨境服务：为外资机构提供在华资产出售顾问服务，协助实现投资退出。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>典型出售场景</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>产业方资产剥离：制造业企业出售闲置工业用地及厂房，实现资金回笼与主业聚焦。</li>
+                <li>开发商项目退出：住宅开发商出售持有型商业资产，优化资产负债结构。</li>
+                <li>外资机构退出：境外基金到期清算，出售在华物流或产业园资产包。</li>
+                <li>国企混改处置：国有企业剥离非核心资产，引入社会资本实现混改。</li>
+                <li>不良资产处置：银行、AMC委托出售抵押资产，实现债权回收。</li>
+                <li>REITs前期筹备：协助原始权益人筛选并培育可证券化资产。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>2026战略重点</b></h3>
+            <ol class="lead" style="text-align: left">
+                <li>外资机构在华资产退出：为境外基金、跨国企业提供全面的资产出售顾问服务，协助实现投资退出与资金汇回。</li>
+                <li>产业方资产剥离顾问：深度服务制造业、能源、物流等产业客户，专业处置闲置或低效资产。</li>
+                <li>国企混改资产处置：为国有企业提供非核心资产剥离、引入战略投资者的专项顾问服务。</li>
+                <li>不良资产处置合作：与银行、AMC建立合作，提供抵押资产出售、债转股等处置方案。</li>
+            </ol>
+
+            <h3 style="text-align: left"><b>业绩记录</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>累计完成<b>80余项</b>资产出售委托，交易金额逾<b>100亿元人民币</b>。</li>
+                <li>平均交易周期<b>8-16周</b>，交割成功率<b>100%</b>，无遗留问题或风险事件。</li>
+                <li>服务客户涵盖产业方、开发商、外资基金、国有企业等多元主体。</li>
+                <li>成功处置资产类型包括产业园、物流仓储、工业用地、酒店、写字楼等。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>服务客户</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>产业方：制造业、能源、物流等产业企业，处置闲置或低效资产。</li>
+                <li>开发商：住宅及商业开发商，退出持有型资产优化报表。</li>
+                <li>外资机构：境外基金、跨国企业，实现在华投资退出。</li>
+                <li>国有企业：央企、地方国企，非核心资产剥离与混改。</li>
+                <li>金融机构：银行、AMC、信托，不良资产处置与抵押物变现。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>资产出售执行流程</b></h3>
+            <ol class="lead" style="text-align: left">
+                <li>委托启动（第1-2周）：签署独家委托协议，明确资产范围、出售目标、时间表及利益相关方。</li>
+                <li>资产梳理（第2-4周）：权属文件整理、财务数据收集、税务风险排查、估值建模与定价策略制定。</li>
+                <li>材料筹备（第3-5周）：信息备忘录（IM）编制、数据室搭建、法律及财税尽职调查报告。</li>
+                <li>买家筛选（第4-6周）：精准匹配产业投资方、机构投资者等潜在买家，签署保密协议（NDA）。</li>
+                <li>定向推介（第5-8周）：定向路演、现场考察、管理层交流、答疑与补充材料提供。</li>
+                <li>竞价管理（第7-10周）：接收意向报价、组织投标轮次、价格谈判、确定优先买家。</li>
+                <li>协议谈判（第9-12周）：SPA/APA条款谈判、交易架构优化、先决条件设置、交割时间表。</li>
+                <li>交割落地（第11-16周）：最终尽职调查、审批备案、资金监管、权属过户、尾款结算。</li>
+            </ol>
+
+            <h3 style="text-align: left"><b>典型周期</b></h3>
+            <ol class="lead" style="text-align: left">
+                <li>根据资产复杂程度，一般8-16周完成。</li>
+                <li>我们承诺在每个关键节点提供书面进度报告，确保出售方全程掌控交易进程。</li>
+            </ol>
+
+            <h3 style="text-align: left"><b>委托模式与收费标准</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>独家委托制：我们采用独家委托模式，确保资源集中投入，避免多头代理导致的市场混乱与信息泄露。</li>
+                <li>基础顾问费：人民币30-100万元（根据资产规模及复杂程度），覆盖估值建模、材料编制、买家筛选等前期投入。</li>
+                <li>成功佣金：交易金额的1%-3%（根据交易规模阶梯递减），交割完成后收取，与出售方利益深度绑定。</li>
+                <li>费用结构：基础顾问费可在成功佣金中抵扣，实现"低门槛启动、高激励成交"的合作机制。</li>
+                <li>保密承诺：严格执行保密协议（NDA），未经出售方书面同意，不得向任何第三方披露资产信息。</li>
+                <li>利益冲突管理：同一时期内，同一资产类别仅接受一方委托，坚决避免双向代理。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>精选出售案例</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>长三角智能制造产业园出售：某制造业集团退出非核心业务，标的位于苏州工业园区，建筑面积8万平方米。我们协助完成资产评估、买家筛选（最终买家为某物流地产基金），交易金额12亿元，12周完成交割，实现溢价15%出售。</li>
+                <li>大湾区物流资产包处置：某外资基金到期清算，持有广州、佛山两地物流仓储资产包，总建筑面积15万平方米。我们协调境内外买家资源，最终由某中资产业方竞得，交易金额18亿元，通过售后回租安排保障运营连续性。</li>
+                <li>某央企华东资产剥离：某央企下属非核心资产处置，涉及上海、杭州两地写字楼及商业配套。我们协助完成权属瑕疵整改、税务筹划，引入战略投资者实现混改，交易金额25亿元，获得国资委及监管部门认可。</li>
+                <li>外资酒店资产退出：某国际酒店集团战略调整，出售中国区非核心城市酒店资产。我们协助完成品牌解绑、特许经营协议谈判，最终由某本土酒店集团收购，交易金额6亿元，实现平稳过渡。</li>
+            </ul>
+
+            <h3 style="text-align: left"><b>资产出售常见问题</b></h3>
+            <p class="lead" style="text-align: left">Q1：资产出售前需要准备哪些材料？<br>
+            A：基础材料包括产权证/不动产权证、规划用途文件、历史租赁合同、公用事业账单、环保合规证明、近三年财务报表及审计报告、场地图纸及实景照片等。我们会在委托启动后提供详细的材料清单，并协助整理与完善。</p>
+            <p class="lead" style="text-align: left">Q2：如何确保资产信息保密？<br>
+            A：我们采用分级数据室机制，核心信息仅在签署保密协议（NDA）后向入围买家披露；建立受控买家名单，所有接触需经出售方书面同意；敏感信息分阶段释放，确保商业机密安全。</p>
+            <p class="lead" style="text-align: left">Q3：资产存在权属瑕疵能否出售？<br>
+            A：可以。我们拥有专业的法律团队，可协助处理土地性质变更、历史遗留问题、抵押解除等权属瑕疵。在正式推向市场前，我们会完成全面的法律尽调，制定瑕疵整改方案，确保交易合规。</p>
+            <p class="lead" style="text-align: left">Q4：如何确定合理的出售价格？<br>
+            A：我们采用DCF现金流折现法、可比交易法、收益资本化法等多种估值方法，结合市场供需、资产稀缺性、买家竞争程度等因素，为出售方提供定价区间建议，并在竞价过程中争取最优价格。</p>
+            <p class="lead" style="text-align: left">Q5：出售周期一般需要多久？<br>
+            A：根据资产复杂程度，一般8-16周完成。其中材料筹备2-4周，买家筛选与推介3-5周，竞价与谈判3-5周，交割2-4周。我们会制定详细的时间表，并在每个关键节点提供进度报告。</p>
+            <p class="lead" style="text-align: left">Q6：是否可以同时委托多家机构？<br>
+            A：我们建议采用独家委托模式。多头代理容易导致市场信息混乱、买家重复接触、价格预期不一致等问题。独家委托确保我们全力投入，避免利益冲突，且我们的收费与成交结果挂钩，利益高度一致。</p>
+
+            <h3 style="text-align: left"><b>合规与风控体系</b></h3>
+            <ul class="lead" style="text-align: left">
+                <li>客户身份识别（KYC）：严格执行买家资质审查，核实资金来源合法性，防范洗钱风险。</li>
+                <li>制裁名单筛查：对交易对手进行OFAC、UN、EU等国际制裁名单筛查，确保交易合规。</li>
+                <li>数据室治理：建立分级数据室，核心信息分阶段释放，全程留痕可追溯。</li>
+                <li>权属风险排查：交易前完成全面的法律尽调，识别抵押、查封、租赁等权利负担，制定风险缓释方案。</li>
+                <li>税务合规审查：排查历史税务风险，测算交易税费，优化税务架构，确保依法纳税。</li>
+                <li>资金监管保障：建议采用第三方资金监管，确保交易资金安全，防范交割风险。</li>
+                <li>监管审批协调：协助办理国资委、发改委、商务部、外汇管理等部门的审批备案手续。</li>
+            </ul>
         </div>
     </div>
     <!-- /Services -->
@@ -245,7 +401,7 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center">
-                        <h2><b>Best Options</b></h2>
+                        <h2><b>项目列表</b></h2>
                     </div>
                 </div>
             </div>
@@ -257,11 +413,11 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
             <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Plastic Resins video">
-                    <img src="./static/images/1.png" alt="Financial Technology">
+                    <a href="#收并购需求" style="color:white;" aria-label="收并购需求">
+                    <img src="static/images/SmartConnections.png" alt="收并购需求">
                     <div class="caption">
-                        <h3>Fintech ETF</h3>
-                        <p style="text-align: left">Tour Shanghai fintech institutions and join cutting-edge seminars.</p>
+                        <h3>收并购需求</h3>
+                        <p style="text-align: left">涵盖国有工业用地、农村集体用地、物流仓储用地、数据中心用地、办公楼、酒店、特殊资产等收并购信息。</p>
                     </div>
                     </a>
                 </div>
@@ -269,11 +425,11 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Tai Chi video">
-                    <img src="./static/images/2.png" alt="Tai Chi">
+                    <a href="#各地存量资产" style="color:white;" aria-label="各地存量资产">
+                    <img src="static/images/In-DepthResearch.png" alt="各地存量资产">
                     <div class="caption">
-                        <h3>Tai Chi</h3>
-                        <p style="text-align: left">Watch and practice Tai Chi with senior coaches at Shanghai venues.</p>
+                        <h3>各地存量资产</h3>
+                        <p style="text-align: left">包括产业园、物流仓储、写字楼、酒店、商铺等各类存量资产的转让和出租信息，覆盖全国多个重点城市。</p>
                     </div>
                     </a>
                 </div>
@@ -281,11 +437,11 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Financial Technology video">
-                    <img src="./static/images/3.png" alt="Plastic Resins">
+                    <a href="#跨境交易与服务" style="color:white;" aria-label="跨境交易与服务">
+                    <img src="static/images/TailoredSolutions.png" alt="跨境交易与服务">
                    <div class="caption">
-                        <h3>Plastic Resins</h3>
-                        <p style="text-align: left">Explore Zhangmutou's plastic resin markets in Dongguan, Guangdong.</p>
+                        <h3>跨境交易与服务</h3>
+                        <p style="text-align: left">提供欧美、东南亚等国家和地区的投资机会，涵盖金融服务、物流仓储、酒店资产交易等跨境产业服务。</p>
                     </div>
                     </a>
                 </div>
@@ -295,6 +451,637 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
         </div>
     <!-- /Portfolio -->
 
+    <br>
+
+    <!-- Business Links -->
+    <div id="business-links" class="services">
+        <div class="container">
+
+            <!-- M&A Requirements -->
+            <h4 class="text-gray"><i class="linecons-tag" id="收并购需求"></i>收并购需求</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/office.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购整幢办公楼</strong>
+                                </span>
+                                <p class="overflowClip_2">另类投资、债务优化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/hotel.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购酒店资产</strong>
+                                </span>
+                                <p class="overflowClip_2">提供详细踏勘信息</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/warehousing.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购物流仓储一手及二手地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购物流仓储一手及二手地</strong>
+                                </span>
+                                <p class="overflowClip_2">江浙沪京、穗佛莞深</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/lsh-jcs.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购商业门面">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购商业门面</strong>
+                                </span>
+                                <p class="overflowClip_2">适用于电商中转集包</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/shanghai.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购上海二手工业厂房">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购上海二手工业厂房</strong>
+                                </span>
+                                <p class="overflowClip_2">浦东、奉贤、闵行</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/dongguan.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="求购东莞一手及二手地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>求购东莞一手及二手地</strong>
+                                </span>
+                                <p class="overflowClip_2">长安、虎门、沙田、厚街</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/tent.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="科技感野奢体验的帐篷营地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>科技感野奢体验的帐篷营地</strong>
+                                </span>
+                                <p class="overflowClip_2">寻求闲置土地合作开发</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/sh-hq-gd.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购上海存量资产">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>收购上海存量资产</strong>
+                                </span>
+                                <p class="overflowClip_2">适合不良资产交易</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/meeting.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="存量资产碰头会">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>存量资产碰头会</strong>
+                                </span>
+                                <p class="overflowClip_2">产业地产与资本对接平台</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br />
+            <!-- END M&A Requirements -->
+            <br />
+            <!-- Stock Assets Across Regions -->
+            <h4 class="text-gray"><i class="linecons-tag" id="各地存量资产"></i>各地存量资产</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wzp.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海青浦产业园转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海青浦产业园转让</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地97亩+2.5万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/7-small-and-beautiful.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="小而美的核心资产">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>小而美的核心资产</strong>
+                                </span>
+                                <p class="overflowClip_2">稳定回报 风险可控 流动性强</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/sh-hq-yym-gd.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥小独栋写字楼出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥小独栋写字楼出售</strong>
+                                </span>
+                                <p class="overflowClip_2">单价3万内，送车位，返租</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/resort.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海祟明康养基地合作或转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海崇明康养基地合作或转让</strong>
+                                </span>
+                                <p class="overflowClip_2">占地30亩，14栋楼，6000㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/sh-hq-pzq-a.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥五星级酒店转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥五星级酒店转让</strong>
+                                </span>
+                                <p class="overflowClip_2">两座酒店年收入各近亿元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/sh-hq-pzq-b.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海虹桥5A写字楼出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海虹桥5A写字楼出售</strong>
+                                </span>
+                                <p class="overflowClip_2">适合总部选址，近虹桥火车站</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/sz-taozf.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="嘉兴平湖5万㎡高标仓转让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>嘉兴平湖5万㎡高标仓转让</strong>
+                                </span>
+                                <p class="overflowClip_2">当前满租，年租金约2600万元</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wmyfhm.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="浙江桐庐民居出租">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>浙江桐庐民居出租</strong>
+                                </span>
+                                <p class="overflowClip_2">独栋二层，邻近千岛湖景区</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/chengdu-hrf.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都武侯区底层商铺出租">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>成都武侯区底层商铺出租</strong>
+                                </span>
+                                <p class="overflowClip_2">原外资银行长期租用</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/dyj-a.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="成都工业园区合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>成都工业园区合作</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地522.87亩+131500㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/dyj-b.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="青岛工业园区合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>青岛工业园区合作</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地200.9亩+4.2万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/guojingyan.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞沙田一手地360亩出让">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞沙田一手地360亩出让</strong>
+                                </span>
+                                <p class="overflowClip_2">物流仓储用地，稀缺资源</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/xiaogan.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="武汉仓储园区合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>武汉仓储园区合作</strong>
+                                </span>
+                                <p class="overflowClip_2">物流仓储用地156亩+9万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/kangqiao.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="上海浦东康桥半岛租售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>上海浦东康桥半岛租售</strong>
+                                </span>
+                                <p class="overflowClip_2">商用独栋6998㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/huangjiang.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞市黄江镇厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞市黄江镇厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地193亩+17621㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/huizhou.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="惠州仲恺高新区厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>惠州仲恺高新区厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地191亩+59244.75㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/qiangqiang.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞清溪二手厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞清溪二手厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业用地80亩+56424.52㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/zhongdun.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞大岭山二手厂房出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞大岭山二手厂房出售</strong>
+                                </span>
+                                <p class="overflowClip_2">相邻3个地块300多亩工业用地</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/gjt.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞望牛墩200亩物流用地出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞望牛墩200亩物流用地出售</strong>
+                                </span>
+                                <p class="overflowClip_2">可在3个月内落地</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/zhongtang.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东莞中堂镇二手地出售">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东莞中堂镇二手地出售</strong>
+                                </span>
+                                <p class="overflowClip_2">工业及仓储用地750亩+15万㎡</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/airport.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="机场大单尾迹">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>机场大单尾迹</strong>
+                                </span>
+                                <p class="overflowClip_2">机场周边6-20公里范围内买地</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/hansongdage.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="出让福建漳浦200亩工业用地">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>出让福建漳浦200亩工业用地</strong>
+                                </span>
+                                <p class="overflowClip_2">拥有500吨级对台贸易码头</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wangwenged.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="太仓浏河长江智慧港口物流园">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>太仓浏河长江智慧港口物流园</strong>
+                                </span>
+                                <p class="overflowClip_2">项目合作，资产交易</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/National/wuxiangrong.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="海宁尖⼭科技产业园">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>海宁尖⼭科技产业园</strong>
+                                </span>
+                                <p class="overflowClip_2">欢迎承购、承租、或合资</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <!--END Stock Assets Across Regions -->
+            <br />
+            <!-- Cross-border Transactions and Services -->
+            <h4 class="text-gray"><i class="linecons-tag" id="跨境交易与服务"></i>跨境交易与服务</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Amanda.Yan.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="美国酒店交易列表">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>美国酒店交易列表</strong>
+                                </span>
+                                <p class="overflowClip_2">CIPS国际房产认证机构操盘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Manhattan-Hotel.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="纽约万豪酒店投资机会（近曼哈顿）">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>转让纽约万豪酒店（近曼哈顿）</strong>
+                                </span>
+                                <p class="overflowClip_2">客房400间</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Los-Angeles-Historical-Hotel.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="转让洛杉矶历史酒店（1925 年）">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>转让洛杉矶历史酒店（1925 年）</strong>
+                                </span>
+                                <p class="overflowClip_2">提供4张现场照片</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Opportunity-Zone.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="转让南加州海岸线地标级办公楼">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>转让南加州海岸线地标级办公楼</strong>
+                                </span>
+                                <p class="overflowClip_2">12层甲级办公楼，永久产权</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Downtown-Los-Angeles.png" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="转让洛杉矶市中心全新精品酒店">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>转让洛杉矶市中心全新精品酒店</strong>
+                                </span>
+                                <p class="overflowClip_2">28间客房｜5层</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/San-Bernardino-Hotel-Conference.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="转让美国加州圣贝纳迪诺酒店">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>转让美国加州圣贝纳迪诺酒店</strong>
+                                </span>
+                                <p class="overflowClip_2">毗邻国家森林公园</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Suvarnabhumi.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Suvarnabhumi International Airport Cargo Warehousing Project in Bangkok, Thailand">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>机场货运仓储投资与运营</strong>
+                                </span>
+                                <p class="overflowClip_2">泰国曼谷素万那普国际机场</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Asset-Trading-Salon-en.jpg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="独家高潜力二手资产机会">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>独家高潜力二手资产机会</strong>
+                                </span>
+                                <p class="overflowClip_2">存量资产碰头会英文版介绍</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <!--END Cross-border Transactions and Services -->
+            <br />
+
+            <!-- Business Services -->
+            <h4 class="text-gray"><i class="linecons-tag" id="商务服务"></i>商务服务</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Beijing/taxation.mp4" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="提供税务稽查协助服务">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>税务策略</strong>
+                                </span>
+                                <p class="overflowClip_2">提供税务稽查协助服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Shanghai/Private-Business.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="专属高净值人群、企业主或特定职业精英的个性化商务安排">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>商务设计与接待</strong>
+                                </span>
+                                <p class="overflowClip_2">简单、直接、有效</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Shanghai/Industry-and-Capital.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="陆续更新的产业与资方信息">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>产业与资方</strong>
+                                </span>
+                                <p class="overflowClip_2">资产交易、产业招商</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Shanghai/Training-Consulting.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="经认证的私教课程清单">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>经认证的私教课程清单</strong>
+                                </span>
+                                <p class="overflowClip_2">一对一定制</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Zhejiang/custom-processing-of-fasteners.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="紧固件定制加工">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>紧固件研发+定制+服务</strong>
+                                </span>
+                                <p class="overflowClip_2">跨境电商备货</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Malaysia/fund.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="马来西亚主权基金合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>马来西亚主权基金合作</strong>
+                                </span>
+                                <p class="overflowClip_2">REITs、能源、物流仓储</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Malaysia/chain.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="RWA 稳定币合作">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>RWA 稳定币合作</strong>
+                                </span>
+                                <p class="overflowClip_2">区块链溯源</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Malaysia/Lion-Parcel-Malaysia.pdf" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="东南亚航空物流仓储与快递">
+                        <div class="xe-comment-entry">
+                            <div class="xe-comment">
+                                <span class="xe-user-name overflowClip_1">
+                                    <strong>东南亚航空物流仓储与快递</strong>
+                                </span>
+                                <p class="overflowClip_2">跨境电商机会</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <!--END Business Services -->
+        </div>
+    </div>
+    <!-- /Business Links -->
+    <br>
+
     <br><br>
 
     <!-- Footer -->
@@ -302,23 +1089,25 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
- 
+
             <ul class="list-inline spaced">
-                <li><a href="#" onclick="shareToFacebook(event)" title="Share to Facebook"><i class="fa-brands fa-facebook fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToTwitter(event)" title="Share to Twitter"><i class="fa-brands fa-twitter fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToLinkedIn(event)" title="Share to LinkedIn"><i class="fa-brands fa-linkedin fa-3x"></i></a></li>
-                <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="https://www.amap.com/search?query=上海市闵行区申达三路181号4F" title="地址导航" target="_blank"><i class="fa-solid fa-location-dot fa-3x"></i></a></li>
+                <li><a href="default.html" target="_blank" title="English Version"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="mailto:webmaster@kb727.com" title="联系我们" target="_blank"><i class="fa-solid fa-paper-plane fa-3x"></i></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToWeChat()" title="分享到微信"><i class="fa-brands fa-weixin fa-3x"></i></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToDouyin()" title="分享到抖音"><i class="fa-brands fa-tiktok fa-3x"></i></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToXiaohongshu()" title="分享到小红书"><i class="fa-solid fa-book fa-3x"></i></a></li>
             </ul>
                     <ul class="list-unstyled size-m spaced">
-                        <li><i class="fa-solid fa-location-dot"></i> Pudong New Area, Shanghai, China</li>
-                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:business@kb727.com" target="_blank">business@kb727.com</a></li>
-                        <li> 💬 WeChat: KB727er</li>
+                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
+                        <li> 💬 微信：KB727er</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 上海虹桥</li>
                     </ul>
                 <div class="top-scroll">
-                <a href="#top" title="Back to top"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
+                <a href="#top" title="返回顶部"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
                 </div>
                 <hr>
-            <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. Please refer to <a href="attachments/Global/terms.pdf">Legal Terms</a>. Unauthorized commercial resale is prohibited and subject to legal action.</p><br><br>
+            <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. 隐私数据保护及Cookie使用已按法规要求妥善处理。参阅<a href="static/docs/terms.pdf">版权声明与法律条款</a>，未经授权不得用于商业转售。</p><br><br>
                 </div>
             </div>
         </div>
@@ -328,8 +1117,25 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
     <!-- Load JavaScript asynchronously -->
     <!-- Removed inline sidebar initial style settings, switched to CSS control -->
     
+    <!-- WeChat QR Code Modal -->
+    <div id="wechatModal" class="wechat-modal" style="display: none;">
+        <div class="wechat-modal-content">
+            <span class="wechat-modal-close" onclick="closeWeChatModal()">&times;</span>
+            <div class="wechat-modal-header">
+                <h3>微信分享</h3>
+            </div>
+            <div class="wechat-modal-body">
+                <p>请使用微信扫描二维码</p>
+                <div class="qr-code-container">
+                    <img id="wechatQRCode" src="" alt="微信分享二维码" />
+                </div>
+                <p class="qr-url" id="qrUrl"></p>
+            </div>
+        </div>
+    </div>
+    
     <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
-    <script src="./static/js/main.js"></script>
+    <script src="static/js/main.js"></script>
     <script>
         // Social media sharing functions
         function shareToFacebook(event) {
@@ -342,7 +1148,7 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
         function shareToTwitter(event) {
             event.preventDefault();
             const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('KB727: Industrial Investment Consortium | Strategic Emerging Industries');
+            const text = encodeURIComponent('KB727: 《迅捷的中颐复聚》邮件列表订阅服务');
             const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
             window.open(shareUrl, '_blank', 'width=600,height=400');
         }
@@ -352,6 +1158,100 @@ Across all eight sectors, KB727 connects visiting executives with the right ente
             const url = encodeURIComponent(window.location.href);
             const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
             window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+        
+        // WeChat, Douyin, Xiaohongshu sharing functions
+        function shareToWeChat() {
+            var currentUrl = window.location.href;
+            var modal = document.getElementById('wechatModal');
+            var qrCode = document.getElementById('wechatQRCode');
+            var qrUrl = document.getElementById('qrUrl');
+            
+            // 固定指向kb727.com
+            var fixedUrl = 'https://kb727.com';
+            
+            // 使用API生成二维码
+            qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(fixedUrl);
+            qrUrl.textContent = fixedUrl;
+            
+            // 显示模态框
+            modal.style.display = 'flex';
+            
+            // 防止页面滚动
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeWeChatModal() {
+            var modal = document.getElementById('wechatModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            var modal = document.getElementById('wechatModal');
+            if (event.target == modal) {
+                closeWeChatModal();
+            }
+        }
+
+        function shareToDouyin() {
+            // 抖音分享 - 使用Web Share API或复制链接
+            var currentUrl = 'https://kb727.com';
+            var currentTitle = document.title;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: currentTitle,
+                    url: currentUrl
+                }).catch(function(err) {
+                    console.log('分享失败:', err);
+                    copyToClipboard(currentUrl);
+                    alert('链接已复制，请在抖音App中粘贴分享');
+                });
+            } else {
+                copyToClipboard(currentUrl);
+                alert('链接已复制，请在抖音App中粘贴分享');
+            }
+        }
+
+        function shareToXiaohongshu() {
+            // 小红书分享 - 使用Web Share API或复制链接
+            var currentUrl = 'https://kb727.com';
+            var currentTitle = document.title;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: currentTitle,
+                    url: currentUrl
+                }).catch(function(err) {
+                    console.log('分享失败:', err);
+                    copyToClipboard(currentUrl);
+                    alert('链接已复制，请在小红书App中粘贴分享');
+                });
+            } else {
+                copyToClipboard(currentUrl);
+                alert('链接已复制，请在小红书App中粘贴分享');
+            }
+        }
+
+        function copyToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(text);
+            } else {
+                let textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                textArea.style.top = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                return new Promise((resolve, reject) => {
+                    document.execCommand('copy') ? resolve() : reject();
+                    textArea.remove();
+                });
+            }
         }
     </script>
 </body>
