@@ -151,7 +151,8 @@ a:active {
   height: 150px;
   width: 150px;
   margin: 17px auto;
-  background: url(../images/KB727-Background-2.jpg);
+  background: url(../images/icons/android-chrome-384x384.png) no-repeat center center;
+  background-size: contain;
   visibility: visible;
 }
 
