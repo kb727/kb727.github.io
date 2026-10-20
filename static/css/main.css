@@ -156,11 +156,29 @@ a:active {
   visibility: visible;
 }
 
-/* About区域：第二段起向左跳出col-md-9，与下方Services文本左顶格对齐（仅桌面端） */
+/* About区域（仅桌面端）：
+   1) 左侧 pixelMe 区域收窄为 200px × 200px
+   2) 第二段起向左跳出 col-md-9，与下方 Services 文本左顶格对齐 */
 @media (min-width: 992px) {
+  /* 左侧 pixelMe 区域固定为 200px 宽 × 200px 高 */
+  #about .col-md-3 {
+    width: 200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about .pixelMe {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  /* 右侧文本列占用剩余宽度，避免因左侧收窄而留出空隙 */
+  #about .col-md-9 {
+    width: calc(100% - 200px);
+  }
+  /* 第二段起向左对齐到容器左侧，偏移量对应收窄后的 200px 列 */
   #about .col-md-9 p.lead:nth-of-type(n+2) {
-    margin-left: calc(-33.333333% - 10px);
-    width: calc(133.333333% + 10px);
+    margin-left: -200px;
+    width: calc(100% + 200px);
   }
 }
 
