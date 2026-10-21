@@ -108,7 +108,7 @@ a:active {
   right: 0;
   z-index: 1001;
   padding: 15px 20px;
-  background-color: #669900;
+  background-color: #FF2F3B; /* KB727 logo red (closed-state cover) */
   border: none;
   color: white;
   border-radius: 0 0 0 4px;
