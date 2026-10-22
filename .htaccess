@@ -6,7 +6,9 @@
 # Rules below are therefore NOT enforced on the current host.
 #
 # Effective measures for GitHub Pages are implemented in HTML instead:
-#   - Content-Security-Policy via <meta http-equiv> in each <head>
+#   - Content-Security-Policy via <meta http-equiv> (present in 404.html;
+#     main/attachment pages deliberately omit CSP to avoid breaking
+#     external resources: api.qrserver.com QR images, AMap scripts)
 #   - HTTPS enforcement via GitHub Pages setting / DNS provider
 #   - Caching relies on GitHub Pages defaults + asset versioning (?v=)
 #
@@ -85,7 +87,7 @@
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
     # Content Security Policy
-    # img-src allows api.qrserver.com for the WeChat QR code in default.html
+    # img-src allows api.qrserver.com for the WeChat QR code in index.html
     Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://api.qrserver.com; font-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
 </IfModule>
 

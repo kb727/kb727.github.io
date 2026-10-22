@@ -153,7 +153,7 @@ function setupMobileMenuHandler() {
         });
     }
 
-    // Handle specific mobile menu toggle in default.html
+    // Handle specific mobile menu toggle in index.html
     const mobileToggleBtn = document.querySelector(".mobile-menu-toggle a[data-toggle='mobile-menu']");
     if (mobileToggleBtn) {
         mobileToggleBtn.addEventListener('click', function(e) {
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 /*
 * Social media share functions - fallback for attachment pages without
-* inline copies. index.html and legacy attachment pages define their own
+* inline copies. default.html and legacy attachment pages define their own
 * inline versions which load after main.js and take precedence.
 */
 function ensureWeChatModal() {
