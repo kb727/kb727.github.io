@@ -187,6 +187,13 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://kb727.com/attachments/National/nanning.html</loc>
+        <lastmod>2026-10-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- Global Pages -->
     <url>
         <loc>https://kb727.com/attachments/Global/Los-Angeles-Historical-Hotel.html</loc>
@@ -404,6 +411,13 @@
     <url>
         <loc>https://kb727.com/attachments/Global/20261022-MontereyPark.html</loc>
         <lastmod>2026-10-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://kb727.com/attachments/Global/20261023-2017.html</loc>
+        <lastmod>2026-10-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
