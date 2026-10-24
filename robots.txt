@@ -1,4 +1,4 @@
-# robots.txt for KB727.COM - 中颐复聚大宗物业资产交易咨询服务 & International Business Exploration
+# robots.txt for KB727.COM - 中颐复聚大宗物业资产交易咨询服务 & Second-Hand Asset / Industrial Real Estate Capital Matchmaking
 
 User-agent: *
 Allow: /
@@ -21,4 +21,4 @@ Crawl-delay: 1
 
 Sitemap: https://kb727.com/sitemap.xml
 
-Updated on 2026-10-22
+Updated on 2026-10-24
