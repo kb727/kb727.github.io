@@ -4,17 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KB727 is a Shanghai-headquartered industrial investment and asset management platform focused on the acquisition, redevelopment and long-term reactivation of underutilized real assets — industrial parks, industrial land, and logistics and warehouse properties — converting low-efficiency sites into modern industrial spaces.">
-    <meta name="keywords" content="KB727,Industrial Investment,Asset Management,Asset Revitalization,Underutilized Real Assets,Industrial Park Revitalization,Industrial Land Intensification,Logistics and Warehouse Upgrade,Modern Industrial Spaces,Advanced Manufacturing,Supply-Chain Infrastructure,Proprietary Development,Joint Development,Mandated Development,Redevelopment,Property Operations,Shanghai">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
+    <meta name="description" content="KB727 is a Shanghai-based industrial investment and asset management platform redeveloping industrial parks, land and logistics into modern industrial space.">
+    <meta name="keywords" content="KB727,Industrial Investment,Asset Management,Industrial Park Revitalization,Industrial Land Intensification,Logistics and Warehouse Upgrade,Industrial Redevelopment,Shanghai">
     <meta name="author" content="KB727.COM">
     <meta name="apple-mobile-web-app-title" content="KB727">
     <meta name="application-name" content="KB727">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileColor" content="#FF2F3B">
     <meta name="msapplication-TileImage" content="./static/images/icons/mstile-144x144.png?v20251015">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://kb727.com/">
+    <link rel="alternate" hreflang="en" href="https://kb727.com/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://kb727.com/default.html">
+    <link rel="alternate" hreflang="x-default" href="https://kb727.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KB727.COM">
     <meta property="og:title" content="KB727 - Industrial Investment &amp; Asset Management Platform">
@@ -34,7 +38,7 @@
     <link rel="preload" href="./static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preload critical images -->
-    <link rel="preload" href="./static/images/KB727-Background-1.jpg" as="image">
+    <link rel="preload" as="image" href="./static/images/KB727-Background-2.webp" imagesrcset="./static/images/KB727-Background-2-1200.webp 1200w, ./static/images/KB727-Background-2.webp 1920w" imagesizes="100vw">
 
     <title>KB727 - Industrial Investment &amp; Asset Management Platform</title>
 
@@ -44,7 +48,7 @@
         body { margin: 0; font-family: 'Open Sans', sans-serif; }
         .header { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .header img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
-        .header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 0; }
+        .header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 0; }
         .vert-text { text-align: center; color: white; position: relative; z-index: 1; }
         .expandUp h2, .expandUp h3 { margin: 0; }
         .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
@@ -81,6 +85,11 @@
         .sidebar-description {
             color: #FFFFFF !important;
         }
+        /* Sidebar sizing - aligned with attachment pages (shell-sidebar.css) */
+        .sidebar-nav li { line-height: 40px; text-indent: 20px; }
+        .sidebar-nav li a { font-size: 14px; }
+        .sidebar-nav > .sidebar-brand { height: 55px; line-height: 55px; font-size: 18px; }
+        .sidebar-description { font-size: 14px; }
         
         /* Portfolio color block settings */
         #portfolio .caption {
@@ -130,13 +139,22 @@
     </style>
 
     <!-- Load critical CSS resources -->
-    <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css">
-    <link rel="stylesheet" href="./static/fonts/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="./static/css/bootstrap.css">
-    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/fonts/open-sans/open-sans.css?v=20261107">
+    <link rel="stylesheet" href="./static/css/bootstrap.css?v=20261107">
+    <link rel="stylesheet" href="./static/css/main.css?v=20261107">
+
+    <!-- Hero (first screen) text & icon color: KB727 logo red #FF2F3B -->
+    <style>
+        #top .vert-text,
+        #top .vert-text h1,
+        #top .vert-text .list-inline a,
+        #top .vert-text .list-inline a i {
+            color: #FF2F3B !important;
+        }
+    </style>
     
     <!-- Non-critical CSS - Load asynchronously -->
-    <link href="./static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./static/css/animations.css?v=20261107" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/images/icons/apple-touch-icon.png?v20251015">
@@ -149,18 +167,48 @@
     <link rel="manifest" href="./site.webmanifest?v20251015">
     <link rel="mask-icon" href="./static/images/icons/safari-pinned-tab.svg?v20251015" color="#5bbad5">
     <link rel="shortcut icon" href="./static/images/icons/favicon.ico">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://kb727.com/#organization",
+          "name": "KB727.COM",
+          "alternateName": "中颐复聚",
+          "url": "https://kb727.com/",
+          "logo": "https://kb727.com/static/images/icons/web-app-manifest-512x512.png",
+          "email": "webmaster@kb727.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "申达三路181号4F",
+            "addressLocality": "上海市闵行区",
+            "addressCountry": "CN"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kb727.com/#website",
+          "url": "https://kb727.com/",
+          "name": "KB727.COM",
+          "publisher": { "@id": "https://kb727.com/#organization" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
     <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" onclick="toggleMenu(event)"><i class="fa fa-reorder"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" aria-label="Open menu" aria-controls="sidebar-wrapper" aria-expanded="false" onclick="toggleMenu(event)"><!-- Icons: Font Awesome Free 6.5.2 by @fontawesome - CC BY 4.0 - https://fontawesome.com/license/free --><svg viewBox="0 0 448 512" width="0.88em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
+            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><svg viewBox="0 0 384 512" width="0.75em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a>
+            <li class="sidebar-brand"><a aria-label="Back to top" href="#top"><b>KB727.COM</b></a></li>
             <li><a href="#about">About KB727</a></li>
-            <li><a href="#portfolio">Visit by Invitation</a></li>
+            <li><a href="#Intro">Visit by Invitation</a></li>
             <li><a href="default.html">Chinese Localization</a></li>
             <li><a href="mailto:webmaster@kb727.com">Electronic Mail Contact</a></li>
             <hr>
@@ -171,17 +219,17 @@
 
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
-        <img src="./static/images/KB727-Background-1.jpg" alt="KB727 Background" class="bg-img">
+        <img src="./static/images/KB727-Background-2.webp" srcset="./static/images/KB727-Background-2-1200.webp 1200w, ./static/images/KB727-Background-2.webp 1920w" sizes="100vw" alt="" class="bg-img" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.removeAttribute('sizes');this.src='./static/images/KB727-Background-2.jpg';" width="1920" height="909" decoding="async">
         <div class="vert-text">
             <div class="expandUp">
             <h1 class="hero-subtitle"><b>​​Your Gateway to</b></h1>
             <h1 class="hero-subtitle"><b>​​Industrial Excellence</b></h1>
             </div><br><br><br><br>
             <ul class="list-inline spaced">
-                <li><a href="#about" title="About KB727"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
-                <li><a href="#Intro" title="Visit by Invitation"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
-                <li><a href="mailto:webmaster@kb727.com" title="Email Us" target="_blank"><i class="fa-regular fa-envelope fa-3x"></i></a></li>
-                <li><a href="default.html" target="_blank" title="Chinese Version"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="#about" title="About KB727" aria-label="About KB727"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M474.31 330.41c-23.66 91.85-94.23 144.59-201.9 148.35V429.6c0-48 26.41-74.39 74.39-74.39 62 0 99.2-37.2 99.2-99.21 0-61.37-36.53-98.28-97.38-99.06-33-69.32-146.5-64.65-177.24 0C110.52 157.72 74 194.63 74 256c0 62.13 37.27 99.41 99.4 99.41 48 0 74.55 26.23 74.55 74.39V479c-134.43-5-211.1-85.07-211.1-223 0-141.82 81.35-223.2 223.2-223.2 114.77 0 189.84 53.2 214.69 148.81H500C473.88 71.51 388.22 8 259.82 8 105 8 12 101.19 12 255.82 12 411.14 105.19 504.34 259.82 504c128.27 0 213.87-63.81 239.67-173.59zM357 182.33c41.37 3.45 64.2 29 64.2 73.67 0 48-26.43 74.41-74.4 74.41-28.61 0-49.33-9.59-61.59-27.33 83.06-16.55 75.59-99.67 71.79-120.75zm-81.68 97.36c-2.46-10.34-16.33-87 56.23-97 2.27 10.09 16.52 87.11-56.26 97zM260 132c28.61 0 49 9.67 61.44 27.61-28.36 5.48-49.36 20.59-61.59 43.45-12.23-22.86-33.23-38-61.6-43.45 12.41-17.69 33.27-27.35 61.57-27.35zm-71.52 50.72c73.17 10.57 58.91 86.81 56.49 97-72.41-9.84-59-86.95-56.25-97zM173.2 330.41c-48 0-74.4-26.4-74.4-74.41 0-44.36 22.86-70 64.22-73.67-6.75 37.2-1.38 106.53 71.65 120.75-12.14 17.63-32.84 27.3-61.14 27.3zm53.21 12.39A80.8 80.8 0 0 0 260 309.25c7.77 14.49 19.33 25.54 33.82 33.55a80.28 80.28 0 0 0-33.58 33.83c-8-14.5-19.07-26.23-33.56-33.83z"/></svg></a></li>
+                <li><a href="#Intro" title="Visit by Invitation" aria-label="Visit by Invitation"><svg viewBox="0 0 576 512" width="3.38em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg></a></li>
+                <li><a href="mailto:webmaster@kb727.com" title="Electronic Mail Contact" aria-label="Electronic Mail Contact" target="_blank"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></a></li>
+                <li><a href="default.html" target="_blank" title="Chinese Localization" aria-label="Chinese Localization"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></a></li>
             </ul>
         </div>
     </div>
@@ -199,22 +247,22 @@
                 <div class="col-md-9">
                 <h3 class="text-left"><b>About KB727</b></h3>
 <p class="lead text-left">
-KB727 is a Shanghai-headquartered industrial investment and asset management platform focused on the acquisition, redevelopment and long-term reactivation of underutilized real assets — including industrial parks, industrial land, and logistics and warehouse properties. Grounded in active management and operating discipline, we build full-cycle capabilities across origination, transaction restructuring, redevelopment, tenant alignment and property operations, converting low-efficiency sites into modern industrial spaces that serve advanced manufacturing, innovation and supply-chain needs.
+KB727 is a Shanghai-headquartered industrial investment and asset management platform. We acquire, redevelop and operate underutilized industrial parks, industrial land and logistics and warehouse properties, converting low-efficiency sites into modern industrial space for advanced manufacturing, innovation and supply-chain operations.
 </p>
 <p class="lead text-left">
-<b>Team and Track Record:</b> The core team brings an average of over 25 years of industry experience, with more than 80 completed asset transactions and a cumulative redeveloped asset value exceeding RMB 10 billion. The team is deeply familiar with China's regulatory framework and transaction practices, and has demonstrated capability in handling complex ownership structures and multi-party transactions.
+<b>Team and Track Record:</b> The core team brings an average of over 25 years of industry experience, with more than 80 completed asset transactions and RMB 10 billion+ in cumulative redeveloped asset value. It combines this experience with deep familiarity of China's regulatory framework and the handling of complex ownership structures.
 </p>
 <p class="lead text-left">
-<b>Core Businesses:</b> Industrial park revitalization — repositioning ageing plants and vacant innovation campuses into modern industrial communities. Industrial land intensification — compliant redevelopment, vertical industrial use, and mixed-use upgrading to unlock land efficiency. Logistics and warehouse upgrade — transforming conventional distribution assets into modern supply-chain infrastructure for smart manufacturing and smart logistics.
+<b>Core Businesses:</b> Industrial park revitalization — repositioning aging plants and vacant innovation campuses into modern industrial communities. Industrial land intensification — compliant redevelopment, vertical industrial use and mixed-use upgrading. Logistics and warehouse upgrade — transforming conventional distribution assets into modern supply-chain infrastructure.
 </p>
 <p class="lead text-left">
-<b>Delivery Models:</b> Depending on asset stage and partnership terms, we work through three models — proprietary development (using own capital to acquire, redevelop and operate assets), joint development (investing and sharing risk with industrial partners or co-investors), and mandated development (engaged by asset owners or investors to provide investment judgment, redevelopment management and operating services).
+<b>Delivery Models:</b> Three models, matched to asset stage and partnership terms — proprietary development (own capital to acquire, redevelop and operate), joint development (shared investment and risk with industrial partners or co-investors) and mandated development (investment judgment, redevelopment management and operating services on behalf of asset owners or investors).
 </p>
 <p class="lead text-left">
-<b>Collaboration Network:</b> We maintain long-term working relationships with industrial investors, developers, operators and operating partners, providing end-to-end resource coordination from project incubation to stabilized operation.
+<b>Collaboration Network:</b> Long-term working relationships with industrial investors, developers and operators, providing end-to-end resource coordination from project incubation to stabilized operation.
 </p>
 <p class="lead text-left">
-<b>Value Proposition:</b> For asset owners, we turn underused assets into tradable, operable and financeable properties; for industrial users, we deliver purpose-built spaces for R&amp;D, manufacturing and logistics; for investment partners, we provide assets with clear fundamentals and stable operating performance.
+<b>Value Proposition:</b> For asset owners, we turn underused assets into tradable, operable and financeable properties; for industrial users, we deliver purpose-built space for R&amp;D, manufacturing and logistics; for investment partners, we provide assets with clear fundamentals and stable operating performance.
 </p>
                 </div>
             </div>
@@ -238,11 +286,11 @@ KB727 is a Shanghai-headquartered industrial investment and asset management pla
             <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Plastic Resins video">
-                    <img src="./static/images/FintechETFs.png" alt="Financial Technology">
+                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="View Business Talks event">
+                    <img loading="lazy" src="./static/images/BusinessTalks.webp" onerror="this.onerror=null;this.src='./static/images/BusinessTalks.png';" alt="Business Talks" width="250" height="250" decoding="async">
                     <div class="caption">
-                        <h3>Fintech ETFs</h3>
-                        <p style="text-align: left">Visit Shanghai fintech institutions and join cutting-edge seminars.</p>
+                        <h3>Business Talks</h3>
+                        <p style="text-align: left">Meet Shanghai entrepreneurs to discuss opportunities, risks, and future business trends.</p>
                     </div>
                     </a>
                 </div>
@@ -251,10 +299,10 @@ KB727 is a Shanghai-headquartered industrial investment and asset management pla
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Tai Chi video">
-                    <img src="./static/images/TaiChi.png" alt="Tai Chi">
+                    <img loading="lazy" src="./static/images/TaiChi.webp" onerror="this.onerror=null;this.src='./static/images/TaiChi.png';" alt="Tai Chi Session" width="250" height="250" decoding="async">
                     <div class="caption">
-                        <h3>Tai Chi</h3>
-                        <p style="text-align: left">Watch and practice Tai Chi with senior coaches in Shanghai.</p>
+                        <h3>Tai Chi Session</h3>
+                        <p style="text-align: left">Practice Tai Chi with experts in Shanghai, sharing industry experience and insights.</p>
                     </div>
                     </a>
                 </div>
@@ -262,11 +310,11 @@ KB727 is a Shanghai-headquartered industrial investment and asset management pla
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="Watch Financial Technology video">
-                    <img src="./static/images/PlasticResins.png" alt="Plastic Resins">
+                    <a href="https://xhslink.cn/o/5bhJXBqfStb" target="_blank" style="color:white;" aria-label="View Plastic Pellets market visit">
+                    <img loading="lazy" src="./static/images/PlasticResins.webp" onerror="this.onerror=null;this.src='./static/images/PlasticResins.png';" alt="Plastic Pellets" width="250" height="250" decoding="async">
                    <div class="caption">
-                        <h3>Plastic Resins</h3>
-                        <p style="text-align: left">Explore the Dongguan plastic resin market in Guangdong.</p>
+                        <h3>Plastic Pellets</h3>
+                        <p style="text-align: left">Explore & visit the plastic pellet markets in Yuyao and Dongguan to inspect raw materials.</p>
                     </div>
                     </a>
                 </div>
@@ -285,21 +333,21 @@ KB727 is a Shanghai-headquartered industrial investment and asset management pla
                 <div class="col-md-6 col-md-offset-3 text-center">
  
             <ul class="list-inline spaced">
-                <li><a href="#" onclick="shareToFacebook(event)" title="Share to Facebook"><i class="fa-brands fa-facebook fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToTwitter(event)" title="Share to Twitter"><i class="fa-brands fa-twitter fa-3x"></i></a></li>
-                <li><a href="#" onclick="shareToLinkedIn(event)" title="Share to LinkedIn"><i class="fa-brands fa-linkedin fa-3x"></i></a></li>
-                <li><a href="default.html" target="_blank" title="Chinese Localization"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="#" onclick="shareToFacebook(event)" title="Share to Facebook" aria-label="Share to Facebook"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a></li>
+                <li><a href="#" onclick="shareToTwitter(event)" title="Share to Twitter" aria-label="Share to Twitter"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li>
+                <li><a href="#" onclick="shareToLinkedIn(event)" title="Share to LinkedIn" aria-label="Share to LinkedIn"><svg viewBox="0 0 448 512" width="2.62em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></li>
+                <li><a href="default.html" target="_blank" title="Chinese Localization" aria-label="Chinese Localization"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></a></li>
             </ul>
                     <ul class="list-unstyled size-m spaced">
-                        <li><i class="fa-solid fa-location-dot"></i> Hongqiao Hub, Shanghai, China</li>
-                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
+                        <li><svg viewBox="0 0 384 512" width="0.75em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> Hongqiao Hub, Shanghai, China</li>
+                        <li><svg viewBox="0 0 512 512" width="1.0em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
                         <li> 💬 WeChat: KB727er</li>
                     </ul>
                 <div class="top-scroll">
-                <a href="#top" title="Back to top"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
+                <a aria-label="Back to top" href="#top" title="Back to top"><svg class="scroll" viewBox="0 0 448 512" width="3.5em" height="4em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3 361.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3 361.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/></svg></a>
                 </div>
                 <hr>
-            <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. See <a href="static/docs/terms.pdf">Legal Terms</a>. Unauthorized commercial resale is strictly prohibited and subject to legal action.</p><br><br>
+            <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. See <a href="static/docs/terms.pdf">Legal Terms</a>. Unauthorized commercial resale is prohibited.</p><br><br>
                 </div>
             </div>
         </div>
@@ -310,7 +358,7 @@ KB727 is a Shanghai-headquartered industrial investment and asset management pla
     <!-- Removed inline sidebar initial style settings, switched to CSS control -->
     
     <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
-    <script src="./static/js/main.js"></script>
+    <script src="./static/js/main.js?v=20261107"></script>
     <script>
         // Social media sharing functions
         function shareToFacebook(event) {

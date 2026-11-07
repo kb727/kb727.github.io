@@ -1,0 +1,24 @@
+name: site-check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Sidebar/footer shells match _includes templates
+        run: python scripts/build_shell.py --check
+
+      - name: All local asset references resolve
+        run: python scripts/check_links.py
+
+      - name: sitemap.xml lastmod dates match file mtimes
+        run: python scripts/update_sitemap_lastmod.py --check

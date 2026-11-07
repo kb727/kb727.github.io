@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
     <meta name="description" content="中颐复聚（KB727）是一家总部位于上海的产业投资与资产管理平台，聚焦产业园区、工业用地、物流仓储等存量资产的收购、改造与价值再生，构建从资产发现、交易重组、改造开发到产业招商与运营管理的全周期能力，将低效载体转化为适配先进制造、科创研发与供应链需求的现代产业空间。">
     <meta name="keywords" content="中颐复聚,产业投资,资产管理,存量资产盘活,产业园区焕新,工业用地提质增效,物流仓储升级,工业上楼,城市更新,功能重构,合规再开发,混合用途改造,现代产业社区,现代产业空间,先进制造,科创研发,供应链,智慧物流,自有资本开发,联合投资开发,委托投资开发,产业招商,运营管理,上海">
     <meta name="author" content="KB727.COM">
@@ -15,6 +16,9 @@
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://kb727.com/default.html">
+    <link rel="alternate" hreflang="en" href="https://kb727.com/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://kb727.com/default.html">
+    <link rel="alternate" hreflang="x-default" href="https://kb727.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KB727.COM">
     <meta property="og:title" content="KB727.COM - 中颐复聚 - 产业投资与资产管理平台">
@@ -34,7 +38,7 @@
     <link rel="preload" href="static/fonts/open-sans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Preload critical images -->
-    <link rel="preload" href="static/images/KB727-Background-2.jpg" as="image">
+    <link rel="preload" as="image" href="static/images/KB727-Background-1.webp" imagesrcset="static/images/KB727-Background-1-1200.webp 1200w, static/images/KB727-Background-1.webp 1920w" imagesizes="100vw">
 
     <title>KB727.COM - 中颐复聚 - 产业投资与资产管理平台</title>
 
@@ -82,6 +86,11 @@
         .sidebar-description {
             color: #FFFFFF !important;
         }
+        /* Sidebar sizing - aligned with attachment pages (shell-sidebar.css) */
+        .sidebar-nav li { line-height: 40px; text-indent: 20px; }
+        .sidebar-nav li a { font-size: 14px; }
+        .sidebar-nav > .sidebar-brand { height: 55px; line-height: 55px; font-size: 18px; }
+        .sidebar-description { font-size: 14px; }
         
         /* Portfolio color block settings */
         #portfolio .caption {
@@ -199,16 +208,14 @@
     </style>
 
     <!-- Load critical CSS resources -->
-    <link rel="stylesheet" href="static/fonts/open-sans/open-sans.css">
-    <link rel="stylesheet" href="static/fonts/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="static/css/bootstrap.css">
-    <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet" href="static/css/assets/xenon-components.css">
-    <link rel="stylesheet" href="static/css/assets/nav.css">
-    <link rel="stylesheet" href="static/css/assets/fonts/linecons/css/linecons.css">
+    <link rel="stylesheet" href="static/fonts/open-sans/open-sans.css?v=20261107">
+    <link rel="stylesheet" href="static/css/bootstrap.css?v=20261107">
+    <link rel="stylesheet" href="static/css/main.css?v=20261107">
+    <link rel="stylesheet" href="static/css/assets/nav.css?v=20261107">
+    <link rel="stylesheet" href="static/css/assets/fonts/linecons/css/linecons.css?v=20261107">
     
     <!-- Non-critical CSS - Load asynchronously -->
-    <link href="static/css/animations.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="static/css/animations.css?v=20261107" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/icons/apple-touch-icon.png?v20251015">
@@ -226,11 +233,11 @@
 <body>
 
     <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" onclick="toggleMenu(event)"><i class="fa fa-reorder"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle" aria-label="打开菜单" aria-controls="sidebar-wrapper" aria-expanded="false" onclick="toggleMenu(event)"><!-- Icons: Font Awesome Free 6.5.2 by @fontawesome - CC BY 4.0 - https://fontawesome.com/license/free --><svg viewBox="0 0 448 512" width="0.88em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></a>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand"><a href="#top"><b>KB727.COM</b></a></li>
+            <a id="menu-close" href="#" class="btn btn-index btn-lg pull-right toggle" aria-label="Close menu" onclick="toggleMenu(event)"><svg viewBox="0 0 384 512" width="0.75em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a>
+            <li class="sidebar-brand"><a aria-label="返回顶部" href="#top"><b>KB727.COM</b></a></li>
             <li><a href="#about">关于我们</a></li>
             <li><a href="#Intro">项目列表</a></li>
             <li><a href="index.html">英文版本</a></li>
@@ -243,17 +250,17 @@
 
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
-        <img src="./static/images/KB727-Background-1.jpg" alt="KB727 Background" class="bg-img">
+        <img src="./static/images/KB727-Background-1.webp" srcset="./static/images/KB727-Background-1-1200.webp 1200w, ./static/images/KB727-Background-1.webp 1920w" sizes="100vw" alt="" class="bg-img" fetchpriority="high" onerror="this.onerror=null;this.removeAttribute('srcset');this.removeAttribute('sizes');this.src='./static/images/KB727-Background-1.jpg';" width="1920" height="909" decoding="async">
         <div class="vert-text">
             <div class="expandUp">
-            <h1 class="hero-subtitle"><b>旧产业载体，</b></h1>
-            <h1 class="hero-subtitle"><b>转化为新产业基础设施</b></h1>
+            <h1 class="hero-subtitle"><b>存量产业空间</b></h1>
+            <h1 class="hero-subtitle"><b>升级为现代基础设施</b></h1>
             </div><br><br><br><br>
             <ul class="list-inline spaced">
-                <li><a href="#about" title="关于我们"><i class="fa-brands fa-cotton-bureau fa-3x"></i></a></li>
-                <li><a href="#Intro" title="项目列表"><i class="fa-regular fa-address-card fa-3x"></i></a></li>
-                <li><a href="mailto:webmaster@kb727.com" title="联系我们" target="_blank"><i class="fa-regular fa-envelope fa-3x"></i></a></li>
-                <li><a href="index.html" target="_blank" title="英文版本"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
+                <li><a href="#about" title="关于我们" aria-label="关于我们"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M474.31 330.41c-23.66 91.85-94.23 144.59-201.9 148.35V429.6c0-48 26.41-74.39 74.39-74.39 62 0 99.2-37.2 99.2-99.21 0-61.37-36.53-98.28-97.38-99.06-33-69.32-146.5-64.65-177.24 0C110.52 157.72 74 194.63 74 256c0 62.13 37.27 99.41 99.4 99.41 48 0 74.55 26.23 74.55 74.39V479c-134.43-5-211.1-85.07-211.1-223 0-141.82 81.35-223.2 223.2-223.2 114.77 0 189.84 53.2 214.69 148.81H500C473.88 71.51 388.22 8 259.82 8 105 8 12 101.19 12 255.82 12 411.14 105.19 504.34 259.82 504c128.27 0 213.87-63.81 239.67-173.59zM357 182.33c41.37 3.45 64.2 29 64.2 73.67 0 48-26.43 74.41-74.4 74.41-28.61 0-49.33-9.59-61.59-27.33 83.06-16.55 75.59-99.67 71.79-120.75zm-81.68 97.36c-2.46-10.34-16.33-87 56.23-97 2.27 10.09 16.52 87.11-56.26 97zM260 132c28.61 0 49 9.67 61.44 27.61-28.36 5.48-49.36 20.59-61.59 43.45-12.23-22.86-33.23-38-61.6-43.45 12.41-17.69 33.27-27.35 61.57-27.35zm-71.52 50.72c73.17 10.57 58.91 86.81 56.49 97-72.41-9.84-59-86.95-56.25-97zM173.2 330.41c-48 0-74.4-26.4-74.4-74.41 0-44.36 22.86-70 64.22-73.67-6.75 37.2-1.38 106.53 71.65 120.75-12.14 17.63-32.84 27.3-61.14 27.3zm53.21 12.39A80.8 80.8 0 0 0 260 309.25c7.77 14.49 19.33 25.54 33.82 33.55a80.28 80.28 0 0 0-33.58 33.83c-8-14.5-19.07-26.23-33.56-33.83z"/></svg></a></li>
+                <li><a href="#Intro" title="项目列表" aria-label="项目列表"><svg viewBox="0 0 576 512" width="3.38em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg></a></li>
+                <li><a href="mailto:webmaster@kb727.com" title="联系我们" aria-label="联系我们" target="_blank"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></a></li>
+                <li><a href="index.html" target="_blank" title="英文版本" aria-label="英文版本"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></a></li>
             </ul>
         </div>
     </div>
@@ -284,7 +291,7 @@
         <div class="container">
             <h3 style="text-align: left"><b>团队与业绩</b></h3>
             <ul class="lead" style="text-align: left">
-                <li>核心团队平均从业<b>超过25年</b>，累计完成<b>80余项</b>资产交易，盘活开发金额逾<b>100亿元</b>。</li>
+                <li>核心团队平均从业<b>超过25年</b>，累计完成<b>80余项</b>资产交易，盘活开发金额逾<b>100亿元人民币</b>。</li>
                 <li>团队熟悉国内资产交易政策法规与商业逻辑，具备复杂权属与跨主体交易的处理能力。</li>
             </ul>
 
@@ -338,7 +345,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a href="#收并购需求" style="color:white;" aria-label="收并购需求">
-                    <img src="static/images/Acquisition.png" alt="收并购需求">
+                    <img loading="lazy" src="static/images/Acquisition.webp" onerror="this.onerror=null;this.src='static/images/Acquisition.png';" alt="收并购需求" width="250" height="250" decoding="async">
                     <div class="caption">
                         <h3>收并购需求</h3>
                         <p style="text-align: left">涵盖国有工业用地、农村集体用地、物流仓储用地、数据中心用地、办公楼、酒店、特殊资产等收并购信息。</p>
@@ -350,7 +357,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a href="#各地存量资产" style="color:white;" aria-label="各地存量资产">
-                    <img src="static/images/National.png" alt="各地存量资产">
+                    <img loading="lazy" src="static/images/National.webp" onerror="this.onerror=null;this.src='static/images/National.png';" alt="各地存量资产" width="250" height="250" decoding="async">
                     <div class="caption">
                         <h3>各地存量资产</h3>
                         <p style="text-align: left">包括产业园、物流仓储、写字楼、酒店、商铺等各类存量资产的转让和出租信息，覆盖全国多个重点城市。</p>
@@ -362,7 +369,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <a href="#跨境交易与服务" style="color:white;" aria-label="跨境交易与服务">
-                    <img src="static/images/Global.png" alt="跨境交易与服务">
+                    <img loading="lazy" src="static/images/Global.webp" onerror="this.onerror=null;this.src='static/images/Global.png';" alt="跨境交易与服务" width="250" height="250" decoding="async">
                    <div class="caption">
                         <h3>跨境交易与服务</h3>
                         <p style="text-align: left">提供欧美、东南亚等国家和地区的投资机会，涵盖金融服务、物流仓储、酒店资产交易等跨境产业服务。</p>
@@ -385,7 +392,7 @@
             <h4 class="text-gray"><i class="linecons-tag" id="收并购需求"></i>收并购需求</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/office.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/office-building-acquisition.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购整幢办公楼">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -397,7 +404,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/hotel.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Acquisition/hotel-asset-acquisition.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="收购酒店资产">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -492,7 +499,6 @@
                         </div>
                     </div>
                 </div>
-
 
             </div>
             <br />
@@ -870,7 +876,7 @@
             <h4 class="text-gray"><i class="linecons-tag" id="跨境交易与服务"></i>跨境交易与服务</h4>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Amanda.Yan.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="美国酒店交易列表">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/amanda-yan.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="美国酒店交易列表">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -942,7 +948,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/Suvarnabhumi.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Suvarnabhumi International Airport Cargo Warehousing Project in Bangkok, Thailand">
+                    <div class="xe-widget xe-conversations box2 label-info" data-href="attachments/Global/suvarnabhumi-air-cargo-warehousing.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Suvarnabhumi International Airport Cargo Warehousing Project in Bangkok, Thailand">
                         <div class="xe-comment-entry">
                             <div class="xe-comment">
                                 <span class="xe-user-name overflowClip_1">
@@ -1101,7 +1107,7 @@
                                 <span class="xe-user-name overflowClip_1">
                                     <strong>资产出售单边委托</strong>
                                 </span>
-                                <p class="overflowClip_2">变现、瘦身、盘活、调仓、止损、化债</p>
+                                <p class="overflowClip_2">变现、瘦身、盘活、止损、化债</p>
                             </div>
                         </div>
                     </div>
@@ -1124,20 +1130,20 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
 
             <ul class="list-inline spaced">
-                <li><a href="https://www.amap.com/search?query=上海市闵行区申达三路181号4F" title="地址导航" target="_blank"><i class="fa-solid fa-location-dot fa-3x"></i></a></li>
-                <li><a href="index.html" target="_blank" title="English Version"><i class="fa-solid fa-earth-americas fa-3x"></i></a></li>
-                <li><a href="mailto:webmaster@kb727.com" title="联系我们" target="_blank"><i class="fa-solid fa-paper-plane fa-3x"></i></a></li>
-                <li><a href="javascript:void(0);" onclick="shareToWeChat()" title="分享到微信"><i class="fa-brands fa-weixin fa-3x"></i></a></li>
-                <li><a href="javascript:void(0);" onclick="shareToDouyin()" title="分享到抖音"><i class="fa-brands fa-tiktok fa-3x"></i></a></li>
-                <li><a href="javascript:void(0);" onclick="shareToXiaohongshu()" title="分享到小红书"><i class="fa-solid fa-book fa-3x"></i></a></li>
+                <li><a href="https://www.amap.com/search?query=上海市闵行区申达三路181号4F" title="地址导航" aria-label="地址导航" target="_blank"><svg viewBox="0 0 384 512" width="2.25em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></a></li>
+                <li><a href="index.html" target="_blank" title="英文版本" aria-label="英文版本"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg></a></li>
+                <li><a href="mailto:webmaster@kb727.com" title="联系我们" aria-label="联系我们" target="_blank"><svg viewBox="0 0 512 512" width="3.0em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToWeChat()" title="分享到微信" aria-label="分享到微信"><svg viewBox="0 0 576 512" width="3.38em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z"/></svg></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToDouyin()" title="分享到抖音" aria-label="分享到抖音"><svg viewBox="0 0 448 512" width="2.62em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></a></li>
+                <li><a href="javascript:void(0);" onclick="shareToXiaohongshu()" title="分享到小红书" aria-label="分享到小红书"><svg viewBox="0 0 448 512" width="2.62em" height="3em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a></li>
             </ul>
                     <ul class="list-unstyled size-m spaced">
-                        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
+                        <li><svg viewBox="0 0 512 512" width="1.0em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg> <a href="mailto:webmaster@kb727.com" target="_blank">webmaster@kb727.com</a></li>
                         <li> 💬 微信：KB727er</li>
-                        <li><i class="fa-solid fa-location-dot"></i> 上海虹桥</li>
+                        <li><svg viewBox="0 0 384 512" width="0.75em" height="1em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> 上海虹桥</li>
                     </ul>
                 <div class="top-scroll">
-                <a href="#top" title="返回顶部"><i class="fa fa-angle-double-up scroll fa-4x"></i></a>
+                <a aria-label="返回顶部" href="#top" title="返回顶部"><svg class="scroll" viewBox="0 0 448 512" width="3.5em" height="4em" style="vertical-align:-0.125em" fill="currentColor" aria-hidden="true"><path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3 361.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352l-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3 361.4 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/></svg></a>
                 </div>
                 <hr>
             <p>Copyright &copy; 2026 KB727.COM. All Rights Reserved. 隐私数据保护及Cookie使用已按法规要求妥善处理。参阅<a href="static/docs/terms.pdf">版权声明与法律条款</a>，未经授权不得用于商业转售。</p><br><br>
@@ -1160,7 +1166,7 @@
             <div class="wechat-modal-body">
                 <p>请使用微信扫描二维码</p>
                 <div class="qr-code-container">
-                    <img id="wechatQRCode" src="" alt="微信分享二维码" />
+                    <img loading="lazy" id="wechatQRCode" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="微信分享二维码" />
                 </div>
                 <p class="qr-url" id="qrUrl"></p>
             </div>
@@ -1168,124 +1174,6 @@
     </div>
     
     <!-- Load scripts at the bottom of the page to ensure DOM is fully loaded -->
-    <script src="static/js/main.js"></script>
-    <script>
-        // Social media sharing functions
-        function shareToFacebook(event) {
-            event.preventDefault();
-            const url = encodeURIComponent(window.location.href);
-            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-
-        function shareToTwitter(event) {
-            event.preventDefault();
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('KB727.COM');
-            const shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-
-        function shareToLinkedIn(event) {
-            event.preventDefault();
-            const url = encodeURIComponent(window.location.href);
-            const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-        
-        // WeChat, Douyin, Xiaohongshu sharing functions
-        function shareToWeChat() {
-            var currentUrl = window.location.href;
-            var modal = document.getElementById('wechatModal');
-            var qrCode = document.getElementById('wechatQRCode');
-            var qrUrl = document.getElementById('qrUrl');
-            
-            // 固定指向kb727.com
-            var fixedUrl = 'https://kb727.com';
-            
-            // 使用API生成二维码
-            qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(fixedUrl);
-            qrUrl.textContent = fixedUrl;
-            
-            // 显示模态框
-            modal.style.display = 'flex';
-            
-            // 防止页面滚动
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeWeChatModal() {
-            var modal = document.getElementById('wechatModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // 点击模态框外部关闭
-        window.onclick = function(event) {
-            var modal = document.getElementById('wechatModal');
-            if (event.target == modal) {
-                closeWeChatModal();
-            }
-        }
-
-        function shareToDouyin() {
-            // 抖音分享 - 使用Web Share API或复制链接
-            var currentUrl = 'https://kb727.com';
-            var currentTitle = document.title;
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: currentTitle,
-                    url: currentUrl
-                }).catch(function(err) {
-                    console.log('分享失败:', err);
-                    copyToClipboard(currentUrl);
-                    alert('链接已复制，请在抖音App中粘贴分享');
-                });
-            } else {
-                copyToClipboard(currentUrl);
-                alert('链接已复制，请在抖音App中粘贴分享');
-            }
-        }
-
-        function shareToXiaohongshu() {
-            // 小红书分享 - 使用Web Share API或复制链接
-            var currentUrl = 'https://kb727.com';
-            var currentTitle = document.title;
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: currentTitle,
-                    url: currentUrl
-                }).catch(function(err) {
-                    console.log('分享失败:', err);
-                    copyToClipboard(currentUrl);
-                    alert('链接已复制，请在小红书App中粘贴分享');
-                });
-            } else {
-                copyToClipboard(currentUrl);
-                alert('链接已复制，请在小红书App中粘贴分享');
-            }
-        }
-
-        function copyToClipboard(text) {
-            if (navigator.clipboard && window.isSecureContext) {
-                return navigator.clipboard.writeText(text);
-            } else {
-                let textArea = document.createElement("textarea");
-                textArea.value = text;
-                textArea.style.position = "fixed";
-                textArea.style.left = "-999999px";
-                textArea.style.top = "-999999px";
-                document.body.appendChild(textArea);
-                textArea.focus();
-                textArea.select();
-                return new Promise((resolve, reject) => {
-                    document.execCommand('copy') ? resolve() : reject();
-                    textArea.remove();
-                });
-            }
-        }
-    </script>
+    <script src="static/js/main.js?v=20261107"></script>
 </body>
 </html>

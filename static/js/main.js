@@ -69,6 +69,7 @@ function toggleMenu(event) {
             sidebar.classList.remove('active');
             if (menuToggle) {
                 menuToggle.style.visibility = 'visible';
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         } else {
             sidebar.style.right = '0px';
@@ -76,6 +77,7 @@ function toggleMenu(event) {
             /* Hide the red toggle so the open menu cover stays fully #669900 */
             if (menuToggle) {
                 menuToggle.style.visibility = 'hidden';
+                menuToggle.setAttribute('aria-expanded', 'true');
             }
         }
     }
@@ -253,7 +255,7 @@ function ensureWeChatModal() {
         '<span class="wechat-modal-close" onclick="closeWeChatModal()">&times;</span>' +
         '<div class="wechat-modal-header"><h3>微信分享</h3></div>' +
         '<div class="wechat-modal-body"><p>请使用微信扫描二维码</p>' +
-        '<div class="qr-code-container"><img id="wechatQRCode" src="" alt="微信分享二维码" /></div>' +
+        '<div class="qr-code-container"><img id="wechatQRCode" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="微信分享二维码" /></div>' +
         '<p class="qr-url" id="qrUrl"></p></div></div>';
     document.body.appendChild(modal);
     modal.addEventListener('click', function(event) {
@@ -264,15 +266,53 @@ function ensureWeChatModal() {
     return modal;
 }
 
+/*
+* Lazy-load vendor/qrcode.js (55KB) on first WeChat share click.
+* Path is derived from main.js's own <script> src so it works at any depth.
+*/
+var _qrLibState = 0; /* 0 = not requested, 1 = loading, 2 = ready */
+var _qrLibQueue = [];
+function loadQrLib(cb) {
+    if (_qrLibState === 2) { cb(); return; }
+    _qrLibQueue.push(cb);
+    if (_qrLibState === 1) return;
+    _qrLibState = 1;
+    var s = document.createElement('script');
+    var self = document.querySelector('script[src*="static/js/main.js"]');
+    s.src = self ? self.src.replace(/js\/main\.js.*$/, 'js/vendor/qrcode.js?v=20261107')
+                 : './static/js/vendor/qrcode.js?v=20261107';
+    s.onload = function () {
+        _qrLibState = 2;
+        while (_qrLibQueue.length) { _qrLibQueue.shift()(); }
+    };
+    s.onerror = function () {
+        _qrLibState = 0;
+        while (_qrLibQueue.length) { _qrLibQueue.shift()(); }
+    };
+    document.head.appendChild(s);
+}
+
 function shareToWeChat() {
-    var fixedUrl = 'https://kb727.com';
+    var fixedUrl = window.location.href.split('#')[0];
     var modal = ensureWeChatModal();
-    var qrCode = document.getElementById('wechatQRCode');
     var qrUrl = document.getElementById('qrUrl');
-    qrCode.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(fixedUrl);
     qrUrl.textContent = fixedUrl;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    loadQrLib(function () {
+        var qrCode = document.getElementById('wechatQRCode');
+        if (!qrCode) return;
+        if (typeof qrcode === 'function') {
+            var qr = qrcode(0, 'M');
+            qr.addData(fixedUrl);
+            qr.make();
+            qrCode.src = qr.createDataURL(4, 8);
+            qrCode.style.display = '';
+        } else {
+            // Local qrcode library unavailable: hide the image; the URL text remains usable
+            qrCode.style.display = 'none';
+        }
+    });
 }
 
 function closeWeChatModal() {

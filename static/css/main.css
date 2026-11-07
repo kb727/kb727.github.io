@@ -340,3 +340,9 @@ footer .list-unstyled a {
   text-decoration: none;
 }
 
+
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
