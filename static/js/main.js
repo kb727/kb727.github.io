@@ -1,4 +1,4 @@
-/*
+﻿/*
 * Main JavaScript file containing all site functionality
 * Optimized for performance and minimal dependencies
 */
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 /*
 * Social media share functions - fallback for attachment pages without
-* inline copies. default.html and legacy attachment pages define their own
+* inline copies. index.html and legacy attachment pages define their own
 * inline versions which load after main.js and take precedence.
 */
 function ensureWeChatModal() {

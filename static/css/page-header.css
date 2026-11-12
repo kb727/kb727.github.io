@@ -1,4 +1,4 @@
-/* Shared page-header styles for index.html (EN) and default.html (ZH).
+﻿/* Shared page-header styles for index.html (EN) and index.html (ZH).
    Loaded before bootstrap.css / main.css to preserve the original cascade order.
    This file is the single source of truth for: .header, #sidebar-wrapper,
    .call-to-action brand block, .btn-primary/.btn-index, .section-title. */

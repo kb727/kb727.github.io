@@ -1,6 +1,12 @@
 MIT License
 
-Copyright (c) 2017 DesignStack
+Copyright (c) 2026 KB727.COM
+
+基于 DesignStack 2017 Xenon 模板二次开发,原始作品保留其 MIT License。
+参见: https://github.com/DesignStack/xenon
+
+本项目使用的全部第三方组件及其许可证,详见 THIRD-PARTY-NOTICES.md。
+See THIRD-PARTY-NOTICES.md for all third-party components and their licenses.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

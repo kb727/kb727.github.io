@@ -210,7 +210,7 @@
     margin-right: 0;
 }
 
-/* Title icon spacing */
-h4.text-gray i.linecons-tag {
+/* Title icon spacing - linecons 已全部替换为 inline SVG,此样式保留作为历史参考 */
+/* h4.text-gray i.linecons-tag {
     margin-right: 7px;
-}
+} */
